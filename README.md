@@ -7,7 +7,3 @@
 <li>Project Euler</li>
 <li>Friends</li>
 </ul>
-
-<b>Releases:</b>
-
-<i>Don't let someone tell you that you can't do something...especially programming</i>
