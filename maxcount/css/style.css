@@ -1,0 +1,38 @@
+.nextButton {
+  background-color: #343338;
+  color: #cccccc;
+  min-width: 50px;
+  padding: .7em 1em;
+  border-radius: .3em;
+  border: 3px solid #cccccc;
+  font-family: Arial;
+  font-size: 16px;
+  outline: none;
+}
+.nextButton:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid white;
+}
+
+.buttonContainer {
+  width: 200px;
+  height: 100px;
+  background-color: #343338;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+#sideArrow {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  color: white;
+}

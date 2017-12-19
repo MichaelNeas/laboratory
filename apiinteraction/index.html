@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>apiInteraction</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+    
+  </head>
+
+  <body>
+
+    <ol>
+  <li>Describe what's needed to turn this text into valid, parsable JSON:
+    <pre>
+[
+  {
+    id: 7,
+    type: 1,  // cat
+    name: 'Fluffy',
+    trainable: false,
+    birthDate: '5/7/05',
+  },
+  {
+    id: 8,
+    type: 2,  // dog
+    name: 'Spot',
+    trainable: true,
+    birthDate: "\/Date(1336460400000)\/",
+    adoptionDate: '2012-11-23T00:00:00-08:00',
+  },
+  {
+    id: 9,
+    type: 1,
+    name: 'Boris',
+    trainable: false,
+    birthDate: '',
+    adoptionDate: '2014-06-09T07:00:00Z'
+  }
+]</pre>
+    <h2>Please read all of the following instructions before proceeding.</h2>
+  </li>
+  <li>Write/describe how would you retrieve this data from an API endpoint <a href="http://demo8429909.mockable.io/animals" target="_blank"><code>http://demo8429909.mockable.io/animals</code></a>?</li>
+  <li>Create JS structure (model/view-model/etc) that reflects the data structure specified above, along with the following:
+    <ul>
+      <li>A method that returns text version of the animal <code>type</code>: "cat", "dog", as indicated in the text comments above.</li>
+      <li>Property/method <code>isAdopted</code>.</li>
+      <li>Property/method <code>age</code> (in months).</li>
+      <li>Maintain <code>trainable</code> as a private property. It will not be exposed in the UI.</li>
+      <li>Method <code>speak</code> that uses <code>trainable</code> property to return the animal's appropriate response.
+        (if you ever tried to teach your cat to "speak", you'd know their response ;)</li>
+      <li>Method <code>adopt</code> that lets the user adopt that animal <small>(or at least starts that process &ndash;
+        uploading paperwork is not part of this excercise)</small>.</li>
+    </ul>
+  </li>
+  <li>Write/describe unit tests for this.
+    <ul>
+      <li><em>(bonus)</em> How would you <strong>unit</strong> test the API request?</li>
+    </ul>
+  </li>
+  <li><em>(bonus 2)</em> Generate a list of adopted cats' names.</li>
+</ol>
+
+4. In order to unit test the api endpoint you could have a known response object and make the request to the service which you would compare and validate it equals the known.
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+  </body>
+</html>
