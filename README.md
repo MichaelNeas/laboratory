@@ -1,4 +1,4 @@
-#DailyProgrammerPractice
+# DailyProgrammerPractice
 ## Much Practice, Getting Okay At Programming
 
 ### Challenges from:
@@ -9,6 +9,14 @@
  - Codewars
  - [HackerRank](https://www.hackerrank.com/)
  - [L337C0D3](https://leetcode.com/)
+
+A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
+
+./jsthings has really cool advanced js concepts that have helped me with my personal development!
+
+Shout out to funfunfunction!
+./beginnersnode is my run through of the beginners node book
+./css_pree random css, sass, scss
 
 **Releases:**
 
@@ -43,3 +51,6 @@
   
 4/11/17
   * Poker hands < 21 or -1
+
+12/20/17
+  * Elevation Change

@@ -1,0 +1,42 @@
+body,html{
+  height:100%;
+}
+body{
+   display:flex; 
+   justify-content: center;
+   align-items: center;
+}
+#square{
+  border-radius: 50px;
+  margin: 0 auto;
+  background-color:orange;
+  height: 5em;
+  width: 25em;
+  text-align:center;
+  transition: all 1s;
+  transform: rotate(360deg) rotateZ(360deg);
+}
+
+#info{
+  transition: all 1s ease-in-out;
+  visibility:hidden;
+}
+
+#magic{
+  margin-top: 1em;
+  transition: all 1s ease-in-out;
+  padding:7px;
+  border-radius: 3px;
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+
+#magic:hover{
+  background-color: black;
+  color: white;
+}
+
+#info:selection{
+  background:url('http://placekitten.com/200/300');
+}

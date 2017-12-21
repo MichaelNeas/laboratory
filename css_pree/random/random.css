@@ -1,0 +1,34 @@
+.circleNotification{
+  border: solid 3px blue;
+  background-color: green;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 70px;
+  -webkit-animation-name: notification; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: notification;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  -webkit-transition: width .35s ease-in-out; /* Safari 3.1 to 6.0 */
+  transition: width .35s ease-in-out;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes notification {
+    0%   {border-color:blue; background-color:limegreen; left:0px; top:0px;}
+    25%  {border-color:cyan; left:100px; top: 100px;}
+    50%  {border-color:white; background-color:Aquamarine; left: 200px; top: 50px;}
+    75%  {border-color:cyan; background-color:Chartreuse; left:50px; top: 150px}
+    100% {border-color:blue; background-color:LightSeaGreen; top: 0px; left: 0px;}
+}
+
+/* Standard syntax */
+@keyframes notification {
+   0%   {border-color:blue; background-color:limegreen; left:0px; top:0px;}
+    25%  {border-color:cyan; left:100px; top: 100px;}
+    50%  {border-color:white; background-color:Aquamarine; left: 200px; top: 50px;}
+    75%  {border-color:cyan; background-color:Chartreuse; left:50px; top: 150px}
+    100% {border-color:blue; background-color:LightSeaGreen; top: 0px; left: 0px;}
+}

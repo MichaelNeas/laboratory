@@ -1,0 +1,6 @@
+#include <windows.h>
+#include <process.h>
+#define K ][(x+80)%20+(y+80)%20*20]
+#define H R.Event.MouseEvent.dwMousePosition
+#define J R.Event.MouseEvent.dwButtonState
+HANDLE Q,W;char*E[3],O;Y(x,y){return E[0 K;}U(x,y,l,v){E[l K=v;}I(){E[2]=E[1];E[1]=*E;*E=E[2];memset(E[1],0,400);}A(i,j,k,l,P){while(1){Sleep(16);for(i=0;i<20;++i)for(j=0;j<20;++j){COORD a={i,j};SetConsoleCursorPosition(Q,a);putchar(E[0][i+j*20]==1?'0':' ');}if(O){for(i=0;i<20;++i)for(j=0;j<20;++j){for(k=i-1,P=0;k<i+2;++k)for(l=j-1;l<j+2;++l){P+=Y(k,l);}U(i,j,1,P==3?1:Y(i,j)==1&&P==4?1:0);}I();}}}main(T,x,y,F,D){for(x=0;x<21;++x)puts("#####################");E[0]=malloc(800);E[1]=E[0]+400;I();I();W=GetStdHandle(-10);Q=GetStdHandle(-11);SetConsoleMode(W,24);INPUT_RECORD R;F=D=O=0;COORD size={80,25};SetConsoleScreenBufferSize(Q,size);_beginthread(A,99,0);while(1){ReadConsoleInput(W,&R,1,&T);switch(R.EventType){case 1:O=R.Event.KeyEvent.dwControlKeyState&128;break;case 2:switch(R.Event.MouseEvent.dwEventFlags){case 1:x=H.X;y=H.Y;case 0:F=J&1;D=J&2;}if(F)U(x,y,0,1);if(D)U(x,y,0,0);}}}

@@ -1,0 +1,10 @@
+.container{
+  text-align:center;
+}
+
+#box{
+  margin: 0 auto;
+  background-color:tomato;
+  width: 5em;
+  height: 5em;
+}

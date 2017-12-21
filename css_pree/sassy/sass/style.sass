@@ -1,0 +1,42 @@
+$font-stack:    Helvetica, sans-serif
+$primary-color: blue
+
+html,
+body,
+ul,
+ol
+  margin:  0
+  padding: 0
+
+
+h1
+  font-family: $font-stack
+  color: $primary-color  
+
+nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+li
+  display: inline-block
+
+a
+  display: block
+  padding: 6px 12px
+  text-decoration: none
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+.box
+  +border-radius(10px)
+  background-color: tomato
+  height: 50px
+  text-align: center
+  margin-top: 10px
+  padding-top: 1em

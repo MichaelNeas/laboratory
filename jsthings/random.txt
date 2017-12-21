@@ -1,0 +1,6 @@
+Rita    1    pan    10.00
+Rita    3    salt    2.50
+Rita    5    books    3.76
+Mike    2    butter    3.00
+Mike    4    notebook    2.45
+Mike    12    pens    1.2  
