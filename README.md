@@ -18,7 +18,7 @@ Shout out to funfunfunction!
 ./beginnersnode is my run through of the beginners node book
 ./css_pree random css, sass, scss
 
-**Releases:**
+**Interview Releases:**
 
 10/2/15 
   * Can a string or sentence of strings form a palindrome?
