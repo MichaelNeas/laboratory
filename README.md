@@ -1,22 +1,25 @@
 # DailyProgrammerPractice
-## Much Practice, Getting Okay At Programming
+## Much Practice, Very Programming
 
 ### Challenges from:
- - [r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/)
- - nand2tetris
- - [Project Euler](https://projecteuler.net/)
- - Friends
- - Codewars
- - [HackerRank](https://www.hackerrank.com/)
- - [L337C0D3](https://leetcode.com/)
+  - [r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/)
+  - nand2tetris
+  - [Project Euler](https://projecteuler.net/)
+  - Friends
+  - Codewars
+  - [HackerRank](https://www.hackerrank.com/)
+  - [L337C0D3](https://leetcode.com/)
 
-A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
+#### A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
 
-./jsthings has really cool advanced js concepts that have helped me with my personal development!
+  - `./jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
+  - `./Interviews` for questions i've been asked on interviews
+  - `./RChallenges` for reddit challenges
+  - `./beginnersnode` is my run through of the beginners node book
+  - `./css_pree` random css, sass, scss
+  - `./gitfessor` when i was teaching a class on git
+  - `./java` random java questions solved 
 
-Shout out to funfunfunction!
-./beginnersnode is my run through of the beginners node book
-./css_pree random css, sass, scss
 
 **Interview Releases:**
 
