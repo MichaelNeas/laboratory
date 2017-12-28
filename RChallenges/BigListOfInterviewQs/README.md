@@ -84,4 +84,4 @@ node that begins the loop
 - Implement quick sort
 
 Extra:
-(fullstack github q's)[https://github.com/ratracegrad/Full-Stack-Interview-Questions]
+[fullstack github q's](https://github.com/ratracegrad/Full-Stack-Interview-Questions)
