@@ -11,7 +11,7 @@ Array B={5,6,7,8,1,2,3}~~
 - Implement binary search of a sorted array of integers 
 - Implement binary search in a rotated array (ex. {5,6,7,8,1,2,3}) 
 - Use dynamic programming to find the first X prime numbers 
-- Write a function that prints out the binary form of an int 
+- ~~Write a function that prints out the binary form of an int~~
 - Implement parseInt 
 - Implement squareroot function 
 - Implement an exponent function (bonus: now try in log(n) time) 
@@ -44,8 +44,7 @@ right
 - Find the smallest element in a BST 
 - Find the 2nd largest number in a BST 
 - Given a binary tree which is a sum tree (child nodes add to 
-parent), write an algorithm to determine whether the tree is a valid sum
- tree 
+parent), write an algorithm to determine whether the tree is a valid sum tree 
 - Find the distance between 2 nodes in a BST and a normal binary tree 
 - Print the coordinates of every node in a binary tree, where root is 0,0 
 - Print a tree by levels 
