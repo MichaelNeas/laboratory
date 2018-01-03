@@ -1,6 +1,4 @@
 //Write a function that prints out the binary form of an int
-const assert = require('assert');
-
 let binaryInt = number => {
     let output = "";
     while(number > 0){

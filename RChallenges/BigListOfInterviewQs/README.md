@@ -8,7 +8,7 @@ Array B={5,6,7,8,1,2,3}~~
 - ~~Write fibbonaci iteratively and recursively (bonus: use dynamic programming)~~ 
 - ~~Find the only element in an array that only occurs once.~~
 - ~~Find the common elements of 2 int arrays~~
-- Implement binary search of a sorted array of integers 
+- ~~Implement binary search of a sorted array of integers~~
 - Implement binary search in a rotated array (ex. {5,6,7,8,1,2,3}) 
 - Use dynamic programming to find the first X prime numbers 
 - ~~Write a function that prints out the binary form of an int~~
