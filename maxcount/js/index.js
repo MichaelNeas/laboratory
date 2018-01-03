@@ -24,7 +24,21 @@ function maxCount(array){
   return currentMax;
 }
 
+function differentMaxCount(array){
+  let hashed = array.reduce((acc, curr, i, arr) => {
+    acc.has(curr) ? acc.set(curr, acc.get(curr) + 1) : acc.set(curr, 1);
+    return acc;
+  }, new Map());
+  let ans = [...hashed].reduce((acc, curr, i, arr) => {
+    if(curr[1] > acc[1])
+      return curr;
+    return acc;
+  }, [0,0]);
+  return ans;
+}
+
 console.log(maxCount(numbers));
 console.log(maxCount(singleNumbers));
 console.log(maxCount(noNumbers));
-console.log(maxCount(allSameNumbers))
+console.log(maxCount(allSameNumbers));
+console.log(differentMaxCount(numbers));
