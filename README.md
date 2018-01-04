@@ -13,8 +13,8 @@
 #### A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
 
   - `./jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
-  - `./Interviews` for questions i've been asked on interviews
-  - `./RChallenges` for reddit challenges
+  - `./interviews` for questions i've been asked on interviews
+  - `./rChallenges` for reddit challenges
   - `./beginnersnode` is my run through of the beginners node book
   - `./css_pree` random css, sass, scss
   - `./gitfessor` when i was teaching a class on git
