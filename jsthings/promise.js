@@ -19,4 +19,4 @@ function loadImage(url){
 	})
 }
 
-expor default loadImage
+export default loadImage

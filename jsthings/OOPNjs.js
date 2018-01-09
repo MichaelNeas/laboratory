@@ -1,5 +1,4 @@
-	
-/*
+	/*
  * Person Object
  */
 	// Constructor
@@ -32,17 +31,17 @@
 	/*
 	 * Main Method 
 	 */
-	 Dan = new Person("Dan", 25);
+	Dan = new Person("Dan", 25);
 
-	 Mike = new Person("Mike", 24);
-	 Joey = new Person("Joey", 22);
+	Mike = new Person("Mike", 24);
+	Joey = new Person("Joey", 22);
 
-	 Dan.addFriend(Mike);
-	 Dan.addFriend(Joey);
+	Dan.addFriend(Mike);
+	Dan.addFriend(Joey);
 
-	 console.log("Hello I am: ");
-	 Dan.greet();
-	 console.log('\n');
-	 console.log("And I am friends with: ");
-	 Dan.friendsWith();
+	console.log("Hello I am: ");
+	Dan.greet();
+	console.log('\n');
+	console.log("And I am friends with: ");
+	Dan.friendsWith();
 

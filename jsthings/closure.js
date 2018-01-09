@@ -29,9 +29,9 @@ function init() {
 init();
 
 function makeAdder(x) {
-  return function(y) {
-    return x + y;
-  };
+    return function(y) {
+        return x + y;
+    };
 }
 
 var add5 = makeAdder(5);

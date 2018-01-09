@@ -39,10 +39,10 @@ console.log(friends);
 
 //Swap case using map
 function swapCase(text) {
-     var letterArr = text.split('')
-     var caseToggled = letterArr.map( toggleLetterCase)
-     var joinString = caseToggled.join("")
-     return joinString
+	var letterArr = text.split('')
+	var caseToggled = letterArr.map( toggleLetterCase)
+	var joinString = caseToggled.join("")
+	return joinString
 }
 
 function toggleLetterCase(e){

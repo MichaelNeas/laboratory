@@ -10,7 +10,6 @@ console.log("Reduce to ", B);
 let C = Object.keys(B).find(key => B[key] === 1);
 console.log("Unique is ", C);
 
-
 let D = A.reduce((acc, val) => {
 	return acc ^ val;
 }, 0);
