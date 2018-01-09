@@ -6,17 +6,17 @@ import java.util.regex.*;
 
 
 class Difference {
-  	private int[] elements;
-  	public int maximumDifference;
+    private int[] elements;
+    public int maximumDifference;
 
-public Difference(int[] elements){
-    this.elements = elements;
-    Arrays.sort(this.elements);
-}
+    public Difference(int[] elements){
+        this.elements = elements;
+        Arrays.sort(this.elements);
+    }
 
-public void computeDifference(){
-    maximumDifference = Math.abs(this.elements[0] - this.elements[this.elements.length-1]);
-}
+    public void computeDifference(){
+        maximumDifference = Math.abs(this.elements[0] - this.elements[this.elements.length-1]);
+    }
 
 } 
 

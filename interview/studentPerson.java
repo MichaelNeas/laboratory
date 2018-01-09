@@ -14,11 +14,10 @@ class Person {
 	
 	// Print person data
 	public void printPerson(){
-		 System.out.println(
+		System.out.println(
 				"Name: " + lastName + ", " + firstName 
 			+ 	"\nID: " + idNumber); 
 	}
-	 
 }
 
 class Student extends Person{

@@ -3,12 +3,12 @@ def extractTree(buckets, stack):
   for bucket in buckets:
     for key in bucket.keys():
       value = bucket[key]
-      if type(value) == “dict”:
-        if “value” in value:
+      if type(value) == 'dict':
+        if 'value' in value:
           value = value.value
         else:
-          value = collectBucket(value, stack.append(key))
-      if key == “key”:
+          value = 'method'
+      if key == 'key':
         key = stack[len(stack) - 2]
       tree[key] = value
   return tree
