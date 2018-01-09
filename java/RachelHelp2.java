@@ -1,9 +1,6 @@
 import java.util.Scanner;
 
 public class RachelHelp2 {
-	
-	
-
 	public static double calcDiscount(double numBooks){
 		double discount = 0.0;
 		if(numBooks < 3)

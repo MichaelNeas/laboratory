@@ -9,33 +9,27 @@ public class Square {
 	side = kbd.nextInt();
 	}
 	
-	public Square(double mySide)
-	{
+	public Square(double mySide){
 		side = mySide;
 	}
 	
-	public Square()
-	{
+	public Square(){
 		side = 0.0;
 	}
 	
-	public void setSide(double newSide)
-	{
+	public void setSide(double newSide){
 		side = newSide;
 	}
 	
-	public double getSide()
-	{
+	public double getSide(){
 		return side;
 	}
 	
-	public double getArea()
-	{
+	public double getArea(){
 		return side*side;
 	}
 	
-	public double getCircumference()
-	{
+	public double getCircumference(){
 		return 4*side;
 	}
 }

@@ -1,17 +1,16 @@
 import java.util.Scanner;
 
-public class reverseString{
+public class ReverseString{
 	private static String myString;
 	private static int front = 0;
 	private static int end;
 
 	private static String reverseMe(String[] aFakeCharArray){
-		if(front-end==-1 || front-end == 0){
+		if(front==-1 || end == 0){
 			String aString = new String(aCharArray);
 			return aString;
 		}else{
-			aFakeCharArray[front]=+ aFakeCharArray[end];
-
+			aFakeCharArray[front] += aFakeCharArray[end];
 			front++;
 			end--;
 			reverseMe(aString);

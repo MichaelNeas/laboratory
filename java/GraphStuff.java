@@ -1,10 +1,8 @@
-
-public class hw35001 {
+public class GraphStuff {
 
 	static float edge;
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		//edgeVertex();
 		//reallyHighLogs();
 		sumRecurrence(10);
@@ -13,28 +11,24 @@ public class hw35001 {
 	private static void reallyHighLogs() {
 		float logz = 0;
 
-		for(int i = 0; i<100; i++)
-		{
+		for(int i = 0; i<100; i++){
 			logz = (float) Math.log(i) + logz;
 			System.out.println(logz);
 		}
 		System.out.println(logz);
 	}
 
-	public static void sumRecurrence(int n)
-	{
+	public static void sumRecurrence(int n){
 		int k;
 
-		for(k = 0; k<n; k++)
-		{
+		for(k = 0; k<n; k++){
 			System.out.print(k + "C + ");
 			sumRecurrence(k);
 		}
 		System.out.print("D + ");
 	}
 
-	public static void edgeVertex()
-	{
+	public static void edgeVertex(){
 		for(float i = 0; i < 100; i++)
 		{
 			edge = (2*i) - 6;

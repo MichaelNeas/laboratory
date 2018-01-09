@@ -1,5 +1,4 @@
-public class AreaOfShapes
-{
+public class AreaOfShapes {
 	public static double side, base, height, base1, base2, radius; //all values for shape areas
 	public static double squareArea, rectangleArea, parallelogramArea, 
 						 trapezoidArea, circleArea, triangleArea;

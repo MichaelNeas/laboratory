@@ -12,6 +12,5 @@ public class Apples{
 			}
 		}
 		System.out.println(red + " reds, " + yellow  + " yellows!");
-
 	}
 }
