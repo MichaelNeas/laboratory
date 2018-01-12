@@ -12,7 +12,7 @@
 - ~~Implement binary search in a rotated array (ex. {5,6,7,8,1,2,3})~~
 - ~~Use dynamic programming to find the first X prime numbers~~
 - ~~Write a function that prints out the binary form of an int~~
-- Implement parseInt
+- ~~Implement parseInt~~
 - Implement squareroot function
 - Implement an exponent function (bonus: now try in log(n) time)
 - ~~Write a multiply function that multiples 2 integers without using *~~
