@@ -17,7 +17,7 @@
 - ~~Implement an exponent function (bonus: now try in log(n) time)~~
 - ~~Write a multiply function that multiples 2 integers without using *~~
 - ~~HARD: Given a function rand5() that returns a random int between 0 and 5, implement rand7()~~
-- HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s) 
+- HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s, A group of connected 1s forms an island, 1 or more 1's)
 
 ## Strings
 
@@ -49,7 +49,7 @@
 
 ## Stacks, Queues, and Heaps
 
-- Implement a stack with push and pop functions
+- ~~Implement a stack with push and pop functions~~
 - Implement a queue with queue and dequeue functions
 - Find the minimum element in a stack in O(1) time
 - Write a function that sorts a stack (bonus: sort the stack in place without extra memory)
