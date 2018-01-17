@@ -21,7 +21,7 @@
 
 ## Strings
 
-- Find the first non-repeated character in a String
+- ~~Find the first non-repeated character in a String~~
 - Reverse a String iteratively and recursively
 - ~~Determine if 2 Strings are anagrams~~
 - ~~Check if String is a palindrome~~
