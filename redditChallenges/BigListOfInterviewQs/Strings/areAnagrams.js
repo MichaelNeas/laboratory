@@ -17,8 +17,26 @@ const areAnagrams = (str1, str2) => {
     return true;
 }
 
+const areAnagramsSorted = (str1, str2) => {
+    if(str1.length != str2.length)
+        return false;
+    const str1Sorted = [...str1].sort();
+    const str2Sorted = [...str2].sort();
+    let i;
+    for(i=0; i<str1.length; i++){
+        if(str1Sorted[i] != str2Sorted[i])
+            return false;
+    }
+    return true;
+}
+
 console.log(areAnagrams('mike', 'iekm'));
 console.log(areAnagrams('miksadfsade', 'iekfasdfasdm'));
 console.log(areAnagrams('mi ke', 'i ekm'));
 console.log(areAnagrams('miplmoknke', 'ieplmoknkm'));
 console.log(areAnagrams('miplmoknke', 'ieplmoknsafsadkm'));
+console.log(areAnagramsSorted('mike', 'iekm'));
+console.log(areAnagramsSorted('miksadfsade', 'iekfasdfasdm'));
+console.log(areAnagramsSorted('mi ke', 'i ekm'));
+console.log(areAnagramsSorted('miplmoknke', 'ieplmoknkm'));
+console.log(areAnagramsSorted('miplmoknke', 'ieplmoknsafsadkm'));
