@@ -16,3 +16,6 @@ let out = fs.readFileSync('random.txt', 'utf8')
     },{});
 
 console.log(out)
+
+//Random way to check for bad words!
+let res = str.replace(/\W/g, ' ').split(' ').filter(val => !!~censoredList.indexOf(val));
