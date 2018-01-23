@@ -58,7 +58,7 @@
 
 ## Linked Lists
 
-- Implement a linked list (with insert and delete functions)
+- ~~Implement a linked list (with insert and delete functions)~~
 - Find the Nth element in a linked list
 - Remove the Nth element of a linked list
 - Check if a linked list has cycles
