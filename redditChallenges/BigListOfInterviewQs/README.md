@@ -22,7 +22,7 @@
 ## Strings
 
 - ~~Find the first non-repeated character in a String~~
-- Reverse a String iteratively and recursively
+- ~~Reverse a String iteratively and recursively~~
 - ~~Determine if 2 Strings are anagrams~~
 - ~~Check if String is a palindrome~~
 - ~~Check if a String is composed of all unique characters~~
