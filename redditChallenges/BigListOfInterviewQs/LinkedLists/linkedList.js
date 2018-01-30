@@ -42,14 +42,17 @@ function singlyLinkedList(){
         let nth = n;
         while(n > 0){
             if(tempNode.next == null){
-                return `list not ${nth} deep`;
+                return null;
             }
             tempNode = tempNode.next;
             n--;
         }
-        return `found: ${tempNode.value}, ${nth} deep -- 0 indexed`;
+        return tempNode;
     }
     const remove = node => {
+        if(node == null)
+            return null;
+        
         let tempNode = head;
         if(tempNode.value === node.value){
             console.log(`deletion occuring at the first element`);
@@ -67,13 +70,15 @@ function singlyLinkedList(){
         }
         return `${val} not able to be removed.`
     }
+    const removeNth = n => remove(findNth(n))
 
     return {
         insert: insert,
         find: find,
         findNth: findNth,
         print: readList,
-        remove: remove
+        remove: remove,
+        removeNth: removeNth
     }
 }
 
@@ -94,6 +99,9 @@ bleh.insert(node(73));
 bleh.insert(node(23));
 bleh.insert(node(3));
 bleh.print();
-console.log(bleh.findNth(5));
+console.log('found ' + bleh.findNth(5).value);
+console.log('remove that meow!');
+bleh.removeNth(5);
+bleh.print();
 
 module.exports = singlyLinkedList;
