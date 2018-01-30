@@ -59,7 +59,7 @@
 ## Linked Lists
 
 - ~~Implement a linked list (with insert and delete functions)~~
-- Find the Nth element in a linked list
+- ~~Find the Nth element in a linked list~~
 - Remove the Nth element of a linked list
 - Check if a linked list has cycles
 - Given a circular linked list, find the node at the beginning of the loop. Example: A--&gt;B--&gt;C --&gt; D--&gt;E --&gt;C, C is the node that begins the loop
@@ -74,6 +74,7 @@
 - ~~Implement merge sort~~
 - ~~Implement quick sort~~
 
-Extra:
-[fullstack github q's](https://github.com/ratracegrad/Full-Stack-Interview-Questions)
-[frontend github q's](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+### Extra
+
+- [fullstack github q's](https://github.com/ratracegrad/Full-Stack-Interview-Questions)
+- [frontend github q's](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
