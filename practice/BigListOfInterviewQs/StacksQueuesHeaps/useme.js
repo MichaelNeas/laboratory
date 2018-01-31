@@ -1,5 +1,5 @@
 const stack = require('./stack')();
-const queue = require('./queue');
+const queue = require('./queue')();
 
 stack.push('m');
 stack.push('i');
