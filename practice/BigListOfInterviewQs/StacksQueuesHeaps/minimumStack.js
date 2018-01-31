@@ -1,3 +1,4 @@
+//Find the minimum element in a stack in O(1) time
 const Stack = require('./stack');
 
 const fullStack = new Stack();
