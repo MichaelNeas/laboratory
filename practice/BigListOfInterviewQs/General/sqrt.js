@@ -11,15 +11,8 @@ let squareRoot = n => {
     return x;
 }
 
-
-console.log(`Difference for approximation of sqrt 50 ${squareRoot(50)- Math.sqrt(50)}`);
-console.log(`Difference for approximation of sqrt 49 ${squareRoot(49)- Math.sqrt(49)}`);
-console.log(`Difference for approximation of sqrt 123 ${squareRoot(123)- Math.sqrt(123)}`);
-console.log(`Difference for approximation of sqrt 5123 ${squareRoot(5123)- Math.sqrt(5123)}`);
-console.log(`Difference for approximation of sqrt 5 ${squareRoot(5)- Math.sqrt(5)}`);
-console.log(`Difference for approximation of sqrt 9 ${squareRoot(9) - Math.sqrt(9)}`);
-console.log(`Difference for approximation of sqrt 120 ${squareRoot(120)- Math.sqrt(120)}`);
-console.log(`Difference for approximation of sqrt 490 ${squareRoot(490)- Math.sqrt(490)}`);
-console.log(`Difference for approximation of sqrt 54 ${squareRoot(54)- Math.sqrt(54)}`);
-console.log(`Difference for approximation of sqrt 90 ${squareRoot(90)- Math.sqrt(90)}`);
-console.log(`Difference for approximation of sqrt 4 ${squareRoot(4) - Math.sqrt(4)}`);
+let i;
+for(i=0;i<50; i++){
+    let randomNum1to1000 = Math.random() * (1000 - 1) * 100;
+    console.log(`Difference for approximation of sqrt ${randomNum1to1000} ${squareRoot(randomNum1to1000) - Math.sqrt(randomNum1to1000)}`);
+}
