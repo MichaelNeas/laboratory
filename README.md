@@ -15,10 +15,10 @@
 
 #### A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
 
-- `./jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
-- `./interviews` for questions i've been asked on interviews
-- `./practice` for various programming challenges
-- `./noders` random node things
-- `./css_pree` random css, sass, scss
 - `./java` java questions solved
-- `./sea` C and C++ programming
+- `./jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
+- `./practice` for various programming challenges
+- `./practice/interviews` for questions i've been asked on interviews
+- `./jsthings/noders` random node things
+- `./practice/css_pree` random css, sass, scss
+- `./practice/sea` C and C++ programming
