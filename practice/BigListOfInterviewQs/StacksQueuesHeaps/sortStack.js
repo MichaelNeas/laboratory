@@ -5,18 +5,23 @@ let aStack = new stack();
 let stackSort = stack => { 
     if(stack.size() > 0){
         let temp = stack.pop();
+        //hold temp in the call stack real quick
         stackSort(stack);
+        //sort on the elements in the call stack
         sortedInsert(stack, temp);
     }
 }
 
-let sortedInsert = (stack, el) => {
-    if(stack.size() === 0 || el > stack.peek())
-        stack.push(el);
-    else{
-        let temp = stack.pop()
-        sortedInsert(stack, el)
+let sortedInsert = (stack, val) => {
+    if(stack.size() === 0 || val > stack.peek()){
+        console.log(`Pushing ${val} on to the stack`);
+        stack.push(val);
+    }else{
+        let temp = stack.pop();
+        console.log(`Popping ${temp} off of the stack`);
+        sortedInsert(stack, val);
         stack.push(temp);
+        console.log(`Pushing ${temp} on to the stack`);
     }
 }
 
