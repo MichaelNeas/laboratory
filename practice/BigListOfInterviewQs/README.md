@@ -33,7 +33,7 @@
 
 ## Trees
 
-- Implement a BST with insert and delete functions
+- ~~Implement a BST with insert and delete functions~~
 - Print a tree using BFS and DFS
 - Write a function that determines if a tree is a BST
 - Find the smallest element in a BST
