@@ -1,5 +1,4 @@
 //Implement a BST with insert and delete functions
-
 function Node(val){
     return {
         val: val,
@@ -8,21 +7,16 @@ function Node(val){
     }
 }
 
-function BinarySearchTree(){
-    let tree = {
-        root: null 
-    };
+module.exports.BinarySearchTree = function(){
+    let tree = { root: null };
 
     let _insertHelper = (root, val) => {
         if(root === null){
-            root = new Node(val)
+            root = new Node(val);
             return root;
         } 
-        if(root.val < val){
-            root.left = _insertHelper(root.left, val);
-        }else if(root.val > val){
-            root.right = _insertHelper(root.right, val);
-        }
+        if(root.val < val) root.left = _insertHelper(root.left, val);
+        else if(root.val > val) root.right = _insertHelper(root.right, val);
         return root;
     }
 
@@ -51,14 +45,3 @@ function BinarySearchTree(){
         delete: node => tree.root = _deleteHelper(tree.root, node)
     }
 }
-
-let bst = new BinarySearchTree();
-bst.insert(5);
-bst.insert(7);
-bst.insert(2);
-bst.insert(8);
-bst.insert(1);
-bst.insert(4);
-console.log(bst.print());
-bst.delete(5);
-console.log(bst.print());
