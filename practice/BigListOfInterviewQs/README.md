@@ -35,7 +35,7 @@
 
 - ~~Implement a BST with insert and delete functions~~
 - ~~Print a tree using BFS and DFS~~
-- Write a function that determines if a tree is a BST
+- ~~Write a function that determines if a tree is a BST~~
 - Find the smallest element in a BST
 - Find the 2nd largest number in a BST
 - Given a binary tree which is a sum tree (child nodes add to parent), write an algorithm to determine whether the tree is a valid sum tree
