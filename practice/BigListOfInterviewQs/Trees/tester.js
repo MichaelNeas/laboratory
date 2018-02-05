@@ -21,6 +21,7 @@ console.log('--------BFS Done-------');
 console.log('--------DFS Print-------');
 dfs(bst.getTree());
 console.log('--------DFS Done-------');
+console.log(`MINIMUM element is ${bst.getMin()}`);
 
 const badTree = {
     "root" : {

@@ -10,16 +10,6 @@ function Node(val){
 module.exports.BinarySearchTree = function(){
     let tree = { root: null };
 
-    let _insertHelper = (root, val) => {
-        if(root === null){
-            root = new Node(val);
-            return root;
-        } 
-        if(root.val > val) root.left = _insertHelper(root.left, val);
-        else if(root.val < val) root.right = _insertHelper(root.right, val);
-        return root;
-    }
-
     let _deleteHelper = (root, val) => {
         if(root === null) return root;
         if(root.val > val) root.left = _deleteHelper(root.left, val);
@@ -39,10 +29,27 @@ module.exports.BinarySearchTree = function(){
         }
         return root;
     }
+
+    let _insertHelper = (root, val) => {
+        if(root === null){
+            root = new Node(val);
+            return root;
+        } 
+        if(root.val > val) root.left = _insertHelper(root.left, val);
+        else if(root.val < val) root.right = _insertHelper(root.right, val);
+        return root;
+    }
+
+    let _minFinder9000 = node => {
+        if(node.left == null) return node.val; 
+        return _minFinder9000(node.left);
+    }
+
     return {
-        print: () => JSON.stringify(tree.root, null, 2),
-        insert: val => tree.root = _insertHelper(tree.root, val),
         delete: node => tree.root = _deleteHelper(tree.root, node),
-        getTree: () => tree
+        insert: val => tree.root = _insertHelper(tree.root, val),
+        getMin: () => _minFinder9000(tree.root),
+        getTree: () => tree,
+        print: () => JSON.stringify(tree.root, null, 2)   
     }
 }
