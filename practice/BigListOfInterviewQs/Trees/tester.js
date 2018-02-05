@@ -1,5 +1,6 @@
 const bst = require('./bst').BinarySearchTree();
 const bfs = require('./bfs').BreadthFirstSearch;
+const dfs = require('./dfs').DepthFirstSearch;
 
 bst.insert(5);
 bst.insert(7);
@@ -13,4 +14,6 @@ console.log(bst.print());
 console.log('--------BFS Print-------');
 bfs(bst.getTree());
 console.log('--------BFS Done-------');
-
+console.log('--------DFS Print-------');
+dfs(bst.getTree());
+console.log('--------DFS Done-------');

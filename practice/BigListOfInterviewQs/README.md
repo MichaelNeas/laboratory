@@ -34,7 +34,7 @@
 ## Trees
 
 - ~~Implement a BST with insert and delete functions~~
-- Print a tree using BFS and DFS
+- ~~Print a tree using BFS and DFS~~
 - Write a function that determines if a tree is a BST
 - Find the smallest element in a BST
 - Find the 2nd largest number in a BST

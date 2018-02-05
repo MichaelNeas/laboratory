@@ -15,15 +15,15 @@ module.exports.BinarySearchTree = function(){
             root = new Node(val);
             return root;
         } 
-        if(root.val < val) root.left = _insertHelper(root.left, val);
-        else if(root.val > val) root.right = _insertHelper(root.right, val);
+        if(root.val > val) root.left = _insertHelper(root.left, val);
+        else if(root.val < val) root.right = _insertHelper(root.right, val);
         return root;
     }
 
     let _deleteHelper = (root, val) => {
         if(root === null) return root;
-        if(root.val < val) root.left = _deleteHelper(root.left, val);
-        else if(root.val > val) root.right = _deleteHelper(root.right, val);
+        if(root.val > val) root.left = _deleteHelper(root.left, val);
+        else if(root.val < val) root.right = _deleteHelper(root.right, val);
         else{
             if (root.left == null) return root.right;
             else if (root.right == null) return root.left;
