@@ -42,6 +42,7 @@ module.exports.BinarySearchTree = function(){
     return {
         print: () => JSON.stringify(tree.root, null, 2),
         insert: val => tree.root = _insertHelper(tree.root, val),
-        delete: node => tree.root = _deleteHelper(tree.root, node)
+        delete: node => tree.root = _deleteHelper(tree.root, node),
+        getTree: () => tree
     }
 }
