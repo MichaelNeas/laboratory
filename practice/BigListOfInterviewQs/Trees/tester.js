@@ -9,6 +9,10 @@ bst.insert(2);
 bst.insert(8);
 bst.insert(1);
 bst.insert(4);
+bst.insert(17);
+bst.insert(12);
+bst.insert(89);
+bst.insert(6);
 console.log(bst.print());
 bst.delete(5);
 console.log(bst.print());
@@ -22,6 +26,7 @@ console.log('--------DFS Print-------');
 dfs(bst.getTree());
 console.log('--------DFS Done-------');
 console.log(`MINIMUM element is ${bst.getMin()}`);
+console.log(`Second Max element is ${bst.getSecondMax()}`);
 
 const badTree = {
     "root" : {

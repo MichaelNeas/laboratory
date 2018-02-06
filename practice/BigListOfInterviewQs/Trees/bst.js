@@ -45,10 +45,16 @@ module.exports.BinarySearchTree = function(){
         return _minFinder9000(node.left);
     }
 
+    let _secondMaxFinder2000 = (node, parentVal) => {
+        if(node.right == null) return node.left ? node.left.val : parentVal;
+        return _secondMaxFinder2000(node.right, node.val)
+    }
+
     return {
         delete: node => tree.root = _deleteHelper(tree.root, node),
         insert: val => tree.root = _insertHelper(tree.root, val),
         getMin: () => _minFinder9000(tree.root),
+        getSecondMax: () => _secondMaxFinder2000(tree.root, null),
         getTree: () => tree,
         print: () => JSON.stringify(tree.root, null, 2)   
     }

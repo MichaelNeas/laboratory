@@ -17,8 +17,8 @@
 
 - `./java` java questions solved
 - `./jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
+- `./jsthings/noders` random node fun
 - `./practice` for various programming challenges
 - `./practice/interviews` for questions i've been asked on interviews
-- `./jsthings/noders` random node things
-- `./practice/css_pree` random css, sass, scss
+- `./practice/css_pree` css, sass, scss
 - `./practice/sea` C and C++ programming
