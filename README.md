@@ -23,4 +23,4 @@
 - `./practice/css_pree` css, sass, scss
 - `./practice/sea` C and C++ programming
 
-##### Please feel free to write your own implementations and for anything and pr it in (especially alternatives to practice problems)
+##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
