@@ -27,3 +27,17 @@ var dog: String? = "Fen" // Create an optional String that contains "Fen"
 // 	var modelName: String // must exist
 // 	var internalName: String? // may or may not exist
 // }
+
+
+let numberToFind: Int = 21
+let numberFromString: Int? = Int("21") // Optional(21)
+if numberToFind == numberFromString {
+    print("Matching") 
+}
+
+// How Swift actually compares to nil
+var pants: String? = nil
+let temp: Optional<String> = Optional.none
+if pants == temp { // equivalent to if tuxedoRequired == nil
+    print("pants is nil")
+}
