@@ -41,3 +41,47 @@ let temp: Optional<String> = Optional.none
 if pants == temp { // equivalent to if tuxedoRequired == nil
     print("pants is nil")
 }
+
+
+if let unwrappedValue = optionalValue {
+	// do stuff with unwrappedValue, which is just whatever optionalValue is but now you can be sure it isnt nil
+} else {
+	// The unwrap failed, if youre in this block optionalValue is nil
+}
+
+// THAT /\ is equivalent to THIS \/
+
+guard let unwrappedValue = optionalValue else {
+	// The unwrap failed, if youre in this block optionalValue is nil
+}
+// do stuff with unwrappedValue, which is just whatever optionalValue is but now you can be sure it isnt nil
+
+enum MikesErrorType: Error {
+	case invalidAccess
+	case noInternetz
+	case imSleepy
+}
+
+func mikesFunc() throws {
+	guard doTheInternetzWork() else { throw MikesErrorType.noInternetz }
+	// Anything below here can assume that the internetz work
+	guard userIsSudo else { throw MikesErrorType.invalidAccess }
+	if let anus = bootyCheeks {
+		// do that stuff with the anus
+	} else {
+		throw MikesErrorType.imSleepy
+	}
+	print("Got to the end with no errors thrown!")
+}
+
+do {
+	try mikesFunc()
+} catch MikesErrorType.invalidAccess {
+	print("Couldnt do stuff cause access n shit!")
+} catch MikesErrorType.noInternetz {
+	print("no internetz!")
+} catch MikesErrorType.imSleepy {
+	print("sleepy")
+} catch {
+	// kinda like the default in a switch case to make sure its exhaustive
+}
