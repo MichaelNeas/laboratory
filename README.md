@@ -12,6 +12,7 @@
 - [HackerRank](https://www.hackerrank.com/)
 - [L337C0D3](https://leetcode.com/)
 - [exercism.io](http://exercism.io/)
+- [AdventOfCode](https://adventofcode.com/2017/about)
 
 #### A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
 
