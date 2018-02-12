@@ -14,6 +14,7 @@ const pathToData = path.join(__dirname, 'data', 'day2.txt');
 const lineReader = require('readline').createInterface({
     input: fs.createReadStream(pathToData)
 });
+
 (function getValues(){
     return new Promise(resolve => {
         let checksum = 0;
@@ -26,8 +27,8 @@ const lineReader = require('readline').createInterface({
             });
             checksum += max - min;
         });
-        resolve(checksum)
+        lineReader.on('close', ()=>{
+            return resolve(checksum)
+        });
     });
 })().then(res => console.log(`File read and this is the check sum: ${res}`)).catch(e => console.log(e))
-
-
