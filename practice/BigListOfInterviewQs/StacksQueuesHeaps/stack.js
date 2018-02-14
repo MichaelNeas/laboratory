@@ -3,9 +3,9 @@
 
 
 module.exports = function(){
-    const state = [];    
+    let state = [];    
     return {
-        clear: () => state = [],
+        clear: () => state.length = 0,
         clone: () => [...state],
         contains: (val) => state.includes(val),
         equals: (val) => state.equals(val),
