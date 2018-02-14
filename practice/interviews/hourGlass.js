@@ -1,8 +1,8 @@
 function main() {
     var arr = [];
     for(arr_i = 0; arr_i < 6; arr_i++){
-       arr[arr_i] = readLine().split(' ');
-       arr[arr_i] = arr[arr_i].map(Number);
+        arr[arr_i] = readLine().split(' ');
+        arr[arr_i] = arr[arr_i].map(Number);
     }
     let sum = [];
     let i,j;
