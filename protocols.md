@@ -1,4 +1,27 @@
-# Various Protocols, 3rd grade explanations, and Ports
+# Various TCP/UDP Protocols, 3rd grade explanations, and Ports
+
+- Application layer passes messages to the transport layer called a segment, containing the source port and destination port.  Then passed on to the network layer.
+
+## [TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite)
+
+- connection based (20 byte headers), must negotiate a connection first
+    1. Initiator Request: Wanna connect?
+    1. Acceptor Response: Sure.
+    1. Initator acknolegement
+- Retransmission for no delivery acknowledgement, sending packets that may have failed or been lost
+- TCP can rearrange ordering of packages to be correct and delays transmission when network is congested.  Checksum manditory for both ipv4/6
+- Stream oriented
+- UseCase: any time you need to gaurentee package deliveries, text communication, file delivery, acknowledgements, if bandwidth is there run multimedia
+
+## [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol)
+
+- Smaller packet sizes than TCP (8 byte headers)
+- Connectionless to create and maintain the request
+- on curruption, the bad segment gets discarded or kept with a warning flag, with no compensation
+- no order or congestion control
+- lightweight but not that reliable
+- Message oriented
+- UseCase: Skype for real time (if you can tolerate package loss), less latency, dns lookups
 
 ## [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) Port: 20-21
 
@@ -33,7 +56,7 @@
     1. Headers
 - I have a refrigerator I want to add food to the refrigerator so I PUT or POST some food for consumption later.  I can GET the food and DELETE it once it is no longer in the fridge anymore.  Anyone can take my food though and then I might go hungry and eventually die.
 
-## [HTTPS](https://en.wikipedia.org/wiki/HTTPS)
+## [HTTPS](https://en.wikipedia.org/wiki/HTTPS) Port: 443
 
 - SSL certificate is like an online certification card, information is passed only once verification occurs with the authority. Secure socket layer determines the encryption and the data in transmission is completely encrypted.
 - Get your certs [here](https://letsencrypt.org/)
