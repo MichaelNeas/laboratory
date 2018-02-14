@@ -5,7 +5,7 @@
 * insert Θ(1) to head
 * deletion Θ(n)
 */
-const node = data => {
+module.exports.node = data => {
     return {
         value: data,
         next: null
@@ -73,6 +73,7 @@ function singlyLinkedList(){
     const removeNth = n => remove(findNth(n))
 
     return {
+        getHead: () => head,
         insert: insert,
         find: find,
         findNth: findNth,
@@ -82,26 +83,4 @@ function singlyLinkedList(){
     }
 }
 
-let bleh = singlyLinkedList()
-bleh.insert(node(1));
-bleh.insert(node(5));
-bleh.insert(node(9));
-bleh.insert(node(14));
-bleh.print();
-bleh.insert(node(20));
-console.log(bleh.find(14));
-console.log(bleh.find(24));
-bleh.remove(node(1));
-bleh.remove(node(20));
-bleh.print();
-bleh.insert(node(42));
-bleh.insert(node(73));
-bleh.insert(node(23));
-bleh.insert(node(3));
-bleh.print();
-console.log('found ' + bleh.findNth(5).value);
-console.log('remove that meow!');
-bleh.removeNth(5);
-bleh.print();
-
-module.exports = singlyLinkedList;
+module.exports.singlyLinkedList = singlyLinkedList;
