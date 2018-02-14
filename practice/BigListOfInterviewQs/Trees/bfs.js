@@ -9,7 +9,7 @@ module.exports.BreadthFirstSearch = function(tree){
     nonVisitedNodes.enqueue(tree.root);
     
     while(nonVisitedNodes.size() !== 0){
-        let curr = nonVisitedNodes.dequeue()[0];
+        let curr = nonVisitedNodes.dequeue();
         console.log(`BFS touched ${curr.val}`);
         if(curr.left !== null && !visitedNodes[curr.left.val]){
             visitedNodes[curr.left.val] = true;
