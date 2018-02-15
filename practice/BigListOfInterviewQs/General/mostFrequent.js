@@ -1,4 +1,5 @@
-//find the most frequent int in an array 
+const assert = require('assert');
+//find the most frequent int in an arrays 
 let data = [1,2,3,4,5,6,7,8,5,6,8,6,4,3,43,5,5,3,567,7,4,234,4,23,43,43,3,2,2,45,3,4];
 
 (function mostFrequentInt(data){

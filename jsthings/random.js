@@ -1,4 +1,4 @@
-//nothing to see here
+//nothing to see heres
 let fs = require('fs');
 
 let out = fs.readFileSync('random.txt', 'utf8')
