@@ -74,6 +74,7 @@ function singlyLinkedList(){
 
     return {
         getHead: () => head,
+        setHead: newHead => head = newHead,
         insert: insert,
         find: find,
         findNth: findNth,
