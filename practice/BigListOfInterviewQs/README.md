@@ -79,4 +79,4 @@
 - [fullstack github q's](https://github.com/ratracegrad/Full-Stack-Interview-Questions)
 - [frontend github q's](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 
-#### Please feel free to submit a PR with solutions in your language of choice
+#### Please feel free to submit a PR with solutions
