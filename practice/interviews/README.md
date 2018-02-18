@@ -44,4 +44,18 @@
 
 - Elevation Change
 
-02/14/18
+02/15/18
+
+- Moncala
+
+02/16/18
+
+- Scan a list of pairs and return total time interval coverage
+
+02/18/18
+
+1. es5 -> es6 closures
+1. Bank function with a private variable where they all chain to eatch other
+1. Recursive multiplication
+1. Memoization cache return
+1. Balance brace problem
