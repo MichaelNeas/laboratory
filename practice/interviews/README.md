@@ -59,3 +59,7 @@
 1. Recursive multiplication
 1. Memoization cache return
 1. Balance brace problem
+
+02/20/18
+
+- App menu w/ json req and user drill down
