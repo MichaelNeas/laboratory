@@ -63,3 +63,7 @@
 02/20/18
 
 - App menu w/ json req and user drill down
+
+08/24/18
+
+- Rotate a matrix
