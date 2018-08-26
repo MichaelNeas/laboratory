@@ -1,4 +1,4 @@
-# [Reddit Programming Challenges](https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/)
+# [Reddit Programming Challenges](https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/)++
 
 ## General
 
@@ -30,6 +30,7 @@
 - ~~Check if String is a palindrome~~
 - ~~Check if a String is composed of all unique characters~~
 - ~~Determine if a String is an int or a double~~
+- Check if the string can be reordered to a different string
 - HARD: Find the shortest palindrome in a String
 - HARD: Print all permutations of a String
 - HARD: Given a single-line text String and a maximum width value, write the function 'String justify(String text, int maxWidth)' that formats the input text using full-justification, i.e., extra spaces on each line are equally distributed between the words; the first word on each line is flushed left and the last word on each line is flushed right
@@ -46,6 +47,8 @@
 - ~~Print the coordinates of every node in a binary tree, where root is 0,0~~
 - ~~Print a tree by levels~~
 - ~~Given a binary tree which is a sum tree, write an algorithm to determine whether the tree is a valid sum tree~~
+- General [Traversals](https://en.wikipedia.org/wiki/Tree_traversal#Pre-order_(NLR)): Preorder, PostOrder, InOrder
+- Implement a tree with arrays for children to allow larger fan out
 - Given a tree, verify that it contains a subtree.
 - HARD: Find the max distance between 2 nodes in a BST.
 - HARD: Construct a BST given the pre-order and in-order traversal Strings
@@ -88,6 +91,35 @@
 - ~~Implement merge sort~~
 - ~~Implement quick sort~~
 
+## Top algorithms for coding interviews from The Tech Lead
+
+1. Tree Traversal
+1. Use a helper function for clean recursion, always clarify base case (recursion is limited to stack space)
+1. Stacks and Queues to give an iterative solution for recursion
+1. OOP, yes js OOP: class, methods, constructors, private, public
+1. Grid class could save time, with edge checks, sanitation, helpers
+1. HashMaps are huge in all interview questions, hashing function
+1. Add C or C++ to language mix to give some pointers ;)
+1. Sorting: Bubble(lol), Quick and merge... but generally those implementations won't be asked
+1. Dynamic Programming: Know the basics don't drill them tho, caching/memoization is DP
+
+## Design Patterns
+
+- What are the dependencies in the module of your program? Programmer multithreading working with apps
+- Primary Data objects in your program and how do they flow? Simplicity and 1 way data flow
+- Single Responsibility (every class/method has a single responsibility)
+- Which object owns which other object?
+- Singleton - floating globals, dep injection - they can introduce two way data flow - Communication pattern is huge
+- Pub/Sub is versitle and encourages 1 way delegate
+- Delegate 
+- Chain of hierarchy - communicate events upwards, bubbling up (anti pattern?)
+- OOP - inheritence is a pretty poor design structure, two way communication, deeply tied structure
+- Containment - objs and controllers to delegate messages
+- Lazy Initialization - don't create objects until need them
+- Adapter - Many objects with apis and adapter can allow a common api with wrapper classes
+- Factory/Builder - Catalog, for heterogeneous group of components
+- The simpler the better.
+
 ### Extra
 
 - [Geeks for geeks key algies](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/#algo1)
@@ -100,3 +132,5 @@
 ### Notes
 
 - Ask interviewer if they prefer semi colons or nah
+- Solving the Problem is NOT the goal, it really is the analysis.
+- How well can you analyze the solution, often a time or memory type of solution.
