@@ -22,6 +22,8 @@
 ## Strings
 
 - ~~Find the first non-repeated character in a String~~
+- ~~Given a string find the first reoccuring character in that string~~
+- ~~Find the longest consecutive characters in a string~~
 - ~~Reverse a String iteratively and recursively~~
 - ~~Determine if 2 Strings are anagrams~~
 - ~~Check if String is a palindrome~~
@@ -80,3 +82,7 @@
 - [frontend github q's](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 
 #### Please feel free to submit a PR with solutions
+
+### Notes
+
+- Ask interviewer if they prefer semi colons or nah
