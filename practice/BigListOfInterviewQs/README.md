@@ -59,6 +59,17 @@
 - Implement a binary min heap. Turn it into a binary max heap
 - ~~HARD: Implement a queue using 2 stacks~~
 
+## Graphs
+
+- Given a list of sorted words from an alien dictionary, find the order of the alphabet.
+    Alien Dictionary Topological Sort question.
+- Find if a given string matches any path in a labeled graph. A path may contain cycles.
+- Given a bipartite graph, separate the vertices into two sets.
+- You are a thief trying to sneak across a rectangular 100 x 100m field. There are alarms placed on the fields and they each have a circular sensing radius which will trigger if anyone steps into it. Each alarm has its own radius. Determine if you can get from one end of the field to the other end.
+- Given a graph and two nodes, determine if there exists a path between them.
+- Determine if a cycle exists in the graph.
+
+
 ## Linked Lists
 
 - ~~Implement a linked list (with insert and delete functions)~~
@@ -79,6 +90,8 @@
 
 ### Extra
 
+- [Geeks for geeks key algies](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/#algo1)
+- [Repo with q's](https://github.com/yangshun/tech-interview-handbook)
 - [fullstack github q's](https://github.com/ratracegrad/Full-Stack-Interview-Questions)
 - [frontend github q's](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 
