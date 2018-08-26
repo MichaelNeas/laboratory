@@ -67,3 +67,7 @@
 08/24/18
 
 - Rotate a matrix
+
+08/26/18
+
+- Given a grid find the max number of connected colors, added some optimizations
