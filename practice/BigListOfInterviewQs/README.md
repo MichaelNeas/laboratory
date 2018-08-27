@@ -18,6 +18,7 @@
 - ~~Implement an exponent function (bonus: now try in log(n) time)~~
 - ~~Write a multiply function that multiples 2 integers without using *~~
 - ~~Maximum Sum Subarray~~
+- Given a Matrix (n X m) that has sorted columns and rows count the total number of negative numbers
 - ~~HARD: Given a function rand5() that returns a random int between 0 and 5, implement rand7()~~
 - HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s, A group of connected 1s forms an island, 1 or more 1's)
 
@@ -48,6 +49,10 @@
 - ~~Print the coordinates of every node in a binary tree, where root is 0,0~~
 - ~~Print a tree by levels~~
 - ~~Given a binary tree which is a sum tree, write an algorithm to determine whether the tree is a valid sum tree~~
+- Recursive BFS/DFS, Know when you should use one over the other
+- Topological sort with BFS/DFS
+- BFS/DFS on an adjacency list
+- BFS/DFS on an adjacency matrix
 - General [Traversals](https://en.wikipedia.org/wiki/Tree_traversal#Pre-order_(NLR)): Preorder, PostOrder, InOrder
 - Implement a tree with arrays for children to allow larger fan out
 - Given a tree, verify that it contains a subtree.
@@ -67,6 +72,8 @@
 
 - Given a list of sorted words from an alien dictionary, find the order of the alphabet.
     Alien Dictionary Topological Sort question.
+- [Dijkstras](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+- Differences in weighted, unweighted, directed, and undirected graphs
 - Find if a given string matches any path in a labeled graph. A path may contain cycles.
 - Given a bipartite graph, separate the vertices into two sets.
 - You are a thief trying to sneak across a rectangular 100 x 100m field. There are alarms placed on the fields and they each have a circular sensing radius which will trigger if anyone steps into it. Each alarm has its own radius. Determine if you can get from one end of the field to the other end.
