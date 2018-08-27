@@ -25,21 +25,23 @@ var hammingDistance = function(x, y) {
     return count
 };
 
-/** way better not me
+/** way better not me originally
+ * I had thought to use bitwise originally but didn't dive into it to this extent
  * @param {number} x
  * @param {number} y
  * @return {number}
  */
 var hammingDistance = function(x, y) {
     let ones = 0;
+    // xor the nums 1011 ^ 1000 = 11... 11 ^ 8 = 3 
     let z = x ^ y;
       
     while (z) {
-      if (z & 1) {
-        ones += 1;  
-      }
-      // bit shift right 1 each time
-      z = z >> 1;
+        //compare lsb with 1 
+        if (z & 1) ones += 1;  
+        
+        // shift the lsb off
+        z = z >> 1;
     }
     
     return ones;
