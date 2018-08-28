@@ -26,3 +26,19 @@ var numSpecialEquivGroups = function(A) {
         return prev
     }, []).length
 };
+
+//Andrews refactor
+const numSpecialEquivGroups = A => {
+    const s = new Set();
+    A.forEach(a => {
+      const odd = [];
+      const even = [];
+      for (let i = 0; i < a.length; i++) {
+        i % 2 ? odd.push(a[i]) : even.push(a[i]);
+      }
+      odd.sort();
+      even.sort();
+      s.add(`${[...odd, ...even]}`);
+    });
+    return s.size;
+  };
