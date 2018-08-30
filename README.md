@@ -25,10 +25,10 @@
 - [Codewars](https://www.codewars.com/)
 - [HackerRank](https://www.hackerrank.com/)
 - [L337C0D3](https://leetcode.com/)
-- [exercism.io](http://exercism.io/)
 - [AdventOfCode](https://adventofcode.com/2017/about)
 
 ### Readings
 - [Yeggie blog post](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
+- [CS Degree Refreshers](teachyourselfcs.com)
 
 ##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
