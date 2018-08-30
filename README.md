@@ -16,14 +16,16 @@
 
 #### A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
 
-- `./java` java questions solved
-- `./jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
-- `./jsthings/noders` random node fun
+- `./interviews` for questions i've been asked on interviews
 - `./practice` for various programming challenges
-- `./practice/interviews` for questions i've been asked on interviews
-- `./practice/css_pree` css, sass, scss
-- `./practice/sea` C and C++ programming
-- `./swift/` Swift Programming
+- `./practice/1337` LeetCode Solutions
+- `./practice/interview-practice` big list of interview practice problems
+- `./practice/java` java questions solved
+- `./practice/jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
+- `./practice/jsthings/noders` random node specific fun
+- `./practice/css` css, sass, scss
+- `./practice/c` C and C++ programming
+- `./practice/swift` Swift Programming
 
 ##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
 
