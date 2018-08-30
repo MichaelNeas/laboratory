@@ -1,6 +1,7 @@
-# DailyProgrammerPractice
-
-## Much Practice, Very Programming
+<h1 align="center">Welcome to my laboratory</h1>
+<p align="center">
+  <img width="250" height="250" src="assets/dexter.png">
+</p>
 
 ### Challenges from
 
