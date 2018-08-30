@@ -3,7 +3,7 @@
   <img width="250" height="250" src="assets/dexter.png">
 </p>
 
-### Challenges from
+### Challenges
 
 - [r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/)
 - [nand2tetris](http://www.nand2tetris.org/)
@@ -15,7 +15,7 @@
 - [exercism.io](http://exercism.io/)
 - [AdventOfCode](https://adventofcode.com/2017/about)
 
-#### A repo for learning examples and other fun coding nonsense, really whatever comes to mind and some interviews
+### Directory Structure
 
 - `./interviews` for questions i've been asked on interviews
 - `./practice` for various programming challenges
@@ -28,7 +28,7 @@
 - `./practice/c` C and C++ programming
 - `./practice/swift` Swift Programming
 
-##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
-
 #### Readings
 - [Yeggie blog post](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
+
+##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
