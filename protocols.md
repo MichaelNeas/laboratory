@@ -1,4 +1,4 @@
-# Various TCP/UDP Protocols, 3rd grade explanations, and Ports
+# Various TCP/UDP Protocols, 3rd grade explanations with Ports
 
 - Application layer passes messages to the transport layer called a segment, containing the source port and destination port.  Then passed on to the network layer.
 
