@@ -29,6 +29,6 @@
 
 ### Readings
 - [Yeggie blog post](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
-- [CS Degree Refreshers](teachyourselfcs.com)
+- [CS Degree Refreshers](http://teachyourselfcs.com)
 
 ##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
