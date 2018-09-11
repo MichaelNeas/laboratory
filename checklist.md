@@ -793,7 +793,10 @@ You'll get more graph practice in Skiena's book (see Books section below) and th
 
 
 - ### Combinatorics (n choose k) & Probability
-    - [ ] [Math Skills: How to find Factorial, Permutation and Combination (Choose) (video)](https://www.youtube.com/watch?v=8RRo6Ti9d0U)
+    - [x] [Math Skills: How to find Factorial, Permutation and Combination (Choose) (video)](https://www.youtube.com/watch?v=8RRo6Ti9d0U)
+        - nPr = selection with ordering
+        - nCr = selection without caring about ordering
+        - n! = total arrangements
     - [ ] [Make School: Probability (video)](https://www.youtube.com/watch?v=sZkAAk9Wwa4)
     - [ ] [Make School: More Probability and Markov Chains (video)](https://www.youtube.com/watch?v=dNaJg-mLobQ)
     - [ ] Khan Academy:
