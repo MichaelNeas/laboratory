@@ -20,7 +20,7 @@
 - ~~Maximum Sum Subarray~~
 - Given a Matrix (n X m) that has sorted columns and rows count the total number of negative numbers
 - ~~HARD: Given a function rand5() that returns a random int between 0 and 5, implement rand7()~~
-- HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s, A group of connected 1s forms an island, 1 or more 1's)
+- ~~HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s, A group of connected 1s forms an island, 1 or more 1's)~~
 
 ## Strings
 
