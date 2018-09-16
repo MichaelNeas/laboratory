@@ -45,6 +45,14 @@ let MinimumHeap = () => {
         heapifyUp()
     }
 
+    let poll = () => {
+        let top = minHeap[0]
+        minHeap[0] = minHeap[currentSize - 1]
+        currentSize--
+        heapifyDown()
+        return top
+    }
+
     return {
         createHeap: array => {
             for(let i = 0; i < array.length; i++){
@@ -55,16 +63,19 @@ let MinimumHeap = () => {
         getCurrentSize: () => currentSize,
         insert: val => insert(val),
         peak: () => minHeap[0],
-        poll: () => {
-            let top = minHeap[0]
-            minHeap[0] = minHeap[currentSize - 1]
-            currentSize--
-            heapifyDown()
-            return top
-        }
+        poll: poll
     }
 }
 
 let miniHeap = MinimumHeap();
 miniHeap.createHeap([6,4,2,5,7,13,6,8,4,1,3,43])
+console.log("Display Heap")
+miniHeap.display()
+console.log("Poll")
+console.log(miniHeap.poll())
+console.log("Peak")
+console.log(miniHeap.peak())
+console.log("Poll")
+miniHeap.poll()
+console.log("Display :)")
 miniHeap.display()
