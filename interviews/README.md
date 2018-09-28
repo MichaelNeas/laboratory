@@ -71,3 +71,12 @@
 08/26/18
 
 - Given a grid find the max number of connected colors, added some optimizations
+
+09/20/18
+
+- Implement Promise.all
+- Connect pylons so water will flow in a full connection
+- Is it possible to get to the otherside? hopscotch problem
+- Build a DOM and traverse
+- Trie dictionary
+- Sorting algo from a proof
