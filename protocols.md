@@ -62,6 +62,10 @@
 - Get your certs [here](https://letsencrypt.org/)
 - Similarly to my refrigerator example before, EXCEPT now I have a gaurd dog that only likes people that I give an access card to my fridge for.  That way when Paul tries to eat my last slice of pizza, my dog won't let him in.
 
+## [Artnet](https://en.wikipedia.org/wiki/Art-Net) Port: Not reserved
+
+- A protocol for transmitting the DMX512-A lighting control protocol and Remote Device management (RDM) protocol over the User Datagram Protocol (UDP) of the Internet Protocol suite. It is used to communicate between "nodes" (e.g., intelligent lighting instruments) and a "server" (a lighting desk or general purpose computer running lighting control software). 
+
 ### Client/Server Model
 
 Best thought about as customer/kitchen relationship.  I the customer goes in to a store and ask for a burger, the kitchen responds and gets me one. (Http/ssh/telnet/ftp)
