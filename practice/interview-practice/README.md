@@ -139,6 +139,5 @@
 
 ### Notes
 
-- Ask interviewer if they prefer semi colons or nah
-- Solving the Problem is NOT the goal, it really is the analysis.
+- Solving the Problem is not the primary goal, it's the process and analysis of the situation.
 - How well can you analyze the solution, often a time or memory type of solution.
