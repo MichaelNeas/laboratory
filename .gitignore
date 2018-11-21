@@ -1,2 +1,14 @@
 node_modules
 toNicholas*
+
+.DS_Store
+.build/
+/Packages
+*.xcodeproj
+*.playground
+Package.resolved
+Gemfile.lock
+
+# 99 Solutions
+.username
+/Solutions/*/includes
