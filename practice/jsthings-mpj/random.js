@@ -30,3 +30,10 @@ let bleh = [1,5,3,67,3,4,5,61,4,2,3]
             .reduce((prev, curr) => prev + curr, 0)
 
 console.log(bleh)
+
+var arr1 = [1, 2, 3, 4];
+
+//arr1.flatMap(x => [x * 2]);
+// is equivalent to
+arr1.reduce((acc, x) => acc.concat([x * 2]), []);
+// [2, 4, 6, 8]
