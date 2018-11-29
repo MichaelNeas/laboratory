@@ -80,3 +80,7 @@
 - Build a DOM and traverse
 - Trie dictionary
 - Sorting algo from a proof
+
+11/28/18
+
+- Givin a 2d array with strings, parse it for meaningful information efficiently
