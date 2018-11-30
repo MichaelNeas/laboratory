@@ -44,6 +44,12 @@
 
 - Old way to send data over the internet, plain text for everyone to see. All it requires is telnet to be installed on a server to use.
 - It's like yelling across the lunch room knowing that anyone in the cafeteria can listen in and clearly understand what you are saying.
+- Common use case would be commands to turn on ssh for a controller that has it turned off
+
+## [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) Port: 25
+- Client to server to server to client
+- Email has been around since 1965, when you send an email you start in by sending text to an SMTP server that locates the SMTP server of your recipient with their domain name.  That SMTP server passes the message over to the POP3 server to receive the email.
+- This protocol is like mailing a letter.  I package my letter up and put it in my local mail box, to get it to my Post Office(SMTP server), I have an address on the letter so that post office can transfer my letter to the post office nearest my friend.  They deliver it to my friend after passing the letter between post offices.
 
 ## [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) Port: 80
 
