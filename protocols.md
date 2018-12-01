@@ -1,6 +1,11 @@
 # Various TCP/UDP Protocols, 3rd grade explanations with Ports
 
-- Application layer passes messages to the transport layer called a segment, containing the source port and destination port.  Then passed on to the network layer.
+- Application layer passes messages to the transport layer called a segment, containing the source port and destination port.  Then passed on to the network layer. 
+- 65536 Ports available, 1024 "well known"
+
+## Ports
+- Associates package information with TCP/IP protocols, computers only have 1 ip address and 1 mac, so you need to distribute accordingly.
+- Firewalls filter network traffic on port numbers, blocking ports.
 
 ## [TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite)
 
@@ -56,6 +61,8 @@
 - Client to server to server to client
 - Email has been around since 1965, when you send an email you start in by sending text to an SMTP server that locates the SMTP server of your recipient with their domain name.  That SMTP server passes the message over to the POP3 server to receive the email.
 - This protocol is like mailing a letter.  I package my letter up and put it in my local mail box, to get it to my Post Office(SMTP server), I have an address on the letter so that post office can transfer my letter to the post office nearest my friend.  They deliver it to my friend after passing the letter between post offices.
+
+## [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System)
 
 ## [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) Port: 80
 
