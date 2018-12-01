@@ -23,6 +23,12 @@
 - Message oriented
 - UseCase: Skype for real time (if you can tolerate package loss), less latency, dns lookups
 
+## [Echo](https://en.wikipedia.org/wiki/Echo_Protocol)
+
+- Originally proposed for testing and measurement of round-trip times[citation needed] in IP networks.
+- A host may connect to a server that supports the Echo Protocol using the Transmission Control Protocol (TCP) or the User Datagram Protocol (UDP) on the well-known port number 7. The server sends back an identical copy of the data it received.
+- Exactly like an actual echo
+
 ## [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) Port: 20-21
 
 - Transport any type of file to and from a computer. Not generally protected, use SFTP for that.
