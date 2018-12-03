@@ -30,7 +30,7 @@ func compareLetterDiff(between a: String, and b: String) -> Bool{
     return offByOne
 }
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/day2data.txt"
+let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day2.txt"
 do {
     let fileContent = try String(contentsOfFile: location, encoding: .utf8)
     let stringChecksum = fileContent.components(separatedBy: .newlines)

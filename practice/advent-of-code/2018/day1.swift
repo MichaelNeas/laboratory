@@ -1,6 +1,6 @@
 import Foundation
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/day1data.txt"
+let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day1.txt"
 do {
     let fileContent = try String(contentsOfFile: location, encoding: .utf8)
     let totalFrequency = fileContent.components(separatedBy: .newlines)
