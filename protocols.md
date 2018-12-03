@@ -4,7 +4,7 @@
 - 65536 Ports available, 1024 "well known"
 
 ## Ports
-- Associates package information with TCP/IP protocols, computers only have 1 ip address and 1 mac, so you need to distribute accordingly.
+- Associates packet information with TCP/IP protocols, computers only have 1 ip address and 1 mac, so you need to distribute accordingly.
 - Firewalls filter network traffic on port numbers, blocking ports.
 
 ## [TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite)
