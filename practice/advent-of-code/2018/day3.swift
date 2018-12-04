@@ -16,7 +16,8 @@ do {
             }
         }
     }
-    print(cutMap)    
+    let sol = cutMap.filter { $0.value > 1 }.count
+    print(sol)
 }
 catch {
     print("Error reading text. \(error)")
