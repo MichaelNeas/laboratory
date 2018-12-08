@@ -19,21 +19,43 @@ do {
         }
     }
 
-    for hubIndex in 0..<hubs.count {
-        sandbox[hubs[hubIndex].0][hubs[hubIndex].1] = hubIndex
+    for i in 0..<400 {
+        for j in 0..<400{
+            var distanceMap = [(Int, Int)]()
+            for (index, hub) in hubs.enumerated() {
+                let distance = abs(i-hub.0) + abs(j-hub.1)
+                distanceMap.append((index, distance))
+            }
+            let sortedMap = distanceMap.sorted { $0.1 < $1.1 }        
+            if sortedMap[0].1 == sortedMap[1].1 {
+                sandbox[i][j] = -1
+            } else {
+                sandbox[i][j] = sortedMap[0].0
+            }   
+        }
     }
 
-    // bfs EVERYTHING, account for ties by keeping neg 1
+    var countedMap = [Int:Int]()
+    for i in 0..<400 {
+        for j in 0..<400{
+            countedMap[sandbox[i][j]] = countedMap[sandbox[i][j]] != nil ? countedMap[sandbox[i][j]]! + 1 : 1
+        }
+    }
 
-    // count the highest seen number
-
-    // go around the edge and dq those numbers
-
-    //solution is at the top
-
-
-
-    print(sandbox)
+    var unusableSet = Set<Int>()
+    for i in 0..<400{
+        let (a,b,c,d) = (sandbox[i][0], sandbox[0][i], sandbox[i][399],sandbox[399][i])
+        unusableSet.insert(a)
+        unusableSet.insert(b)
+        unusableSet.insert(c)
+        unusableSet.insert(d)
+    }
+    let sortedCountMap = countedMap.sorted { $0.1 > $1.1 }
+    for count in sortedCountMap {
+        if !unusableSet.contains(count.0) {
+            print(count)
+        }
+    }
 }
 catch {
     print("Error reading text. \(error)")
