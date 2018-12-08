@@ -4,21 +4,8 @@ import Foundation
 
 let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day6.txt"
 
-do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
-    let separatorSet = CharacterSet(charactersIn: ", ")
-    let hubs = fileContent.components(separatedBy: .newlines)
-    .compactMap { String($0).components(separatedBy: separatorSet) }
-    .compactMap { ( Int($0[0])!,Int($0[2])!)  }
-
-    var sandbox = [[Int]]() 
-    for i in 0..<400 {
-        sandbox.append([Int]())
-        for _ in 0..<400{
-            sandbox[i].append(-1)
-        }
-    }
-
+func solution1 (_ sb: [[Int]], _ hubs: [(Int, Int)]) {
+    var sandbox = sb
     for i in 0..<400 {
         for j in 0..<400{
             var distanceMap = [(Int, Int)]()
@@ -56,6 +43,44 @@ do {
             print(count)
         }
     }
+}
+
+do {
+    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let separatorSet = CharacterSet(charactersIn: ", ")
+    let hubs = fileContent.components(separatedBy: .newlines)
+    .compactMap { String($0).components(separatedBy: separatorSet) }
+    .compactMap { ( Int($0[0])!,Int($0[2])!)  }
+
+    var sandbox = [[Int]]() 
+    let maxSumManhattan = 10000
+    for i in 0..<400 {
+        sandbox.append([Int]())
+        for _ in 0..<400{
+            sandbox[i].append(-1)
+        }
+    }
+
+    var grandArea = 0
+    for i in 0..<400 {
+        for j in 0..<400 {
+            var distanceMap = [(Int, Int)]()
+            for (index, hub) in hubs.enumerated() {
+                let distance = abs(i-hub.0) + abs(j-hub.1)
+                distanceMap.append((index, distance))
+            }
+            let count = distanceMap.reduce(0, { sum, curr in
+                return sum + curr.1
+            })
+            if count < maxSumManhattan {
+                grandArea = grandArea + 1
+            }
+        }
+    }
+
+    print(grandArea)
+    //solution1(sandbox, hubs)
+
 }
 catch {
     print("Error reading text. \(error)")
