@@ -12,9 +12,28 @@ do {
     .compactMap { ( Int($0[0])!,Int($0[2])!)  }
 
     var sandbox = [[Int]]() 
+    for i in 0..<400 {
+        sandbox.append([Int]())
+        for _ in 0..<400{
+            sandbox[i].append(-1)
+        }
+    }
 
-    
-    print(hubs)
+    for hubIndex in 0..<hubs.count {
+        sandbox[hubs[hubIndex].0][hubs[hubIndex].1] = hubIndex
+    }
+
+    // bfs EVERYTHING, account for ties by keeping neg 1
+
+    // count the highest seen number
+
+    // go around the edge and dq those numbers
+
+    //solution is at the top
+
+
+
+    print(sandbox)
 }
 catch {
     print("Error reading text. \(error)")
