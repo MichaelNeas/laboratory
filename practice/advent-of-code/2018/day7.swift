@@ -8,27 +8,32 @@ struct Node {
 struct Tree {
     var nodes: [Node]
 
-    func insertNode(_ node: Node){
+    func insertNode(_ n: Node){
+        var node = n
         var found = false
         var queue = nodes
         while !found && queue.count > 0 {
+            var curr = queue.removeFirst()
             if curr.value == node.value {
                 curr.children.append(node)
                 found = true
-            } else if curr.value == node.children[0].value{
+            } else if curr.value == node.children[0].value {
+                _ = node.children.removeFirst()
                 node.children.append(curr)
+                curr = node
                 found = true
-            } else {
-                
+            }
+            if curr.children.count > 0 {
+                for child in curr.children {
+                    queue.append(child)
+                }
             }
         }
-        // queue up the nodes in the tree, process them, 
-        // if queue is ever empty or we have a found
-        // add to the children or slap it on the root nodes
     }
 
-    func print(){
+    func details(){
         // print alphabetical traversal
+        print(nodes)
     }
 }
 
@@ -44,7 +49,7 @@ do {
         tree.insertNode(node)
     }
 
-    //print(ordering)
+    //tree.details()
 }
 catch {
     print("Error reading text. \(error)")
