@@ -55,17 +55,11 @@ struct Graph {
         var processableList = Set<String>()
         while nodes.count > 0 || processableList.count > 0 {
             if processableList.count < 1 { 
-                var contenders = [String:Int]()
                 for kvpair in nodes {
-                    contenders[kvpair.key] = kvpair.value.count
-                }
-                
-                let sContenders = contenders.sorted { $0.value < $1.value}
-                let fContenders = sContenders.filter { sContenders[0].value == $0.value }
-                let ohmygodhelpme = fContenders.compactMap { nodes[$0.key] }.sorted { $0[0] < $1[0] }
-                for ohmy in ohmygodhelpme {
-                    if nodes[ohmy[0]] == nil {
-                        processableList.insert(ohmy[0])
+                    for val in kvpair.value {
+                        if nodes[val] == nil {
+                            processableList.insert(val)
+                        }
                     }
                 }
             }
