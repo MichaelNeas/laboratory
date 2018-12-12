@@ -50,6 +50,49 @@ struct Graph {
         print(answer)
     } 
 
+    func workOn(_ work: [String]) {
+
+    }
+
+    mutating func bruteWorkforce(){
+        var answer = ""
+        var time = 0
+        var workers = 5
+        var processableList = Set<String>()
+        while nodes.count > 0 || processableList.count > 0 {
+            if processableList.count < 1 { 
+                for kvpair in nodes {
+                    for val in kvpair.value {
+                        if nodes[val] == nil {
+                            processableList.insert(val)
+                        }
+                    }
+                }
+            }
+            let sortedBestFromPList = processableList.sorted { $0 < $1 }
+            var bestFromPList = ""
+            for best in sortedBestFromPList {
+                if nodes[best] == nil {
+                    bestFromPList = best
+                    break
+                }
+            }
+            answer += bestFromPList
+            workOn(sortedBestFromPList)
+            for node in nodes {
+                let filtered = node.value.filter { $0 != bestFromPList }
+                if filtered.count == 0 {
+                    processableList.insert(node.key)
+                    nodes[node.key] = nil
+                } else {
+                    nodes[node.key] = filtered
+                }
+            }
+            processableList.remove(bestFromPList)
+        }
+        print(time)
+    }
+
     mutating func brute(){
         var answer = ""
         var processableList = Set<String>()
@@ -82,13 +125,11 @@ struct Graph {
                 }
             }
             processableList.remove(bestFromPList)
-            //print(processableList)
         }
         print(answer)
     }
 
     func details(){
-        // print alphabetical traversal
         print(nodes)
     }
 }
@@ -106,7 +147,8 @@ do {
     }
 
     //graph.topologicalSort()
-    graph.brute()
+    //graph.brute()
+    graph.bruteWorkforce()
     //graph.details()
 }
 catch {
