@@ -41,11 +41,57 @@ struct Graph {
                 topologicalSortUtil(node, &visited, &stack)
             }
         }
+
+        var answer = ""
   
         while stack.isEmpty == false {
-            print("\(stack.removeLast()) "); 
+            answer += stack.removeLast()
         }
+        print(answer)
     } 
+
+    mutating func brute(){
+        var answer = ""
+        var processableList = Set<String>()
+        while nodes.count > 0 || processableList.count > 0 {
+            if processableList.count < 1 { 
+                var contenders = [String:Int]()
+                for kvpair in nodes {
+                    contenders[kvpair.key] = kvpair.value.count
+                }
+                
+                let sContenders = contenders.sorted { $0.value < $1.value}
+                let fContenders = sContenders.filter { sContenders[0].value == $0.value }
+                let ohmygodhelpme = fContenders.compactMap { nodes[$0.key] }.sorted { $0[0] < $1[0] }
+                for ohmy in ohmygodhelpme {
+                    if nodes[ohmy[0]] == nil {
+                        processableList.insert(ohmy[0])
+                    }
+                }
+            }
+            let sortedBestFromPList = processableList.sorted { $0 < $1 }
+            var bestFromPList = ""
+            for best in sortedBestFromPList {
+                if nodes[best] == nil {
+                    bestFromPList = best
+                    break
+                }
+            }
+            answer += bestFromPList
+            for node in nodes {
+                let filtered = node.value.filter { $0 != bestFromPList }
+                if filtered.count == 0 {
+                    processableList.insert(node.key)
+                    nodes[node.key] = nil
+                } else {
+                    nodes[node.key] = filtered
+                }
+            }
+            processableList.remove(bestFromPList)
+            //print(processableList)
+        }
+        print(answer)
+    }
 
     func details(){
         // print alphabetical traversal
@@ -57,7 +103,7 @@ do {
     let fileContent = try String(contentsOfFile: location, encoding: .utf8)
     let ordering = fileContent.components(separatedBy: .newlines)
     .compactMap { String($0).components(separatedBy: " ") }
-    .map { (Node(value: $0[1]), Node(value: $0[7])) }
+    .map { (Node(value: $0[7]), Node(value: $0[1])) }
     
     var graph = Graph(nodes: [String:[String]]() , verticies: Set<String>())
 
@@ -65,8 +111,8 @@ do {
         graph.insertNode(from: node.0,to: node.1)
     }
 
-    graph.topologicalSort()
-
+    //graph.topologicalSort()
+    graph.brute()
     //graph.details()
 }
 catch {
