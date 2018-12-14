@@ -15,6 +15,7 @@
 - `./practice/css` css, sass, scss
 - `./practice/c` C and C++ programming
 - `./practice/swift` Swift Programming
+- `./practice/advent-of-code` Advent Solutions
 
 ### Challenge Sources
 
