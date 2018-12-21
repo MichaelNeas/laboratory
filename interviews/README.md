@@ -84,3 +84,8 @@
 11/28/18
 
 - Givin a 2d array with strings, parse it for meaningful information efficiently
+
+12/4/18
+
+- Given an array of strings, calculate max character value where both words don't contain any of the same chars
+- MSPaint implementation
