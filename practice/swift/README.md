@@ -27,3 +27,11 @@
 - Every instance of Swift’s Character type represents a single extended `grapheme cluster`. An extended grapheme cluster is a sequence of one or more Unicode scalars that (when combined) produce a single human-readable character.
 - using a subscript or a method like prefix(_:)—the result is an instance of Substring, not another string.
 - Two String values (or two Character values) are considered equal if their extended grapheme clusters are canonically equivalent.
+- Swift provides three primary collection types, known as arrays, sets, and dictionaries, for storing collections of values. Arrays are ordered collections of values. Sets are unordered collections of unique values. Dictionaries are unordered collections of key-value associations. Swift’s array, set, and dictionary types are implemented as generic collections. For more about generic types and collections, see Generics.
+- All collection types are bridged from NS Types
+- A set stores distinct values of the same type in a collection with no defined ordering. You can use a set instead of an array when the order of items is not important, or when you need to ensure that an item only appears once.
+- All of Swift’s basic types (such as String, Int, Double, and Bool) are hashable by default, if you want to make your own  hashable type it must also conform to Equatable
+- var declared collection types are mutable and let are intended to be immutable
+- Unlike a subscript, in dictionaries, the updateValue(_:forKey:) method returns the old value after performing an update. This enables you to check whether or not an update took place.
+- Swift’s Dictionary type does not have a defined ordering. To iterate over the keys or values of a dictionary in a specific order, use the sorted() method on its keys or values property.
+- Swift has five control transfer statements: continue, break, fallthrough, return, throw

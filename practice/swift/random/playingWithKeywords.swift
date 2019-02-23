@@ -305,3 +305,121 @@ let justOverOneMillion = 1_000_000.000_000_1 // tf
 
 // can now use AudioSample as a UInt16
 typealias AudioSample = UInt16
+
+
+var threeDoubles = Array(repeating: 0.0, count: 3)
+// threeDoubles is of type [Double], and equals [0.0, 0.0, 0.0]
+
+var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
+// anotherThreeDoubles is of type [Double], and equals [2.5, 2.5, 2.5]
+
+var sixDoubles = threeDoubles + anotherThreeDoubles
+// sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]
+
+/* 
+If you need the integer index of each item as well as its value, use the enumerated() 
+method to iterate over the array instead. For each item in the array, the enumerated()
+ method returns a tuple composed of an integer and the item. The integers start at zero 
+ and count up by one for each item; if you enumerate over a whole array, these integers 
+ match the items’ indices. You can decompose the tuple into temporary constants or variables as part of the iteration:
+*/
+for (index, value) in shoppingList.enumerated() {
+    print("Item \(index + 1): \(value)")
+}
+// Item 1: Six eggs
+// Item 2: Milk
+// Item 3: Flour
+// Item 4: Baking Powder
+// Item 5: Bananas
+
+/// Some users might want fewer tick marks in their UI. They could prefer one mark every 5 minutes instead. 
+/// Use the stride(from:to:by:) function to skip the unwanted marks.
+
+let minuteInterval = 5
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
+    // render the tick mark every 5 minutes (0, 5, 10, 15 ... 45, 50, 55)
+}
+
+let somePoint = (1, 1)
+switch somePoint {
+case (0, 0):
+    print("\(somePoint) is at the origin")
+case (_, 0):
+    print("\(somePoint) is on the x-axis")
+case (0, _):
+    print("\(somePoint) is on the y-axis")
+case (-2...2, -2...2):
+    print("\(somePoint) is inside the box")
+default:
+    print("\(somePoint) is outside of the box")
+}
+// Prints "(1, 1) is inside the box"
+
+
+let anotherPoint = (2, 0)
+switch anotherPoint {
+case (let x, 0):
+    print("on the x-axis with an x value of \(x)")
+case (0, let y):
+    print("on the y-axis with a y value of \(y)")
+case let (x, y):
+    print("somewhere else at (\(x), \(y))")
+}
+// Prints "on the x-axis with an x value of 2"
+
+
+let yetAnotherPoint = (1, -1)
+switch yetAnotherPoint {
+case let (x, y) where x == y:
+    print("(\(x), \(y)) is on the line x == y")
+case let (x, y) where x == -y:
+    print("(\(x), \(y)) is on the line x == -y")
+case let (x, y):
+    print("(\(x), \(y)) is just some arbitrary point")
+}
+// Prints "(1, -1) is on the line x == -y"
+
+
+let stillAnotherPoint = (9, 0)
+switch stillAnotherPoint {
+case (let distance, 0), (0, let distance):
+    print("On an axis, \(distance) from the origin")
+default:
+    print("Not on an axis")
+}
+// Prints "On an axis, 9 from the origin"
+
+
+let finalSquare = 25
+var board = [Int](repeating: 0, count: finalSquare + 1)
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+var square = 0
+var diceRoll = 0
+
+
+gameLoop: while square != finalSquare {
+    diceRoll += 1
+    if diceRoll == 7 { diceRoll = 1 }
+    switch square + diceRoll {
+    case finalSquare:
+        // diceRoll will move us to the final square, so the game is over
+        break gameLoop
+    case let newSquare where newSquare > finalSquare:
+        // diceRoll will move us beyond the final square, so roll again
+        continue gameLoop
+    default:
+        // this is a valid move, so find out its effect
+        square += diceRoll
+        square += board[square]
+    }
+}
+print("Game over!")
+
+/* PRECOMPILERS */
+
+if #available(platform name version, ..., *) {
+    statements to execute if the APIs are available
+} else {
+    fallback statements to execute if the APIs are unavailable
+}
