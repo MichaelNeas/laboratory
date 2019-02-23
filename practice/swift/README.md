@@ -25,3 +25,5 @@
 - Swift’s String and Character types provide a fast, Unicode-compliant way to work with text.
 - Swift’s String type is a value type. If you create a new String value, that String value is copied when it’s passed to a function or method, or when it’s assigned to a constant or variable.
 - Every instance of Swift’s Character type represents a single extended `grapheme cluster`. An extended grapheme cluster is a sequence of one or more Unicode scalars that (when combined) produce a single human-readable character.
+- using a subscript or a method like prefix(_:)—the result is an instance of Substring, not another string.
+- Two String values (or two Character values) are considered equal if their extended grapheme clusters are canonically equivalent.
