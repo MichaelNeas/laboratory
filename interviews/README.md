@@ -89,3 +89,8 @@
 
 - Given an array of strings, calculate max character value where both words don't contain any of the same chars
 - MSPaint implementation
+
+02/15/18
+
+- Count the number of out of order pairs in an array of ints: 1,4,2,3  { 2 } 4,2 and 4,3, do better than n^2 time
+- Kth smallest element in an array, nlogn nlogk and n
