@@ -35,3 +35,8 @@
 - Unlike a subscript, in dictionaries, the updateValue(_:forKey:) method returns the old value after performing an update. This enables you to check whether or not an update took place.
 - Swift’s Dictionary type does not have a defined ordering. To iterate over the keys or values of a dictionary in a specific order, use the sorted() method on its keys or values property.
 - Swift has five control transfer statements: continue, break, fallthrough, return, throw
+- String type defines its string-specific implementation of the greater-than operator (>) as a method that has two parameters of type String, and returns a value of type Bool giving super short hand closure comparisons
+- Swift may instead capture and store a copy of a value if that value is not mutated by a closure, and if the value is not mutated after the closure is created.
+- Closures Are Reference Types
+- A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the function returns, escaping requires explicit `self`
+- An autoclosure is a closure that is automatically created to wrap an expression that’s being passed as an argument to a function.
