@@ -40,3 +40,7 @@
 - Closures Are Reference Types
 - A closure is said to escape a function when the closure is passed as an argument to the function, but is called after the function returns, escaping requires explicit `self`
 - An autoclosure is a closure that is automatically created to wrap an expression that’s being passed as an argument to a function.
+- Enumerations with associated values of any given type are known as discriminated unions, tagged unions, or variants in other programming languages.  Associated values are dynamic in nature compared to raw values.
+- Raw values can be strings, characters, or any of the integer or floating-point number types. Each raw value must be unique within its enumeration declaration.
+- recursive enumeration is an enumeration that has another instance of the enumeration as the associated value for one or more of the enumeration cases.
+- System.Enum is a reference type, but any specific enum type is a value type.

@@ -168,3 +168,8 @@ for customerProvider in customerProviders {
 }
 // Prints "Now serving Barry!"
 // Prints "Now serving Daniella!"
+
+/// 1. Parameter in a function can be replaced with a closure that takes no parameter and returns back a value of the same type as the parameter.
+/// 2. Such closure parameter can be marked with an @autoclosure attribute.
+/// 3. No need to put braces around such @autoclosure-d parameter. Value, another function or an expression passed is wrapped with braces automatically.
+/// 4. Another function used as that marked closure parameter is not executed until it will be called explicitly from the function body.
