@@ -423,3 +423,30 @@ if #available(platform name version, ..., *) {
 } else {
     fallback statements to execute if the APIs are unavailable
 }
+
+
+/// SubScripts
+/// 123456789[0] => 9
+/// 123456789[1] => 8
+/// reverse index lookup
+extension Int {
+    subscript(digitIndex: Int) -> Int {
+        var base = 1
+        for _ in 1...digitIndex {
+            base *= 10
+        }
+        return (self / base) % 10
+    }
+}
+
+/// xorrrrr
+
+let a = 0b00110011
+let b = 0b11001101
+let c = a ^ b // -> 0b11111111
+
+
+/// Precedence and associativity
+/// Swift actually is super cool and follows logical operator precedence, similar to what we learned in grade school
+/// multiplication and mod carry the same weight so they read left to right 
+2 + 3 * 4 % 5 == 2 + ((3  * 4) % 5)

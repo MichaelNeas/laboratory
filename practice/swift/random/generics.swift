@@ -34,3 +34,17 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
     return false
 }
 anyCommonElements([1, 2, 3], [3])
+
+
+/// we can make stacks of whatevs we wannn
+struct Stack<T> {
+    var whereAllTheCheeseGoes: T[]()
+
+    mutating func push(cheese: T) {
+        return whereAllTheCheeseGoes.append(cheese)
+    }
+
+    mutating func pop() -> T {
+        return whereAllTheCheeseGoes.popLast()
+    }
+}
