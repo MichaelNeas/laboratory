@@ -30,6 +30,8 @@ Apps can have bundles, that store resources like images or plists.  Bundles are 
 
 Structs are passed by value and classes are passed by reference.  Structs contain all value types, and they are lighter weight than classes.  As a rule of thumb you can use structs when you anticipate objects only having value types.
 
+Structs are generally light weight and clean because they do not support inheritence.
+
 ### What are value types and what are ref types in swift?
 
 Anything that's a custom object is passed by reference.
@@ -79,3 +81,24 @@ Your application can have one or more threads, or instances of code running toge
 ### Xibs vs Storyboards
 
 Xibs are layout files, visual layouts in XML tied to code accordingly.  In a storyboard your application can have a flow of views.  Xibs with a clear distinct path.
+
+### Bounds vs Frames
+
+Frame - Position relative to super/parent view, x, y, height, width, the smallest bounding box around the view (container of the content)
+Bounds - Position relative to it's own coordinate system, x=0, y=0
+They will be pretty similar until rotations or transformation occur 
+
+
+### Concurrency
+
+Apple's multi core processors allow us to multithread in Swift
+Grand central dispatch handles a lot of threading for us
+
+- Serial Queue - Tasks are handled in order, does not move forward to other tasks until previous are finished.  Predictable execution order. Slower than concurrent. Each app gets one, the main.
+
+- Concurrent Queue - Tasks start in order, but certain tasks that are quicker than others finish first.  Unpredictable order, race conditions. Each app gets 4 background concurrent queues.
+
+```
+DispatchQueue.main.async { //go back to main thread from background }
+DispatchQueue.global(qos: .background).async { //send to background manually }
+```
