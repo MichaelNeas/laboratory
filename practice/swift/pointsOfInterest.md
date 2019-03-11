@@ -102,3 +102,58 @@ Grand central dispatch handles a lot of threading for us
 DispatchQueue.main.async { //go back to main thread from background }
 DispatchQueue.global(qos: .background).async { //send to background manually }
 ```
+
+### Web Requests
+
+URLSession is automatically thrown on to the background thread so we don't need to explicitly define that condition.
+```
+let defaultSession = URLSession(configuration: .default) // Native networking class
+var dataTask: URLSessionDataTask? // URL Sessions task that returns data directly to memory
+```
+Make a URLSession and a URLSessionDataTask for use in your class
+
+Simplest GET
+```
+dataTask?.cancel() // cancel existing tasks
+if var urlComponents = URLComponents(string: urlString) {
+    guard let url = urlComponents.url else { return }
+    dataTask = defaultSession.dataTask(with: url) { data, response, error in
+                defer { self.dataTask = nil }
+                // da logics
+    }
+    dataTask?.resume()
+}
+```
+
+Simplest DELETE
+```
+dataTask?.cancel()
+if var url = URL(string: urlString) {
+    var request = URLRequest(url: url)
+    request.httpMethod = "DELETE"
+    dataTask = defaultSession.dataTask(with: request) { data, response, error in
+        defer { self.dataTask = nil }
+    }
+    dataTask?.resume()
+}
+```
+
+URL's are made up of strings, you can grab a URLComponents.url to use in dataTask
+
+For requests using data URL's, and other requests we know do not automatically go to background thread we need to define that.
+
+```
+DispatchQueue.global().async {
+    do {
+        let data = try Data(contentsOf: url) 
+        guard let image = UIImage(data: data) else { return }
+        DispatchQueue.main.async {
+            completion(image)
+        }
+    } catch {
+        print(error.localizedDescription)
+    }
+}
+```
+
+Dispatch.main.async puts everything back on the main thread
