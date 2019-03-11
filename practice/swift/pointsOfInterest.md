@@ -14,7 +14,7 @@ A blueprint/pattern of functions that a class can implement.  Whenever the deleg
 1. Then archieve it with a generic device or real device.  
 1. Then make an app on the apple web portal with matching app id.  
 1. Validate or submit to app store from xcode.
-1. Once approved it goes to itunes connect and it needs to process.
+1. Once approved it goes to app store connect and it needs to process.
 1. Update the description and all the other goodies. 
 1. Submit it
 
@@ -28,14 +28,17 @@ Apps can have bundles, that store resources like images or plists.  Bundles are 
 
 ### When to use struct vs class
 
-Structs are passed by value and classes are passed by reference.  Structs contain all value types, and they are lighter weight than classes.  As a rule of thumb you can use structs when you anticipate objects only having value types.
+Structs are passed by value and classes are passed by reference. A good rule of thumb is to make your Structs contain all value types, but this is not a requirement as a struct can have functions, and they are lighter weight than classes.  
 
 Structs are generally light weight and clean because they do not support inheritence.
 
 ### What are value types and what are ref types in swift?
 
-Anything that's a custom object is passed by reference.
+Value types give you the value of a given object, when you modify a value type the original value will change.  If you modify a reference then you do not modify the original object.
 Default datatypes are passed by value.
+Functions, closures, classes are reference types
+If the value type instance is part of a class instance, the value is stored in the heap along with the class instance.
+In short: Reference types always goes to the Heap, whereas Value Types always go where they are declared.
 
 ### How can you create a custom view?
 
