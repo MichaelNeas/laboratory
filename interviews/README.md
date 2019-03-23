@@ -90,7 +90,18 @@
 - Given an array of strings, calculate max character value where both words don't contain any of the same chars
 - MSPaint implementation
 
-02/15/18
+02/15/19
 
 - Count the number of out of order pairs in an array of ints: 1,4,2,3  { 2 } 4,2 and 4,3, do better than n^2 time
 - Kth smallest element in an array, nlogn nlogk and n
+
+03/11/19
+
+- Tableview with location search and maps
+- Multiplayer game
+
+03/23/19
+
+- Array of bucks with ints corresponding to max size of buckets, 2nd array of ints with how much those buckets are filled, how can we move all the water with the least amount of buckets
+- 3 arrays, all n items long, each ith element of each array corresponds to 1 product, how many duplicate products are there?
+- Find the retain cycle, weak refs with force unwraps
