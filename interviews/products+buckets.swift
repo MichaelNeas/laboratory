@@ -38,7 +38,7 @@ let bucketStates = [5,  3, 2, 10, 11, 9]
 var totalWater = bucketStates.reduce(0,+)
 for (i, bucket) in bucketSizes.sorted(by: >).enumerated() {
     if bucket >= totalWater {
-        print(i)
+        print(i + 1)
         break
     } else {
         totalWater -= bucket
