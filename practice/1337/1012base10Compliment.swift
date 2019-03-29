@@ -19,4 +19,14 @@ class Solution {
         }
         return 0
     }
+
+    func bitwiseXORComplement(_ N: Int) -> Int {
+        if N == 0 { return 1 }
+        if N == 1 { return 0 }
+        var x = 1
+        while x <= N {
+            x *= 2
+        }
+        return N ^ (x-1);
+    }
 }
