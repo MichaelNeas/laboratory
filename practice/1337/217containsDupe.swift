@@ -15,4 +15,9 @@ class Solution {
         
         return false
     }
+
+    // 100
+    func containsDuplicateCount(_ nums: [Int]) -> Bool {
+        return Set(nums).count != nums.count
+    }
 }
