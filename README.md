@@ -16,6 +16,7 @@
 - `./practice/c` C and C++ programming
 - `./practice/swift` Swift Programming
 - `./practice/advent-of-code` Advent Solutions
+- `./readings` All the reading materials one could ask for
 
 ### Challenge Sources
 
@@ -27,9 +28,5 @@
 - [HackerRank](https://www.hackerrank.com/)
 - [L337C0D3](https://leetcode.com/)
 - [AdventOfCode](https://adventofcode.com/2017/about)
-
-### Readings
-- [Yeggie blog post](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
-- [CS Degree Refreshers](http://teachyourselfcs.com)
 
 ##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
