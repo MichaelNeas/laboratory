@@ -33,6 +33,7 @@
 - [Migrator](https://github.com/apple/swift/tree/master/lib/Migrator)
 - [Swift Evolution](https://github.com/apple/swift-evolution/blob/master/README.md)
 - [Swift Server](https://github.com/swift-server)
+- [Tensorflow Swift](https://github.com/tensorflow/swift)
 
 
 ## Blogs
@@ -79,11 +80,12 @@
 - [Playground Support Lib](https://developer.apple.com/documentation/playgroundsupport)
 - [Project Ideas](https://swift.org/project-ideas/)
 - [Protocol Wish List](https://davedelong.com/blog/2018/02/08/swift-protocols-wishlist/)
+- [Swift for TensorFlow Dev Community](https://groups.google.com/a/tensorflow.org/forum/#!topic/swift/xtXCEvtDe5Q)
 
 
 ## Videos
 - [Performance Profiling on Linux](https://youtu.be/TWeLLTFjqXg)
-
+- [Swift for TensorFlow](https://www.youtube.com/watch?v=Yze693W4MaU)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -153,3 +155,5 @@
 - [Compiler Diagnostic Directives](https://github.com/apple/swift-evolution/blob/master/proposals/0196-diagnostic-directives.md)
 - [Restrict Cross Module Struct Inits](https://github.com/apple/swift-evolution/blob/master/proposals/0189-restrict-cross-module-struct-initializers.md)
 - [Playground QuickLook API Revamp](https://github.com/apple/swift-evolution/blob/master/proposals/0198-playground-quicklook-api-revamp.md)
+- [in-place Remove Where](https://github.com/apple/swift-evolution/blob/master/proposals/0197-remove-where.md)
+- [last where and lastIndex](https://github.com/apple/swift-evolution/blob/master/proposals/0204-add-last-methods.md)
