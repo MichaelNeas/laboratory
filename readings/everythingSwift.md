@@ -81,6 +81,9 @@
 - [Project Ideas](https://swift.org/project-ideas/)
 - [Protocol Wish List](https://davedelong.com/blog/2018/02/08/swift-protocols-wishlist/)
 - [Swift for TensorFlow Dev Community](https://groups.google.com/a/tensorflow.org/forum/#!topic/swift/xtXCEvtDe5Q)
+- [Tesnorflow Design](https://github.com/tensorflow/swift/blob/master/docs/DesignOverview.md)
+- [Reimplementation of Implicitly Unwrapped Optionals](https://swift.org/blog/iuo)
+- [Explanation of escaping closures](https://swiftunboxed.com/lang/closures-escaping-noescape-swift3/)
 
 
 ## Videos
@@ -157,3 +160,8 @@
 - [Playground QuickLook API Revamp](https://github.com/apple/swift-evolution/blob/master/proposals/0198-playground-quicklook-api-revamp.md)
 - [in-place Remove Where](https://github.com/apple/swift-evolution/blob/master/proposals/0197-remove-where.md)
 - [last where and lastIndex](https://github.com/apple/swift-evolution/blob/master/proposals/0204-add-last-methods.md)
+- [Random Number Generation Cross Platform](https://github.com/apple/swift-evolution/blob/master/proposals/0202-random-unification.md)
+- [Better Hashable](https://github.com/apple/swift-evolution/blob/master/proposals/0206-hashable-enhancements.md)
+- [Remove ImplicitlyUnwrappedOptional](https://github.com/apple/swift-evolution/blob/master/proposals/0054-abolish-iuo.md)
+- [Closures non escaping by default](https://github.com/apple/swift-evolution/blob/master/proposals/0103-make-noescape-default.md)
+- [Unicode Properties to Unicode.Scalar](https://github.com/apple/swift-evolution/blob/master/proposals/0211-unicode-scalar-properties.md)
