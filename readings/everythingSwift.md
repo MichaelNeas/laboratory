@@ -34,6 +34,8 @@
 - [Swift Evolution](https://github.com/apple/swift-evolution/blob/master/README.md)
 - [Swift Server](https://github.com/swift-server)
 - [Tensorflow Swift](https://github.com/tensorflow/swift)
+- [4.2 Demos](https://github.com/ole/whats-new-in-swift-4-2)
+- [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)
 
 
 ## Blogs
@@ -84,11 +86,16 @@
 - [Tesnorflow Design](https://github.com/tensorflow/swift/blob/master/docs/DesignOverview.md)
 - [Reimplementation of Implicitly Unwrapped Optionals](https://swift.org/blog/iuo)
 - [Explanation of escaping closures](https://swiftunboxed.com/lang/closures-escaping-noescape-swift3/)
+- [Swift 5 release notes](https://swift.org/blog/swift-5-released/)
+- [Swift Unboxed Website](https://swiftunboxed.com/)
+- [Functional Programming Algebraic Data Types](https://www.pointfree.co/episodes/ep9-algebraic-data-types-exponents)
 
 
 ## Videos
 - [Performance Profiling on Linux](https://youtu.be/TWeLLTFjqXg)
 - [Swift for TensorFlow](https://www.youtube.com/watch?v=Yze693W4MaU)
+- [2018 platforms state of the Union](https://developer.apple.com/videos/play/wwdc2018/102/)
+
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -165,3 +172,7 @@
 - [Remove ImplicitlyUnwrappedOptional](https://github.com/apple/swift-evolution/blob/master/proposals/0054-abolish-iuo.md)
 - [Closures non escaping by default](https://github.com/apple/swift-evolution/blob/master/proposals/0103-make-noescape-default.md)
 - [Unicode Properties to Unicode.Scalar](https://github.com/apple/swift-evolution/blob/master/proposals/0211-unicode-scalar-properties.md)
+- [4.2 proposals implemented](https://apple.github.io/swift-evolution/#?version=4.2)
+- [Linked List Discussion](https://forums.swift.org/t/proposal-singly-and-doubly-linked-list-collections-in-standard-library/11426)
+- [Never conforms to hashable and equatable](https://github.com/apple/swift-evolution/blob/master/proposals/0215-conform-never-to-hashable-and-equatable.md)
+- [Literal initialization by coercion](https://github.com/apple/swift-evolution/blob/master/proposals/0213-literal-init-via-coercion.md)
