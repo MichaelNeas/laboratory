@@ -29,16 +29,21 @@
 - [SWXMLHash](https://github.com/drmohundro/SWXMLHash)
 - [YamlSwift](https://github.com/behrang/YamlSwift)
 - [Yams](https://github.com/behrang/YamlSwift)
-- [SwiftLSP](https://github.com/owensd/swift-lsp)
+- [Swift LSP](https://github.com/apple/sourcekit-lsp)
 - [Migrator](https://github.com/apple/swift/tree/master/lib/Migrator)
 - [Swift Evolution](https://github.com/apple/swift-evolution/blob/master/README.md)
 - [Swift Server](https://github.com/swift-server)
 - [Tensorflow Swift](https://github.com/tensorflow/swift)
 - [4.2 Demos](https://github.com/ole/whats-new-in-swift-4-2)
+- [5.0 Demos](https://github.com/twostraws/whats-new-in-swift-5-0)
 - [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)
+- [Kuery - Core Data Query API using smart keypaths](https://github.com/kishikawakatsumi/Kuery)
+- [SwiftLint](https://github.com/realm/SwiftLint)
+- [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
+- [Google Swift](https://github.com/google/swift/tree/format)
 
 
-## Blogs
+## Blogs/Forums
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
 - [Swift Team](https://swift.org/community/#community-structure)
 - [Swift.org 1st blog post 2015](https://swift.org/blog/welcome/)
@@ -89,6 +94,12 @@
 - [Swift 5 release notes](https://swift.org/blog/swift-5-released/)
 - [Swift Unboxed Website](https://swiftunboxed.com/)
 - [Functional Programming Algebraic Data Types](https://www.pointfree.co/episodes/ep9-algebraic-data-types-exponents)
+- [Plan for module stability](https://forums.swift.org/t/plan-for-module-stability/14551)
+- [Railway Programming](https://medium.com/@naveenkumarmuguda/railway-oriented-programming-a-powerful-functional-programming-pattern-ab454e467f31)
+- [VSCode Swift](https://nshipster.com/vscode/)
+- [LSP Official Site](https://microsoft.github.io/language-server-protocol/)
+- [UTF-8 Strings](https://swift.org/blog/utf8-string/)
+- [String ABI discussion](https://forums.swift.org/t/piercing-the-string-veil/21700)
 
 
 ## Videos
@@ -176,3 +187,8 @@
 - [Linked List Discussion](https://forums.swift.org/t/proposal-singly-and-doubly-linked-list-collections-in-standard-library/11426)
 - [Never conforms to hashable and equatable](https://github.com/apple/swift-evolution/blob/master/proposals/0215-conform-never-to-hashable-and-equatable.md)
 - [Literal initialization by coercion](https://github.com/apple/swift-evolution/blob/master/proposals/0213-literal-init-via-coercion.md)
+- [Raw String Escaping](https://github.com/apple/swift-evolution/blob/master/proposals/0200-raw-string-escaping.md)
+- [Opaque result types](https://github.com/DougGregor/swift-evolution/blob/opaque-result-types/proposals/NNNN-opaque-result-types.md)
+- [Result Type](https://github.com/apple/swift-evolution/blob/master/proposals/0235-add-result.md)
+- [KeyPaths for Key-value Coding](https://github.com/apple/swift-evolution/blob/master/proposals/0161-key-paths.md)
+- [String Encoded Offsets Depreciated](https://github.com/apple/swift-evolution/blob/master/proposals/0241-string-index-explicit-encoding-offset.md)
