@@ -100,6 +100,8 @@
 - [LSP Official Site](https://microsoft.github.io/language-server-protocol/)
 - [UTF-8 Strings](https://swift.org/blog/utf8-string/)
 - [String ABI discussion](https://forums.swift.org/t/piercing-the-string-veil/21700)
+- [ARC](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
+- [libauto](https://opensource.apple.com/source/libauto/libauto-77.1/README.html)
 
 
 ## Videos
