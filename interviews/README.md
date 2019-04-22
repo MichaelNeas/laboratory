@@ -105,3 +105,38 @@
 - Array of bucks with ints corresponding to max size of buckets, 2nd array of ints with how much those buckets are filled, how can we move all the water with the least amount of buckets
 - 3 arrays, all n items long, each ith element of each array corresponds to 1 product, how many duplicate products are there?
 - Find the retain cycle, weak refs with force unwraps
+
+### Lee's Algie Questions
+
+-  Consider a 5x5 chess board where each side has a king and a queen available. Your task is to determine, given input positions only, can white mate within three moves.
+```
+Assume white moves first.
+Your function will be given four integers representing the positions of the white king, white queen, black king and black queen.
+Assume a row-major order matrix for the purpose of placing the pieces.
+```
+
+- Nth stair with at most mth [steps](https://www.techiedelight.com/find-total-ways-reach-nth-stair-with-atmost-m-steps/)
+
+- You're trying to impress your manager with a wonderful blueberry pie, but after several different attempts and unrelated disasters you have a kitchen full of *slices* of blueberry pie. Every slice is a uniform 6 inches in radius, but they differ in size by arc.  Each slice is on a separate paper plate which you have labelled with two values:
+
+```
+t = an integer from 1 up to 360 representing the degree of the primary angle (theta)
+v = a positive real number representing the total volume of blueberries in kg that are in the slice. Note that this second number does not correlate with weight in any way (I did mention the disasters right?)
+
+Naturally, you decide to take this opportunity to construct an optimal whole pie from the piece. Being a great engineer, you fire up your computer to help. You've managed to construct an array (A) of tuples where each tuple holds (int, float) values representing  t and v respectively. Compose an algorithm that constructs an optimal pie from the pieces available, maximizing the total weight of blueberries in the pie.
+
+Notes: Pie slices aren't unique. Presume you have an infinite number available of each slice in the array.
+Also, you don't have to fill all 360 degrees of the pie. Just get as many blueberries as possible in there while staying within 180 degrees.
+```
+
+- You have an MxN matrix A which obeys the following rules:
+```
+...for each element A(i,j) in A
+1) A(i,j) < A(i,j+1)
+2) A(i,j) < A(i+1,j)
+Given a value x, design an algorithm that returns the index
+of x in A or (-1,-1) if x isn't present in A.
+```
+
+- You have an array of lexicographically sorted strings. Your task is to write a function that accepts a string and tells you if that string is a substring of any element in the array.
+_Bonus points for doing it in less than quadratic time._

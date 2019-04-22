@@ -11,12 +11,12 @@
 - `./practice/interview-practice` big list of interview practice problems
 - `./practice/java` java questions solved
 - `./practice/jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
-- `./practice/jsthings/noders` random node specific fun
+- `./practice/jsthings/noders` node specific fun
 - `./practice/css` css, sass, scss
 - `./practice/c` C and C++ programming
 - `./practice/swift` Swift Programming
 - `./practice/advent-of-code` Advent Solutions
-- `./readings` All the reading materials one could ask for
+- `./resources` Great resources that I've encountered in my career
 
 ### Challenge Sources
 
