@@ -12,6 +12,6 @@ class Solution {
     }
 
     func singleNumberReduce(_ nums: [Int]) -> Int {
-        return nums.reduce(0, { $0 ^ $1 })
+        return nums.reduce(0, ^)
     }
 }
