@@ -2,25 +2,14 @@
 
 class Solution {
     func findLengthOfLCIS(_ nums: [Int]) -> Int {
-        if nums.count == 0 {
-            return 0
-        }
+        guard nums.count > 0 else { return 0 }
         var longest = 1
         var count = longest
         var curr = nums[0]
         for num in nums {
-            if curr < num {
-                count += 1
-            } else {
-                if count > longest {
-                    longest = count
-                }
-                count = 1
-            }
+            count = curr < num ? count + 1 : 1
+            longest = max(longest, count)
             curr = num
-        }
-        if count > longest {
-            longest = count
         }
         return longest
     }
