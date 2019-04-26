@@ -16,7 +16,6 @@ class Solution {
             count[t[0]] -= 1
             count[t[1]] += 1
         }
-        print(count)
         for i in 1..<N+1 {
             if count[i] == (N - 1) {
                 return i
