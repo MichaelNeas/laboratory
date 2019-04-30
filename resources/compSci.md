@@ -33,6 +33,8 @@
 - [Beaker Project](https://beaker-project.org/)
 - [Dunbar's Number](https://en.wikipedia.org/wiki/Dunbar%27s_number)
 - [Amatures and Professionals](https://www.fs.blog/2017/08/amateurs-professionals/)
+- [PSPDFKit for a bunch of languages](https://pspdfkit.com/)
+- [macOS and Linux Disassembler](https://www.hopperapp.com/)
 
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)
@@ -40,3 +42,4 @@
 - [ML Podcast](http://ocdevel.com/podcasts/machine-learning)
 - [Pytorch](http://pytorch.org/)
 - [TensorFlow](https://www.tensorflow.org/)
+- [Writing an Interpreter](https://www.youtube.com/watch?v=LCslqgM48D4)

@@ -102,13 +102,13 @@
 - [String ABI discussion](https://forums.swift.org/t/piercing-the-string-veil/21700)
 - [ARC](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
 - [libauto](https://opensource.apple.com/source/libauto/libauto-77.1/README.html)
-
+- [Architecture Wars](https://swifting.io/blog/2016/09/07/architecture-wars-a-new-hope/)
 
 ## Videos
 - [Performance Profiling on Linux](https://youtu.be/TWeLLTFjqXg)
 - [Swift for TensorFlow](https://www.youtube.com/watch?v=Yze693W4MaU)
 - [2018 platforms state of the Union](https://developer.apple.com/videos/play/wwdc2018/102/)
-
+- [Roy Marmelstein: Silver Bullets in Swift](https://www.youtube.com/watch?v=zUABfqFOb2Q)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
