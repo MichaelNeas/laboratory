@@ -29,4 +29,11 @@
 - [L337C0D3](https://leetcode.com/)
 - [AdventOfCode](https://adventofcode.com/2017/about)
 
+### Security Related Challenges
+- [OverTheWire](http://overthewire.org/wargames/)
+- [NetGarage](https://io.netgarage.org/)
+- [SmashTheStack](http://smashthestack.org/)
+- [MicroCorruption](https://microcorruption.com/login)
+- [PicoCTF](https://picoctf.com/get_started)
+
 ##### Please feel free to write your own implementations for anything and pr it in (especially alternatives to practice problems)
