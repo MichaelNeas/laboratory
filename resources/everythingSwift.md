@@ -41,6 +41,15 @@
 - [SwiftLint](https://github.com/realm/SwiftLint)
 - [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 - [Google Swift](https://github.com/google/swift/tree/format)
+- [NSLogger](https://github.com/fpillet/NSLogger)
+- [RxCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+- [RxSwift](https://github.com/ReactiveX/RxSwift)
+- [SnapKit](https://github.com/SnapKit/SnapKit)
+- [Vapor](https://github.com/vapor/vapor)
+- [Kitura](https://github.com/IBM-Swift/Kitura)
+- [Stencil](https://github.com/stencilproject/Stencil)
+- [Marathon](https://github.com/johnsundell/marathon)
+- [Moya](https://github.com/Moya/Moya)
 
 
 ## Blogs/Forums
@@ -103,12 +112,25 @@
 - [ARC](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)
 - [libauto](https://opensource.apple.com/source/libauto/libauto-77.1/README.html)
 - [Architecture Wars](https://swifting.io/blog/2016/09/07/architecture-wars-a-new-hope/)
+- [Hacking with Swift](https://www.hackingwithswift.com/)
+- [Container View Controllers](http://khanlou.com/2012/11/container-view-controllers/)
+- [MVVM is not very good](http://khanlou.com/2015/12/mvvm-is-not-very-good/)
+- [Swift4 Weak References](https://mikeash.com/pyblog/friday-qa-2017-09-22-swift-4-weak-references.html)
+- [iOS Accessibility](https://developer.apple.com/accessibility/ios/)
+- [WTF Auto Layout](http://www.wtfautolayout.com/)
+- [A micro auto layout DSL](http://chris.eidhof.nl/post/micro-autolayout-dsl/)
+- [Child View Controllers in Plugins](https://www.swiftbysundell.com/posts/using-child-view-controllers-as-plugins-in-swift)
+- [objc.io](https://www.objc.io/books/)
+- [Swift Game Dev](http://redqueengamedev.com/blog/)
+- [Red QUeen blog](http://redqueencoder.com/)
+
 
 ## Videos
 - [Performance Profiling on Linux](https://youtu.be/TWeLLTFjqXg)
 - [Swift for TensorFlow](https://www.youtube.com/watch?v=Yze693W4MaU)
 - [2018 platforms state of the Union](https://developer.apple.com/videos/play/wwdc2018/102/)
 - [Roy Marmelstein: Silver Bullets in Swift](https://www.youtube.com/watch?v=zUABfqFOb2Q)
+- [Game Development for App Developers](https://www.youtube.com/watch?v=vhxOMOhteV0)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)

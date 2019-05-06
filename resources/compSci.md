@@ -36,6 +36,8 @@
 - [PSPDFKit for a bunch of languages](https://pspdfkit.com/)
 - [macOS and Linux Disassembler](https://www.hopperapp.com/)
 
+- [Cocos2d engine](http://www.cocos2d.org/index.html)
+
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)
 - [Keras](https://keras.io/)
