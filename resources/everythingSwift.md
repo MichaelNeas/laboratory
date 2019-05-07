@@ -50,6 +50,7 @@
 - [Stencil](https://github.com/stencilproject/Stencil)
 - [Marathon](https://github.com/johnsundell/marathon)
 - [Moya](https://github.com/Moya/Moya)
+- [SwiftMint](https://github.com/yonaskolb/Mint)
 
 
 ## Blogs/Forums
@@ -216,3 +217,5 @@
 - [Result Type](https://github.com/apple/swift-evolution/blob/master/proposals/0235-add-result.md)
 - [KeyPaths for Key-value Coding](https://github.com/apple/swift-evolution/blob/master/proposals/0161-key-paths.md)
 - [String Encoded Offsets Depreciated](https://github.com/apple/swift-evolution/blob/master/proposals/0241-string-index-explicit-encoding-offset.md)
+- [Implicit single line returns](https://github.com/apple/swift-evolution/blob/master/proposals/0255-omit-return.md)
+- [Ending commas for multiline expressions](https://github.com/apple/swift-evolution/blob/master/proposals/0257-elide-comma.md)
