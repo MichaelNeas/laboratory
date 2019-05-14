@@ -52,6 +52,9 @@
 - [Moya](https://github.com/Moya/Moya)
 - [SwiftMint](https://github.com/yonaskolb/Mint)
 - [SwiftNIO](https://github.com/apple/swift-nio)
+- [ML Model Creation Tool](https://github.com/apple/turicreate)
+- [Swift Intermediate Language(SIL)](https://github.com/apple/swift/blob/master/docs/SIL.rst)
+
 
 ## Blogs/Forums
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -126,7 +129,7 @@
 - [Red QUeen blog](http://redqueencoder.com/)
 - [Swifty Methods](https://radex.io/swift/methods/)
 - [PAW API Tool](https://paw.cloud/)
-- [ML Model Creation Tool](https://github.com/apple/turicreate)
+- [Swift Bugs](https://bugs.swift.org/secure/Dashboard.jspa)
 
 
 ## Videos
@@ -135,6 +138,7 @@
 - [2018 platforms state of the Union](https://developer.apple.com/videos/play/wwdc2018/102/)
 - [Roy Marmelstein: Silver Bullets in Swift](https://www.youtube.com/watch?v=zUABfqFOb2Q)
 - [Game Development for App Developers](https://www.youtube.com/watch?v=vhxOMOhteV0)
+
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)

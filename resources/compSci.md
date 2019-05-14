@@ -45,6 +45,9 @@
 - [Imaginet Comp](http://www.image-net.org/challenges/LSVRC/)
 - [Device Vision](https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html)
 
+- [LLVM](https://llvm.org/)
+- [LLVM Kaleidoscope Tutorial](http://llvm.org/docs/tutorial/)
+
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)
 - [Keras](https://keras.io/)
