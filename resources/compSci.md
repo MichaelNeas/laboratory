@@ -37,6 +37,13 @@
 - [macOS and Linux Disassembler](https://www.hopperapp.com/)
 
 - [Cocos2d engine](http://www.cocos2d.org/index.html)
+- [Netty](https://netty.io/)
+- [QUIC](https://www.chromium.org/quic)
+- [What it means to be senior](http://merowing.info/2017/01/seniority/)
+
+- [ML101](https://heartbeat.fritz.ai/mobile-machine-learning-101-glossary-7a4ee36e0a1a)
+- [Imaginet Comp](http://www.image-net.org/challenges/LSVRC/)
+- [Device Vision](https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html)
 
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)

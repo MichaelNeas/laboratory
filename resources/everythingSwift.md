@@ -51,7 +51,7 @@
 - [Marathon](https://github.com/johnsundell/marathon)
 - [Moya](https://github.com/Moya/Moya)
 - [SwiftMint](https://github.com/yonaskolb/Mint)
-
+- [SwiftNIO](https://github.com/apple/swift-nio)
 
 ## Blogs/Forums
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -124,6 +124,9 @@
 - [objc.io](https://www.objc.io/books/)
 - [Swift Game Dev](http://redqueengamedev.com/blog/)
 - [Red QUeen blog](http://redqueencoder.com/)
+- [Swifty Methods](https://radex.io/swift/methods/)
+- [PAW API Tool](https://paw.cloud/)
+- [ML Model Creation Tool](https://github.com/apple/turicreate)
 
 
 ## Videos
