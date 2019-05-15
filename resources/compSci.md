@@ -47,6 +47,7 @@
 
 - [LLVM](https://llvm.org/)
 - [LLVM Kaleidoscope Tutorial](http://llvm.org/docs/tutorial/)
+- [LLDB](https://lldb.llvm.org/)
 
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)

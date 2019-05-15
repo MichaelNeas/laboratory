@@ -54,6 +54,7 @@
 - [SwiftNIO](https://github.com/apple/swift-nio)
 - [ML Model Creation Tool](https://github.com/apple/turicreate)
 - [Swift Intermediate Language(SIL)](https://github.com/apple/swift/blob/master/docs/SIL.rst)
+- [Chisel](https://github.com/facebook/chisel)
 
 
 ## Blogs/Forums
@@ -130,6 +131,7 @@
 - [Swifty Methods](https://radex.io/swift/methods/)
 - [PAW API Tool](https://paw.cloud/)
 - [Swift Bugs](https://bugs.swift.org/secure/Dashboard.jspa)
+- [Apple Logging](https://developer.apple.com/documentation/os/logging)
 
 
 ## Videos

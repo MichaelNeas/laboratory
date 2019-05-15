@@ -49,3 +49,12 @@ let range = ...5
 range.contains(7)   // false
 range.contains(4)   // true
 range.contains(-1)  // true
+
+
+// fizz buzz range and ismultiple api
+Array(0..<100).forEach { num in
+    var str = ""
+    str += num.isMultiple(of: 3) ? "Fizz" : "Foo"
+    str += num.isMultiple(of: 5) ? "Buzz" : "Bar"
+    print(str)
+}
