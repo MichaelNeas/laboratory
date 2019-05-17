@@ -55,6 +55,10 @@
 - [ML Model Creation Tool](https://github.com/apple/turicreate)
 - [Swift Intermediate Language(SIL)](https://github.com/apple/swift/blob/master/docs/SIL.rst)
 - [Chisel](https://github.com/facebook/chisel)
+- [IGListKit](https://github.com/Instagram/IGListKit)
+- [GitHawk](https://github.com/GitHawkApp/GitHawk)
+- [ComponentKit](https://github.com/facebook/componentkit)
+- [Brisk](https://github.com/br1sk/brisk)
 
 
 ## Blogs/Forums
@@ -132,6 +136,9 @@
 - [PAW API Tool](https://paw.cloud/)
 - [Swift Bugs](https://bugs.swift.org/secure/Dashboard.jspa)
 - [Apple Logging](https://developer.apple.com/documentation/os/logging)
+- [PSPDFKIT](https://pspdfkit.com/)
+- [Fixing what apple doesn't](http://petersteinberger.com/blog/2014/fixing-what-apple-doesnt/)
+- [Framer](https://www.framer.com/)
 
 
 ## Videos
@@ -140,6 +147,7 @@
 - [2018 platforms state of the Union](https://developer.apple.com/videos/play/wwdc2018/102/)
 - [Roy Marmelstein: Silver Bullets in Swift](https://www.youtube.com/watch?v=zUABfqFOb2Q)
 - [Game Development for App Developers](https://www.youtube.com/watch?v=vhxOMOhteV0)
+- [Sean Allen](https://www.youtube.com/seanallen)
 
 
 ## Proposals
