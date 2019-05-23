@@ -32,3 +32,13 @@ Reflection - Goes a step further and allows manipulation of the values, data, pr
 Googles lightweight data format to provide easier structure and serialization to developers
 ```
 - [Google Documentation](https://developers.google.com/protocol-buffers/)
+
+### Day 4: RTP, what is it? when/why would you use it?
+```
+Real-time Transport Protocol used for things that need to be in real time i.e. minimal latency
+
+Ex. Sports, phone calls, TV
+```
+- [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
+
+### Day 5: Declarative programming, why/what? An an example.

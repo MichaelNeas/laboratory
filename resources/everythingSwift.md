@@ -59,9 +59,13 @@
 - [GitHawk](https://github.com/GitHawkApp/GitHawk)
 - [ComponentKit](https://github.com/facebook/componentkit)
 - [Brisk](https://github.com/br1sk/brisk)
+- [Jazzy](https://github.com/realm/jazzy)
+- [Splash](https://github.com/johnsundell/splash)
+- [Swift Format](https://github.com/nicklockwood/SwiftFormat)
+- [Layout](https://github.com/nicklockwood/layout)
 
 
-## Blogs/Forums
+## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
 - [Swift Team](https://swift.org/community/#community-structure)
 - [Swift.org 1st blog post 2015](https://swift.org/blog/welcome/)
@@ -140,6 +144,7 @@
 - [Fixing what apple doesn't](http://petersteinberger.com/blog/2014/fixing-what-apple-doesnt/)
 - [Framer](https://www.framer.com/)
 - [Fastlane](https://fastlane.tools/)
+- [Core Animation](https://developer.apple.com/documentation/quartzcore)
 
 
 ## Videos
@@ -149,6 +154,7 @@
 - [Roy Marmelstein: Silver Bullets in Swift](https://www.youtube.com/watch?v=zUABfqFOb2Q)
 - [Game Development for App Developers](https://www.youtube.com/watch?v=vhxOMOhteV0)
 - [Sean Allen](https://www.youtube.com/seanallen)
+- [Beyond Animations with Core Animation](https://www.youtube.com/watch?v=J-rruNKcY0Y)
 
 
 ## Proposals

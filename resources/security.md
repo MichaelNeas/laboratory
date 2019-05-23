@@ -21,6 +21,7 @@
 - [LibSodium](https://download.libsodium.org/doc/)
 - [Salsa20](https://en.wikipedia.org/wiki/Salsa20)
 - [RNCryptor](https://github.com/RNCryptor/RNCryptor)
+- [Themis](https://github.com/cossacklabs/themis)
 
 ## Blogs
 - [SDK MITM attacks](https://krausefx.com/blog/trusting-sdks)
