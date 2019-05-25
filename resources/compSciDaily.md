@@ -42,3 +42,53 @@ Ex. Sports, phone calls, TV
 - [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
 
 ### Day 5: Declarative programming, why/what? An an example.
+```
+Imperative - How one does something (C, C++, Java)
+Declarative - What one wants (SQL, HTML)
+Hybrid - Both! (JS, Python, C#)
+
+It's important to remember that these are paradigms and can be implemented in any language.
+```
+
+- [The VS article](https://tylermcginnis.com/imperative-vs-declarative-programming/)
+
+#### Declarative Examples (What)
+
+```
+function double (arr) {
+  return arr.map((item) => item * 2)
+}
+function add (arr) {
+  return arr.reduce((prev, current) => prev + current, 0)
+}
+<Btn
+  onToggleHighlight={this.handleToggleHighlight}
+  highlight={this.state.highlight}>
+    {this.state.buttonText}
+</Btn>
+```
+
+#### Imperative Examples (How)
+
+```
+function double (arr) {
+  let results = []
+  for (let i = 0; i < arr.length; i++){
+    results.push(arr[i] * 2)
+  }
+  return results
+}
+function add (arr) {
+  let result = 0
+  for (let i = 0; i < arr.length; i++){
+    result += arr[i]
+  }
+  return result
+}
+$("#btn").click(function() {
+  $(this).toggleClass("highlight")
+  $(this).text() === 'Add Highlight'
+    ? $(this).text('Remove Highlight')
+    : $(this).text('Add Highlight')
+})
+```
