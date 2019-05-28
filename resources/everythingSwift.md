@@ -63,6 +63,12 @@
 - [Splash](https://github.com/johnsundell/splash)
 - [Swift Format](https://github.com/nicklockwood/SwiftFormat)
 - [Layout](https://github.com/nicklockwood/layout)
+- [Swift HTML](https://github.com/pointfreeco/swift-html)
+- [ios snapshot test case](https://github.com/uber/ios-snapshot-test-case)
+- [DVR](https://github.com/venmo/DVR)
+- [Buck Build](https://github.com/facebook/buck)
+- [Texture](https://github.com/TextureGroup/Texture)
+
 
 
 ## Blogs/Forums/Docs/Tools
@@ -145,6 +151,7 @@
 - [Framer](https://www.framer.com/)
 - [Fastlane](https://fastlane.tools/)
 - [Core Animation](https://developer.apple.com/documentation/quartzcore)
+- [Testing for Mobile Performance Regressions](https://code.fb.com/android/mobilelab/)
 
 
 ## Videos
@@ -155,6 +162,7 @@
 - [Game Development for App Developers](https://www.youtube.com/watch?v=vhxOMOhteV0)
 - [Sean Allen](https://www.youtube.com/seanallen)
 - [Beyond Animations with Core Animation](https://www.youtube.com/watch?v=J-rruNKcY0Y)
+- [Protocols with Associated Types](https://www.youtube.com/watch?v=XWoNjiSPqI8)
 
 
 ## Proposals
