@@ -49,6 +49,8 @@
 - [LLVM Kaleidoscope Tutorial](http://llvm.org/docs/tutorial/)
 - [LLDB](https://lldb.llvm.org/)
 
+- [Automated Open Source Response Blog](https://mikemcquaid.com/2018/06/05/robot-pedantry-human-empathy/)
+
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)
 - [Keras](https://keras.io/)

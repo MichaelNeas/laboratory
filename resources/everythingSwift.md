@@ -68,6 +68,7 @@
 - [DVR](https://github.com/venmo/DVR)
 - [Buck Build](https://github.com/facebook/buck)
 - [Texture](https://github.com/TextureGroup/Texture)
+- [PromiseKit](https://github.com/mxcl/PromiseKit)
 
 
 
