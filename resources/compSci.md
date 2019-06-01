@@ -50,6 +50,7 @@
 - [LLDB](https://lldb.llvm.org/)
 
 - [Automated Open Source Response Blog](https://mikemcquaid.com/2018/06/05/robot-pedantry-human-empathy/)
+- [Data Oriented Design](https://www.youtube.com/watch?v=rX0ItVEVjHc)
 
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)

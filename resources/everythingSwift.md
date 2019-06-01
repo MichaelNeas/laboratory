@@ -69,6 +69,7 @@
 - [Buck Build](https://github.com/facebook/buck)
 - [Texture](https://github.com/TextureGroup/Texture)
 - [PromiseKit](https://github.com/mxcl/PromiseKit)
+- [Kif](https://github.com/kif-framework/KIF)
 
 
 
@@ -153,6 +154,13 @@
 - [Fastlane](https://fastlane.tools/)
 - [Core Animation](https://developer.apple.com/documentation/quartzcore)
 - [Testing for Mobile Performance Regressions](https://code.fb.com/android/mobilelab/)
+- [Ludacris Speed UI Tests](https://pspdfkit.com/blog/2016/running-ui-tests-with-ludicrous-speed/)
+- [Watch Connectivity](https://developer.apple.com/documentation/watchconnectivity)
+- [Watch Interface Object](https://developer.apple.com/documentation/watchkit/wkinterfaceobject)
+- [Lottie](https://airbnb.design/lottie/)
+- [Halide](https://halide.cam/)
+- [Controller Hierarchies](https://sandofsky.com/blog/controller-hierarchies.html)
+- [Show Method](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621377-show)
 
 
 ## Videos
@@ -164,6 +172,7 @@
 - [Sean Allen](https://www.youtube.com/seanallen)
 - [Beyond Animations with Core Animation](https://www.youtube.com/watch?v=J-rruNKcY0Y)
 - [Protocols with Associated Types](https://www.youtube.com/watch?v=XWoNjiSPqI8)
+- [Designated Nerd](http://designatednerd.com/public-speaking/)
 
 
 ## Proposals
