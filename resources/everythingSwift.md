@@ -71,6 +71,7 @@
 - [PromiseKit](https://github.com/mxcl/PromiseKit)
 - [Kif](https://github.com/kif-framework/KIF)
 - [Syzgy](https://github.com/davedelong/syzygy)
+- [Files](https://github.com/johnsundell/files)
 
 
 ## Videos
@@ -85,7 +86,7 @@
 - [Designated Nerd](http://designatednerd.com/public-speaking/)
 - [Swifts Reflective Underpinnings](https://www.skilled.io/u/swiftsummit/swift-s-reflective-underpinnings-joe-groff)
 - [A better MVC](https://www.youtube.com/watch?v=YWVzCd5FYbs)
-
+- [String Evolution](https://www.youtube.com/watch?v=lMhGnTFA9CI)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -173,6 +174,7 @@
 - [String Encoded Offsets Depreciated](https://github.com/apple/swift-evolution/blob/master/proposals/0241-string-index-explicit-encoding-offset.md)
 - [Implicit single line returns](https://github.com/apple/swift-evolution/blob/master/proposals/0255-omit-return.md)
 - [Ending commas for multiline expressions](https://github.com/apple/swift-evolution/blob/master/proposals/0257-elide-comma.md)
+- [Contiguous Strings](https://github.com/apple/swift-evolution/blob/master/proposals/0247-contiguous-strings.md)
 
 
 ## Blogs/Forums/Docs/Tools
@@ -267,3 +269,11 @@
 - [Calendar API](https://developer.apple.com/documentation/foundation/calendar)
 - [Date Components API](https://developer.apple.com/documentation/foundation/datecomponents)
 - [A Better MVC](https://davedelong.com/blog/2017/11/06/a-better-mvc-part-1-the-problems/)
+- [Cocoawithlove](https://www.cocoawithlove.com/)
+- [Original MVC Doc](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)
+- [Binding values in swift](https://www.swiftbysundell.com/posts/bindable-values-in-swift)
+- [String Essentials](https://forums.swift.org/t/string-essentials/21909)
+- [JS Scripting for iOS](https://scriptable.app/)
+- [Jayson](https://jayson.app/)
+- [Javascript Core](https://developer.apple.com/documentation/javascriptcore)
+- [x-callback-url](http://x-callback-url.com/)

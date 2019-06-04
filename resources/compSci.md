@@ -52,6 +52,14 @@
 - [Automated Open Source Response Blog](https://mikemcquaid.com/2018/06/05/robot-pedantry-human-empathy/)
 - [Data Oriented Design](https://www.youtube.com/watch?v=rX0ItVEVjHc)
 
+- [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+- [Elm Arch](https://guide.elm-lang.org/architecture/)
+- [Functional Reactive Animation](http://conal.net/papers/icfp97/)
+- [Paper that influenced this](http://conal.net/papers/ActiveVRML/ActiveVRML.pdf)
+- [Videos about FRP](https://github.com/conal/talk-2015-essence-and-origins-of-frp)
+- [Benchmarks of code optimizations across languages](https://jackmott.github.io/programming/2016/07/22/making-obvious-fast.html)
+- [Translation for Devs](https://localise.biz/)
+
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)
 - [Keras](https://keras.io/)
