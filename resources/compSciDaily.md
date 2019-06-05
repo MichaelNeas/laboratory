@@ -92,3 +92,17 @@ $("#btn").click(function() {
     : $(this).text('Add Highlight')
 })
 ```
+
+### Day 6: Functor & Monad
+- A functor is an object with a mapping (method)[https://www.youtube.com/watch?v=DisD9ftUyCk]
+- Monads can be a type of functor! In fact a monad is more powerful and refers to flatmap, they are a specific way to chain operations together and they use functors to complete their purpose
+
+```
+Lee:
+Monads are used for MapReduce
+Functors are where categories go to die
+So, for example, I have a category of objects A in java. The toString() method is an elementary functor.
+However, in CS parlance functors are just first-class function objects.
+```
+
+### Day 7: LLVM

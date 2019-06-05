@@ -79,6 +79,7 @@
 - [Files](https://github.com/johnsundell/files)
 - [LittleSwift](https://github.com/theblixguy/LittleSwift)
 - [LLVMSwift](https://github.com/llvm-swift/LLVMSwift)
+- [XCodeGen](https://github.com/yonaskolb/XcodeGen)
 
 
 ## Videos

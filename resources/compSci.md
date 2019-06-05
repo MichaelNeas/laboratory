@@ -59,6 +59,7 @@
 - [Videos about FRP](https://github.com/conal/talk-2015-essence-and-origins-of-frp)
 - [Benchmarks of code optimizations across languages](https://jackmott.github.io/programming/2016/07/22/making-obvious-fast.html)
 - [Translation for Devs](https://localise.biz/)
+- [Bazel Build](https://bazel.build/)
 
 ## Compilers
 - [Clang](https://clang.llvm.org/)
