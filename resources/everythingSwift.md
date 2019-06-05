@@ -1,4 +1,8 @@
 # Swift
+- [Forums](https://swift.org/community/#forums)
+- [Swift Lang](https://github.com/apple/swift)
+- [Radar](https://bugs.swift.org/secure/Dashboard.jspa)
+- [Starter Bugs](https://bugs.swift.org/browse/TF-499?jql=labels%20%3D%20StarterBug)
 
 ## Manifestos
 - [ABI Stability Manifesto](https://github.com/apple/swift/blob/master/docs/ABIStabilityManifesto.md)
@@ -7,6 +11,7 @@
 - [Ownership Manifesto](https://github.com/apple/swift/blob/master/docs/OwnershipManifesto.md)
 - [Concurrency Manifesto](https://gist.github.com/lattner/31ed37682ef1576b16bca1432ea9f782)
 - [Compiler Performance](https://github.com/apple/swift/blob/master/docs/CompilerPerformance.md)
+- [Types in Swift](https://github.com/apple/swift/blob/master/docs/TypeChecker.rst)
 
 
 ## Repos
@@ -72,6 +77,8 @@
 - [Kif](https://github.com/kif-framework/KIF)
 - [Syzgy](https://github.com/davedelong/syzygy)
 - [Files](https://github.com/johnsundell/files)
+- [LittleSwift](https://github.com/theblixguy/LittleSwift)
+- [LLVMSwift](https://github.com/llvm-swift/LLVMSwift)
 
 
 ## Videos
@@ -277,3 +284,5 @@
 - [Jayson](https://jayson.app/)
 - [Javascript Core](https://developer.apple.com/documentation/javascriptcore)
 - [x-callback-url](http://x-callback-url.com/)
+- [Swift Generics](https://medium.com/@slavapestov/the-secret-life-of-types-in-swift-ff83c3c000a5)
+- [Contributing to swift](https://edit.theappbusiness.com/contributing-to-swift-part-1-ea19108a2a54)

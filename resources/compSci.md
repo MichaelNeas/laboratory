@@ -45,7 +45,7 @@
 - [Imaginet Comp](http://www.image-net.org/challenges/LSVRC/)
 - [Device Vision](https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html)
 
-- [LLVM](https://llvm.org/)
+
 - [LLVM Kaleidoscope Tutorial](http://llvm.org/docs/tutorial/)
 - [LLDB](https://lldb.llvm.org/)
 
@@ -59,6 +59,17 @@
 - [Videos about FRP](https://github.com/conal/talk-2015-essence-and-origins-of-frp)
 - [Benchmarks of code optimizations across languages](https://jackmott.github.io/programming/2016/07/22/making-obvious-fast.html)
 - [Translation for Devs](https://localise.biz/)
+
+## Compilers
+- [Clang](https://clang.llvm.org/)
+- [LLVM](https://llvm.org/)
+- [Syntax](https://en.wikipedia.org/wiki/Syntax_(programming_languages))
+- [Parse Tree](https://en.wikipedia.org/wiki/Parse_tree)
+- [Name Binding](https://en.wikipedia.org/wiki/Name_binding)
+- [Type System](https://en.wikipedia.org/wiki/Type_system)
+- [Type system from scratch](https://www.youtube.com/watch?v=IbjoA5xVUq0)
+
+
 
 ## Python
 - [Automate The Boring Stuff](https://automatetheboringstuff.com/)
