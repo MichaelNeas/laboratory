@@ -287,3 +287,5 @@
 - [x-callback-url](http://x-callback-url.com/)
 - [Swift Generics](https://medium.com/@slavapestov/the-secret-life-of-types-in-swift-ff83c3c000a5)
 - [Contributing to swift](https://edit.theappbusiness.com/contributing-to-swift-part-1-ea19108a2a54)
+- [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+- [Combine](https://developer.apple.com/documentation/combine)
