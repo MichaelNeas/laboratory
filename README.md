@@ -5,13 +5,13 @@
 
 ### Directory Structure
 
-- `./interviews` for questions i've been asked on interviews
-- `./practice` for various programming challenges
+- `./interviews` Questions that may or may have not been asked on previous interviews
+- `./practice` Various programming challenges
 - `./practice/1337` LeetCode Solutions
-- `./practice/interview-practice` big list of interview practice problems
-- `./practice/java` java questions solved
-- `./practice/jsthings` has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
-- `./practice/jsthings/noders` node specific fun
+- `./practice/interview-practice` Big list of interview practice problems and solutions
+- `./practice/java` Java questions solved
+- `./practice/jsthings` Has really cool advanced js concepts that have helped me with my personal development! (Shout out to [funfunfunction](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)!)
+- `./practice/jsthings/noders` Node specific fun
 - `./practice/css` css, sass, scss
 - `./practice/c` C and C++ programming
 - `./practice/swift` Swift Programming
