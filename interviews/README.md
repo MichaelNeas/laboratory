@@ -138,5 +138,27 @@ Given a value x, design an algorithm that returns the index
 of x in A or (-1,-1) if x isn't present in A.
 ```
 
+- NQueens
+```
+You have N-queens on an M^2 chess board
+Write an algorithm that determines if any of the queens threaten each other. (edited) 
+Your function should accept a list of (r,c) ordered pairs representing queens and a return a bool
+```
+
+- Database of treesets
+```
+You have a database full of tree sets stored as adjacency lists. The the verticies of each individual tree form a set of values in the domain of 32-bit integers.
+Your task is to write a function that converts these tree sets into "diff trees." To do this, we need to identify an edge in each tree which we can "split" to form a root. This edge should be selected in such a way as to maximize the difference of the sum of all values on the left and right subtrees formed by the split.
+As input you should accept an adjacency list in the form of a map of ints to lists of ints. Your output should return a tuple of verticies representing the edge to split on.
+Receiving a tree with only one vertex is an error.
+Example:
+Input: {
+    1:[2,3], 
+    2:[1], 
+    3:[1],
+}
+Output: [1,2]
+```
+
 - You have an array of lexicographically sorted strings. Your task is to write a function that accepts a string and tells you if that string is a substring of any element in the array.
 _Bonus points for doing it in less than quadratic time._
