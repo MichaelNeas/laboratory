@@ -1,0 +1,3 @@
+1. Return to me ( maxElevation, maxHeartRate, minElevation, minHeartRate)
+2. Return to me a list of all peaks and valleys, where a peak is defined as 3 points, the middle point being a higher elevation than it's left and right points
+3. Give me an efficient structure to maintain the top 5 peaks, so we can add to Bobby's top heights as he goes on more hikes (looking for a heap)
