@@ -14,6 +14,12 @@ Bundle - how apple presents code and other resources on your drive
 - you can use nibs in nibs and reference them from the outside world with files owner
 - IBInspectable & IBDesignable lets you use IB to modify runtime properties
 - you can add views to nib sceneDock which can be super helpful for modals
+- a container view controller manages it's own view and at least 1 other view that represents a part of the screen
+- refactor menu on right click
+- UIKit is ObjC not swift
+- Embed segues are an alternative to loading child view controllers in code, requires container views to use
+- Outlet collections can store multiple ui elements to an array
+- It's important to think about abstract classes paired with generics
 
 ## IB HotKeys 
 - cmd + 0, opt + cmd + 0 to bring in/out side views
