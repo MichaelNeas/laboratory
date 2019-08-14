@@ -3,6 +3,7 @@
 - [Swift Lang](https://github.com/apple/swift)
 - [Radar](https://bugs.swift.org/secure/Dashboard.jspa)
 - [Starter Bugs](https://bugs.swift.org/browse/TF-499?jql=labels%20%3D%20StarterBug)
+- [Swift Compiler](https://swift.org/compiler-stdlib/)
 
 ## Manifestos
 - [ABI Stability Manifesto](https://github.com/apple/swift/blob/master/docs/ABIStabilityManifesto.md)
@@ -12,7 +13,6 @@
 - [Concurrency Manifesto](https://gist.github.com/lattner/31ed37682ef1576b16bca1432ea9f782)
 - [Compiler Performance](https://github.com/apple/swift/blob/master/docs/CompilerPerformance.md)
 - [Types in Swift](https://github.com/apple/swift/blob/master/docs/TypeChecker.rst)
-
 
 ## Repos
 - [Swift Goes FOSS 2015](https://developer.apple.com/swift/blog/?id=34)
@@ -80,6 +80,7 @@
 - [LittleSwift](https://github.com/theblixguy/LittleSwift)
 - [LLVMSwift](https://github.com/llvm-swift/LLVMSwift)
 - [XCodeGen](https://github.com/yonaskolb/XcodeGen)
+- [RxCombine](https://github.com/freak4pc/RxCombine)
 
 
 ## Videos
@@ -95,6 +96,9 @@
 - [Swifts Reflective Underpinnings](https://www.skilled.io/u/swiftsummit/swift-s-reflective-underpinnings-joe-groff)
 - [A better MVC](https://www.youtube.com/watch?v=YWVzCd5FYbs)
 - [String Evolution](https://www.youtube.com/watch?v=lMhGnTFA9CI)
+- [Numeric Tyles and Protocols](https://speakerdeck.com/jessesquires/exploring-swifts-numeric-types-and-protocols)
+- [wwdc swiftui accessibility](https://developer.apple.com/videos/play/wwdc2019/238/)
+- [Essential Video Sessions from 2019 wwdc](https://wwdcbysundell.com/2019/essential-session-videos/)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -183,7 +187,9 @@
 - [Implicit single line returns](https://github.com/apple/swift-evolution/blob/master/proposals/0255-omit-return.md)
 - [Ending commas for multiline expressions](https://github.com/apple/swift-evolution/blob/master/proposals/0257-elide-comma.md)
 - [Contiguous Strings](https://github.com/apple/swift-evolution/blob/master/proposals/0247-contiguous-strings.md)
-
+- [Property Wrappers](https://github.com/apple/swift-evolution/blob/master/proposals/0258-property-wrappers.md)
+- [Generic Math(s)](https://github.com/apple/swift-evolution/blob/master/proposals/0246-mathable.md)
+- [AdditiveArithmetic Protocol](https://github.com/apple/swift-evolution/blob/master/proposals/0233-additive-arithmetic-protocol.md)
 
 ## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -249,7 +255,7 @@
 - [Container View Controllers](http://khanlou.com/2012/11/container-view-controllers/)
 - [MVVM is not very good](http://khanlou.com/2015/12/mvvm-is-not-very-good/)
 - [Swift4 Weak References](https://mikeash.com/pyblog/friday-qa-2017-09-22-swift-4-weak-references.html)
-- [iOS Accessibility](https://developer.apple.com/accessibility/ios/)
+- [iOS Accessibility](https://developer.apple.com/accessibility/)
 - [WTF Auto Layout](http://www.wtfautolayout.com/)
 - [A micro auto layout DSL](http://chris.eidhof.nl/post/micro-autolayout-dsl/)
 - [Child View Controllers in Plugins](https://www.swiftbysundell.com/posts/using-child-view-controllers-as-plugins-in-swift)
@@ -289,3 +295,14 @@
 - [Contributing to swift](https://edit.theappbusiness.com/contributing-to-swift-part-1-ea19108a2a54)
 - [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 - [Combine](https://developer.apple.com/documentation/combine)
+- [How Property Wrappers & Function Builders can be leveraged](https://gist.github.com/vincent-pradeilles/875c9dd165542912f3803f8e01b3e15e)
+- [Property Wrappers John Sundell](https://www.swiftbysundell.com/posts/the-swift-51-features-that-power-swiftuis-api#property-wrappers)
+- [Property Wrappers NSHipster](https://nshipster.com/propertywrapper/)
+- [The NeXT Era Ends, the Swift Era Begins](https://inessential.com/2019/06/07/the_next_era_ends_the_swift_era_begins)
+- [Swift Launch Arguments](https://www.swiftbysundell.com/posts/launch-arguments-in-swift)
+- [Unit Testing](https://www.swiftbysundell.com/basics/unit-testing)
+- [Pure Functions](https://www.swiftbysundell.com/posts/pure-functions-in-swift)
+- [NSDocument](https://developer.apple.com/documentation/appkit/nsdocument)
+- [Swift51 featueature behind swiftui](https://www.swiftbysundell.com/posts/the-swift-51-features-that-power-swiftuis-api)
+- [CryptoKit](https://developer.apple.com/documentation/cryptokit)
+- [VisionKit](https://developer.apple.com/documentation/visionkit)
