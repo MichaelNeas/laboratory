@@ -1,6 +1,7 @@
 # Swift Practice Problems
 
 - [99 Swift Problems](http://www.enekoalonso.com/projects/99-swift-problems/)
+- [100 days of coding test](https://www.hackingwithswift.com/review/100/final-exam)
 
 # Notes from reading the docs
 

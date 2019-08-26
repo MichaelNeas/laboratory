@@ -1,5 +1,8 @@
 # Notes on iOS
 
+- 2 or 3 pixels is equal to 1 point.
+- https://developer.apple.com/documentation/uikit/uiactivityviewcontroller
+
 ## Terminologies
 xib - XML Interface Builder
 nib - NeXT Interface Builder
