@@ -45,3 +45,5 @@
 - Raw values can be strings, characters, or any of the integer or floating-point number types. Each raw value must be unique within its enumeration declaration.
 - recursive enumeration is an enumeration that has another instance of the enumeration as the associated value for one or more of the enumeration cases.
 - System.Enum is a reference type, but any specific enum type is a value type.
+- isEmpty is faster than count == 0
+- Bool.random()

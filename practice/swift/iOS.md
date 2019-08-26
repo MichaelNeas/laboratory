@@ -2,6 +2,8 @@
 
 - 2 or 3 pixels is equal to 1 point.
 - https://developer.apple.com/documentation/uikit/uiactivityviewcontroller
+- assertions get removed in appstore build
+- CTM stands for Current Transformation Matrix.  It stores the current translation, scale, and rotation that will be applied to drawing.
 
 ## Terminologies
 xib - XML Interface Builder
