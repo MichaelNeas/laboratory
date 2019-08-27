@@ -57,3 +57,17 @@ userA === userB
 
 let userC = userA
 userA === userC
+
+
+// failable init
+struct Dog {
+	var name: String
+	init?(name: String) {
+		guard name == "Lassie" else {
+			print("Sorry, wrong dog!")
+			return nil
+		}
+		self.name = name
+	}
+}
+let dog = Dog(name: "Fido")

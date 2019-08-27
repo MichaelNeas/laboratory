@@ -22,6 +22,10 @@ struct Password {
 }
 let password = Password(input: "hell0")
 
+// default dictionary values
+let planets = [1: "Mercury", 2: "Venus"]
+let venus = planets[2, default: "Planet X"]
+
 // valid
 Bool("false")
 Double("2.3")

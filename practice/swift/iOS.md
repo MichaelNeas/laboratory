@@ -25,6 +25,7 @@ Bundle - how apple presents code and other resources on your drive
 - Embed segues are an alternative to loading child view controllers in code, requires container views to use
 - Outlet collections can store multiple ui elements to an array
 - It's important to think about abstract classes paired with generics
+- document outline shows storyboard contents
 
 ## IB HotKeys 
 - cmd + 0, opt + cmd + 0 to bring in/out side views
@@ -37,3 +38,5 @@ Bundle - how apple presents code and other resources on your drive
 ## XCode Text Editor/File Menu Hot Keys
 - cntrl + cmd + e multiselection and rename of a given word
 - option + drag on files will make a copy
+- cmd + . will stop the project
+- cmd + r will run the project

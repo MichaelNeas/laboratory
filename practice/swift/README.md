@@ -47,3 +47,4 @@
 - System.Enum is a reference type, but any specific enum type is a value type.
 - isEmpty is faster than count == 0
 - Bool.random()
+- Final class cannot be inherited from
