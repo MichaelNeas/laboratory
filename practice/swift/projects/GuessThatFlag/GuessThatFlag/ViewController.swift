@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showScore))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSecretScreen))
         countries += ["estonia", "russia", "poland", "spain", "uk", "us", "france", "germany", "ireland", "italy", "monaco", "nigeria"]
         
         // CALayer is below all views
@@ -58,6 +59,12 @@ class ViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
     
         present(alertController, animated: true)
+    }
+    
+    @objc func showSecretScreen() {
+        if let secretViewController = storyboard?.instantiateViewController(withIdentifier: "codeAutoLayout"){
+            navigationController?.pushViewController(secretViewController, animated: true)
+        }
     }
     
     // IBAction - storyboard actions trigger code

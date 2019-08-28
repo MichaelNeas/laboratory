@@ -20,6 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-sk-4kC">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Rd-sk-4kC" secondAttribute="height" multiplier="2:1" id="v0p-hN-mWa"/>
+                                </constraints>
                                 <state key="normal" image="spain"/>
                                 <connections>
                                     <action selector="flagButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OvZ-9x-RBV"/>
@@ -27,6 +30,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnE-Di-fpf">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KnE-Di-fpf" secondAttribute="height" multiplier="2:1" id="LDD-2A-d8S"/>
+                                </constraints>
                                 <state key="normal" image="uk"/>
                                 <connections>
                                     <action selector="flagButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="byr-mv-Gje"/>
@@ -34,6 +40,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWp-Ka-uaD">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tWp-Ka-uaD" secondAttribute="height" multiplier="2:1" id="JVi-CK-Zcw"/>
+                                </constraints>
                                 <state key="normal" image="germany"/>
                                 <connections>
                                     <action selector="flagButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pf8-id-7lp"/>
@@ -43,9 +52,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tWp-Ka-uaD" firstAttribute="top" secondItem="4Rd-sk-4kC" secondAttribute="bottom" constant="30" id="8iM-UL-EGK"/>
+                            <constraint firstItem="KnE-Di-fpf" firstAttribute="height" secondItem="tWp-Ka-uaD" secondAttribute="height" id="Rte-Tw-bwB"/>
                             <constraint firstItem="4Rd-sk-4kC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="TyZ-1t-YYV"/>
                             <constraint firstItem="KnE-Di-fpf" firstAttribute="top" secondItem="tWp-Ka-uaD" secondAttribute="bottom" constant="30" id="Zpx-Wo-yPw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KnE-Di-fpf" secondAttribute="bottom" constant="20" id="eFv-gY-KPE"/>
                             <constraint firstItem="tWp-Ka-uaD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eIr-I8-H4c"/>
+                            <constraint firstItem="tWp-Ka-uaD" firstAttribute="height" secondItem="4Rd-sk-4kC" secondAttribute="height" id="ezv-DO-pcR"/>
                             <constraint firstItem="KnE-Di-fpf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gU4-Qx-UT8"/>
                             <constraint firstItem="4Rd-sk-4kC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uPK-ie-Jdi"/>
                         </constraints>
@@ -61,6 +73,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Auto Layout View Controller-->
+        <scene sceneID="zMO-7P-L7j">
+            <objects>
+                <viewController storyboardIdentifier="codeAutoLayout" id="ipm-mf-3pQ" customClass="AutoLayoutViewController" customModule="GuessThatFlag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Hm-KC-cw4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WXa-Ak-hSU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZe-HV-jaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fr7-9o-b5f">
