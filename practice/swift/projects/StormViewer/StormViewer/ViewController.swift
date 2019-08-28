@@ -17,6 +17,7 @@ class ViewController: UITableViewController {
         title = "Storm Viewer"
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         
         // get the file manager instance
         let fileManager = FileManager.default
@@ -51,6 +52,14 @@ class ViewController: UITableViewController {
             viewController.total = pictures.count
             navigationController?.pushViewController(viewController, animated: true)
         }
+    }
+    
+    @objc func shareTapped() {
+        // https://www.hackingwithswift.com/articles/118/uiactivityviewcontroller-by-example
+        let items: [Any] = ["This app is my favorite", URL(string: "https://www.apple.com")!]
+        let viewController = UIActivityViewController(activityItems: [items], applicationActivities: nil)
+        viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(viewController, animated: true)
     }
 }
 

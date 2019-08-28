@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showScore))
         countries += ["estonia", "russia", "poland", "spain", "uk", "us", "france", "germany", "ireland", "italy", "monaco", "nigeria"]
         
         // CALayer is below all views
@@ -50,6 +51,13 @@ class ViewController: UIViewController {
     func restartGame(action: UIAlertAction? = nil) {
         score = 0
         askQuestion()
+    }
+    
+    @objc func showScore(){
+        let alertController = UIAlertController(title: "Your Score", message: "\(score)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+    
+        present(alertController, animated: true)
     }
     
     // IBAction - storyboard actions trigger code

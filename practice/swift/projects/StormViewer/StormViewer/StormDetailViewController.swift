@@ -21,6 +21,8 @@ class StormDetailViewController: UIViewController {
         title = "Picture \(index) of \(total)"
         // screen configuration just for one place
         navigationItem.largeTitleDisplayMode = .never
+        // UIBarButtonItem uses ObjC so we need to mark @objc
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         
         if let imageToLoad = selectedImage {
             stormImage.image = UIImage(named: imageToLoad)
@@ -37,14 +39,16 @@ class StormDetailViewController: UIViewController {
         navigationController?.hidesBarsOnTap = false
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // please compile in swift but also make visible by barbuttonitem
+    @objc func shareTapped() {
+        // 0 min, 1.0 max
+        guard let jpgImage = stormImage.image?.jpegData(compressionQuality: 0.8),
+            let stormText = selectedImage else { return }
+        // here's what i want to share, an activity image
+        let viewController = UIActivityViewController(activityItems: [jpgImage, stormText], applicationActivities: nil)
+        // on ipad this is required
+        viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(viewController, animated: true)
     }
-    */
 
 }
