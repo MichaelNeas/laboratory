@@ -7,6 +7,8 @@
 - the introduction of retina screens are why we use points(virtual pixels) instead of pixels
 - 2x, 3x images are looked for under the hood and the app store uses app thining to remove unneccessary images based on device
 - ios10+ removes non-retina devices so you only need to include 2x,3x
+- ActivityViewControllers are an easy way to enable sharing to social media or interacting with iphone sharing services
+- Because @IBAction means you're connecting storyboards (Objective-C code) to Swift code, it always implies @objc as well.
 
 ## Terminologies
 xib - XML Interface Builder
