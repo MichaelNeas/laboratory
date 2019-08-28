@@ -4,6 +4,9 @@
 - https://developer.apple.com/documentation/uikit/uiactivityviewcontroller
 - assertions get removed in appstore build
 - CTM stands for Current Transformation Matrix.  It stores the current translation, scale, and rotation that will be applied to drawing.
+- the introduction of retina screens are why we use points(virtual pixels) instead of pixels
+- 2x, 3x images are looked for under the hood and the app store uses app thining to remove unneccessary images based on device
+- ios10+ removes non-retina devices so you only need to include 2x,3x
 
 ## Terminologies
 xib - XML Interface Builder
