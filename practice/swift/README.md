@@ -48,3 +48,4 @@
 - isEmpty is faster than count == 0
 - Bool.random()
 - Final class cannot be inherited from
+- Weak references must be unwrapped before use; unowned references can be used directly.

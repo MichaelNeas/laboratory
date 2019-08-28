@@ -9,11 +9,7 @@
 import UIKit
 
 class WebsiteChooserTableViewController: UITableViewController {
-    var websites = ["michaelneas.com", "google.com"] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var websites = ["michaelneas.com", "google.com"]
     
     override func viewDidLoad() {
         title = "Simple Website Viewer"
@@ -43,14 +39,21 @@ class WebsiteChooserTableViewController: UITableViewController {
         alertController.addTextField { textField in
             textField.placeholder = "Site Name"
         }
-        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] alert in
-            guard let textContent = alertController.textFields?[0],
+        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self, weak alertController] _ in
+            guard let textContent = alertController?.textFields?[0],
                 let site = textContent.text else { return }
-            self?.websites.append(site)
+            self?.add(site)
+ 
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
+    }
+    
+    func add(_ site: String) {
+        websites.insert(site, at: 0)
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
     }
 }
