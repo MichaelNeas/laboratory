@@ -24,14 +24,17 @@ class ViewController: UITableViewController {
         // look at where our app is compiled and all of it's assets, some app bundles, not iOS, don't have app bundles
         let path = Bundle.main.resourcePath!
         // get all the items in the directory, if we cannot read our app bundle there is no reason for the app
-        let items = try! fileManager.contentsOfDirectory(atPath: path)
-        for item in items {
-            if item.hasPrefix("nssl") {
-                // picture to load
-                pictures.append(item)
+        // loads list of images from bundle on background
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            let items = try! fileManager.contentsOfDirectory(atPath: path)
+            for item in items {
+                if item.hasPrefix("nssl") {
+                    // picture to load
+                    self?.pictures.append(item)
+                }
             }
+            self?.pictures.sort()
         }
-        pictures.sort()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

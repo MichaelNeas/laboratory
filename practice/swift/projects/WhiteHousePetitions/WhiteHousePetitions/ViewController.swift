@@ -17,8 +17,12 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showCredits))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(filterPetitions))
-        
-        // points to json data online
+        // run fetch json in current object in the background thread
+        performSelector(inBackground: #selector(fetchJson), with: nil)
+    }
+    
+    @objc func fetchJson() {
+            // points to json data online
         let urlString: String
         if navigationController?.tabBarItem.tag == 1 {
             // if breaks, mirror: https://www.hackingwithswift.com/samples/petitions-1.json
@@ -27,12 +31,21 @@ class ViewController: UITableViewController {
             // if breaks, mirror: https://www.hackingwithswift.com/samples/petitions-2.json
             urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
         }
-        
+        // Data(contentsOf is blocking
+        // all UI work has to occur on the main thread - it is never okay to do ui work on background
+        // you don't get to control when threads execute or what order
+        // code should only have 1 thread modifying data at a time
+        // any reading of remote resource should occur on a background thread
+        // slow code should be on a background thread
+        // parallel code should be on background thread as well
+        // async(), run the following code async
+        // closure capturing is important for async
         if let url = URL(string: urlString),
             let data = try? Data(contentsOf: url) {
             parseJSON(json: data)
         } else {
-            showError()
+            //run this back on a main thread
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
         }
     }
     
@@ -44,7 +57,9 @@ class ViewController: UITableViewController {
         let filterAction = UIAlertAction(title: "Filter", style: .default) { [weak self, weak alertController] _ in
             guard let textContent = alertController?.textFields?[0],
                 let filteredText = textContent.text else { return }
-            self?.filter(filteredText)
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                self?.filter(filteredText)
+            }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(filterAction)
@@ -54,7 +69,10 @@ class ViewController: UITableViewController {
     
     func filter(_ text: String) {
         filteredPetitions = petitions.filter { $0.body.contains(text) || $0.title.contains(text) }
-        tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+        
     }
     
     @objc func showCredits() {
@@ -63,7 +81,7 @@ class ViewController: UITableViewController {
         present(alertController, animated: true)
     }
     
-    func showError() {
+    @objc func showError() {
         let alertController = UIAlertController(title: "Loading Error", message: "There was an issue loading feed, check connection and try again", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertController, animated: true)
@@ -74,7 +92,9 @@ class ViewController: UITableViewController {
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
             filteredPetitions = petitions
-            tableView.reloadData()
+            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+        } else {
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false )
         }
     }
     

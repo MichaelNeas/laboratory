@@ -49,3 +49,4 @@
 - Bool.random()
 - Final class cannot be inherited from
 - Weak references must be unwrapped before use; unowned references can be used directly.
+- GCD: QoS - .userInteractive is the highest priority,  .userInitiated execute threads initiated by a user but its not critical, .default is in between here, .utility - long running tasks (processing photos), .background - users aren't aware of and is the least priority (power efficiency)
