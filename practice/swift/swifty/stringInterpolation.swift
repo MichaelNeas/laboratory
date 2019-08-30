@@ -15,3 +15,11 @@ let route: String? = nil//"the mouth"
 
 let text = "\(name): \(potency) \(unit) \("via %@", ifPresent: route)"
 print("|\(text)|")
+
+let html = """
+<html>
+<body>
+\(text)
+</body>
+</html>
+""""
