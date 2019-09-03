@@ -50,3 +50,8 @@
 - Final class cannot be inherited from
 - Weak references must be unwrapped before use; unowned references can be used directly.
 - GCD: QoS - .userInteractive is the highest priority,  .userInitiated execute threads initiated by a user but its not critical, .default is in between here, .utility - long running tasks (processing photos), .background - users aren't aware of and is the least priority (power efficiency)
+- By default, closures in Swift are non-escaping. This means that you have to use them right away, and they can’t outlive the scope of the place where they’re called. Think about map or filter: they take the closure that you give them, run it immediately, and discard it.
+- And escaping closure is one that lives longer than the function that you originally passed it to. Think of sticking a bunch of closures in an array and storing it somewhere, or storing a callback closure as a property on a view controller.
+- Swift requires you to mark stored closures as escaping so that you don’t accidentally do stuff in a closure that you don’t want to outlive its scope. For example, this could include referencing self, which would cause the closure to keep self alive as long as the closure itself is alive. If self stores the closure as a property, that’s a reference cycle. That’s where [weak self] comes in.
+- You’ll notice that if you use a property in the closure that you pass to map, it doesn’t force you to explicitly reference self or capture it with [weak self], because it knows that the closure is non-escaping, so it knows it won’t outlive the scope where it’s used.
+- This can definitely be confusing, but it might help to think of closures as objects, and the variables referenced inside them as properties.
