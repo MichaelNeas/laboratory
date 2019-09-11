@@ -45,3 +45,9 @@ Bundle - how apple presents code and other resources on your drive
 - option + drag on files will make a copy
 - cmd + . will stop the project
 - cmd + r will run the project
+
+## SpriteKit
+- A sprite is any one visible image in our game
+- `.replace` for background image is faster because it ignores transparency.
+- Restitution controls a sprite's bounciness.
+- The collision bitmask determines bounces; the contact test bitmask determines which bounces we get told about.

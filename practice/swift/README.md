@@ -55,3 +55,4 @@
 - Swift requires you to mark stored closures as escaping so that you don’t accidentally do stuff in a closure that you don’t want to outlive its scope. For example, this could include referencing self, which would cause the closure to keep self alive as long as the closure itself is alive. If self stores the closure as a property, that’s a reference cycle. That’s where [weak self] comes in.
 - You’ll notice that if you use a property in the closure that you pass to map, it doesn’t force you to explicitly reference self or capture it with [weak self], because it knows that the closure is non-escaping, so it knows it won’t outlive the scope where it’s used.
 - This can definitely be confusing, but it might help to think of closures as objects, and the variables referenced inside them as properties.
+- CGFloat is different from both Float and Double – it has the ability to change size depending on what device it's running on.
