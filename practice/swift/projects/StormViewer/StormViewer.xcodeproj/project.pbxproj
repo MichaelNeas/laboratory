@@ -23,6 +23,8 @@
 		68879B112315DD890046BED8 /* nssl0033.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68879B072315DD890046BED8 /* nssl0033.jpg */; };
 		68879B122315DD890046BED8 /* nssl0034.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68879B082315DD890046BED8 /* nssl0034.jpg */; };
 		68879B142315E36C0046BED8 /* StormDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68879B132315E36C0046BED8 /* StormDetailViewController.swift */; };
+		68FE703723293963000C8C75 /* StormViewerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE703623293963000C8C75 /* StormViewerCollectionViewController.swift */; };
+		68FE703923293AE4000C8C75 /* StormCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE703823293AE4000C8C75 /* StormCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		68879B072315DD890046BED8 /* nssl0033.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0033.jpg; sourceTree = "<group>"; };
 		68879B082315DD890046BED8 /* nssl0034.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0034.jpg; sourceTree = "<group>"; };
 		68879B132315E36C0046BED8 /* StormDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormDetailViewController.swift; sourceTree = "<group>"; };
+		68FE703623293963000C8C75 /* StormViewerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormViewerCollectionViewController.swift; sourceTree = "<group>"; };
+		68FE703823293AE4000C8C75 /* StormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				68879AEC2315DC8C0046BED8 /* AppDelegate.swift */,
+				68FE703623293963000C8C75 /* StormViewerCollectionViewController.swift */,
+				68FE703823293AE4000C8C75 /* StormCollectionViewCell.swift */,
 				68879B132315E36C0046BED8 /* StormDetailViewController.swift */,
 				68879AEE2315DC8C0046BED8 /* ViewController.swift */,
 				68879AF02315DC8C0046BED8 /* Main.storyboard */,
@@ -186,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FE703923293AE4000C8C75 /* StormCollectionViewCell.swift in Sources */,
 				68879AEF2315DC8C0046BED8 /* ViewController.swift in Sources */,
 				68879B142315E36C0046BED8 /* StormDetailViewController.swift in Sources */,
+				68FE703723293963000C8C75 /* StormViewerCollectionViewController.swift in Sources */,
 				68879AED2315DC8C0046BED8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
