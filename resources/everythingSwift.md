@@ -81,6 +81,7 @@
 - [LLVMSwift](https://github.com/llvm-swift/LLVMSwift)
 - [XCodeGen](https://github.com/yonaskolb/XcodeGen)
 - [RxCombine](https://github.com/freak4pc/RxCombine)
+- [CombineDataSources](https://github.com/combineopensource/CombineDataSources)
 
 
 ## Videos
@@ -190,6 +191,7 @@
 - [Property Wrappers](https://github.com/apple/swift-evolution/blob/master/proposals/0258-property-wrappers.md)
 - [Generic Math(s)](https://github.com/apple/swift-evolution/blob/master/proposals/0246-mathable.md)
 - [AdditiveArithmetic Protocol](https://github.com/apple/swift-evolution/blob/master/proposals/0233-additive-arithmetic-protocol.md)
+- [Library Evolution](https://github.com/apple/swift-evolution/blob/master/proposals/0260-library-evolution.md)
 
 ## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -306,3 +308,4 @@
 - [Swift51 featueature behind swiftui](https://www.swiftbysundell.com/posts/the-swift-51-features-that-power-swiftuis-api)
 - [CryptoKit](https://developer.apple.com/documentation/cryptokit)
 - [VisionKit](https://developer.apple.com/documentation/visionkit)
+- [Binary Dependency Pitch](https://forums.swift.org/t/pitch-support-for-binary-dependencies/27620)
