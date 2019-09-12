@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var highScore = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,8 @@ class ViewController: UIViewController {
             button?.layer.borderColor = UIColor.lightGray.cgColor
         }
         askQuestion()
+        let defaults = UserDefaults.standard
+        highScore = defaults.integer(forKey: "highScore")
     }
     
     func askQuestion(action: UIAlertAction? = nil) {
@@ -52,6 +55,12 @@ class ViewController: UIViewController {
     func restartGame(action: UIAlertAction? = nil) {
         score = 0
         askQuestion()
+    }
+    
+    func increaseHighScore(action: UIAlertAction? = nil) {
+        highScore += 1
+        askQuestion()
+        save()
     }
     
     @objc func showScore(){
@@ -79,9 +88,9 @@ class ViewController: UIViewController {
             title = "Wrong: That's \(countries[sender.tag])"
         }
         
-        if score == 10 {
-            let alertController = UIAlertController(title: title, message: "Congrats you have a score of \(score)!", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Restart", style: .destructive, handler: restartGame))
+        if score > highScore {
+            let alertController = UIAlertController(title: title, message: "Congrats you have a new high score of \(score)!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Yay", style: .default, handler: increaseHighScore))
         
             present(alertController, animated: true)
         } else {
@@ -92,6 +101,11 @@ class ViewController: UIViewController {
             
             present(alertController, animated: true)
         }
+    }
+    
+    func save() {
+        let defaults = UserDefaults.standard
+        defaults.set(highScore, forKey: "highScore")
     }
 }
 

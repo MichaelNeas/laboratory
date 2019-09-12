@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     var pictures = [String]()
+    var viewCount = [String:Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,16 @@ class ViewController: UITableViewController {
             }
             self?.pictures.sort()
         }
+        
+        let defaults = UserDefaults.standard
+        if let savedPictureCount = defaults.object(forKey: "pictureCount") as? Data {
+            let jsonDecoder = JSONDecoder()
+            do {
+                viewCount = try jsonDecoder.decode([String:Int].self, from: savedPictureCount)
+            } catch {
+                print("Failed to load view count")
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +65,9 @@ class ViewController: UITableViewController {
             viewController.index = indexPath.row + 1
             viewController.total = pictures.count
             navigationController?.pushViewController(viewController, animated: true)
+            viewCount[pictures[indexPath.row], default: 0] += 1
+            save()
+            
         }
     }
     
@@ -63,6 +77,16 @@ class ViewController: UITableViewController {
         let viewController = UIActivityViewController(activityItems: [items], applicationActivities: nil)
         viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(viewController, animated: true)
+    }
+    
+    private func save() {
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(viewCount) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "pictureCount")
+        } else {
+            print("Failed to save people.")
+        }
     }
 }
 

@@ -16,7 +16,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(startGame))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(restartGame))
         
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt"),
            let startWords = try? String(contentsOf: startWordsURL) {
@@ -49,8 +49,30 @@ class ViewController: UITableViewController {
     }
     
     @objc func startGame() {
-        title = allWords.randomElement()
+        let userDefaults = UserDefaults.standard
+        if let currentWord = userDefaults.string(forKey: "currentWord"),
+            currentWord.count > 0 {
+            title = currentWord
+        } else {
+            title = allWords.randomElement()
+            usedWords.removeAll(keepingCapacity: true)
+            userDefaults.set(title!, forKey: "currentWord")
+        }
+        
+        if let entries = userDefaults.array(forKey: "entries") as? [String] {
+            usedWords = entries
+        }
+        
+        tableView.reloadData()
+    }
+    
+    @objc func restartGame() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.removeObject(forKey: "currentWord")
+        userDefaults.removeObject(forKey: "entries")
         usedWords.removeAll(keepingCapacity: true)
+        title = allWords.randomElement()
+        userDefaults.set(title!, forKey: "currentWord")
         tableView.reloadData()
     }
     
@@ -67,6 +89,8 @@ class ViewController: UITableViewController {
                     usedWords.insert(answer, at: 0)
                     let indexPath = IndexPath(row: 0, section: 0)
                     tableView.insertRows(at: [indexPath], with: .automatic)
+                    let userDefaults = UserDefaults.standard
+                    userDefaults.set(usedWords, forKey: "entries")
                     return
                 } else {
                     showErrorMessage(errorTitle: "Word not recognized", errorMessage: "You can't just make em up")
