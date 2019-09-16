@@ -12,6 +12,7 @@ import CoreImage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var intensitySlider: UISlider!
     @IBOutlet weak var imageView: UIImageView!
     var currentImage: UIImage!
@@ -26,7 +27,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         title = "Instafilter"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
         context = CIContext()
-        currentFilter = CIFilter(name: "CISepiaTone")
+        let initialFilter = "CISepiaTone"
+        currentFilter = CIFilter(name: initialFilter)
+        filterButton.setTitle(initialFilter, for: .normal)
     }
     
     @objc func importPicture() {
@@ -68,11 +71,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func setFilter(action: UIAlertAction) {
-        guard let actionTitle = action.title, currentImage != nil else { return }
+        guard let actionTitle = action.title else { return }
         currentFilter = CIFilter(name: actionTitle)
+        filterButton.setTitle(actionTitle, for: .normal)
+        guard currentImage != nil else { return }
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-        
         applyProcessing()
     }
     
