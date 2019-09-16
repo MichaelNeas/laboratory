@@ -15,7 +15,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var intensitySlider: UISlider!
     @IBOutlet weak var imageView: UIImageView!
     var currentImage: UIImage!
-    //An evaluation context for rendering image processing results and performing image analysis.
+    // An evaluation context for rendering image processing results and performing image analysis.
+    // creating a context is computationally expensive
     var context: CIContext!
     //An image processor that produces an image by manipulating one or more input images or by generating new image data.
     var currentFilter: CIFilter!
@@ -56,7 +57,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         ac.addAction(UIAlertAction(title: "CIVignette", style: .default, handler: setFilter))
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
+        // ipad requires a ref
         if let popoverController = ac.popoverPresentationController {
+            // let the source come from the button
             popoverController.sourceView = sender
             popoverController.sourceRect = sender.bounds
         }
@@ -74,7 +77,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func save(_ sender: Any) {
-        guard let image = imageView.image else { return }
+        guard let image = imageView.image else {
+            let ac = UIAlertController(title: "Save Error", message: "No image selected or modified to save", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            return
+        }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
@@ -83,6 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func applyProcessing() {
+        // array of keys a filter can support
         let inputKeys = currentFilter.inputKeys
         // A key for a scalar value (NSNumber) that specifies an intensity value.
         if inputKeys.contains(kCIInputIntensityKey) {
@@ -107,6 +116,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let outputImage = currentFilter.outputImage else { return }
         
         if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
+            // no work is done until we ask for the image
             let processedImage = UIImage(cgImage: cgImage)
             imageView.image = processedImage
         }
@@ -116,6 +126,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let error = error {
             let ac = UIAlertController(title: "Save Error", message: error.localizedDescription, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
         } else {
             let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved!", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))

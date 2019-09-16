@@ -188,10 +188,13 @@
 - [Implicit single line returns](https://github.com/apple/swift-evolution/blob/master/proposals/0255-omit-return.md)
 - [Ending commas for multiline expressions](https://github.com/apple/swift-evolution/blob/master/proposals/0257-elide-comma.md)
 - [Contiguous Strings](https://github.com/apple/swift-evolution/blob/master/proposals/0247-contiguous-strings.md)
+- [Propery Behaviors (wrappers 1.0)](https://github.com/apple/swift-evolution/blob/master/proposals/0030-property-behavior-decls.md)
 - [Property Wrappers](https://github.com/apple/swift-evolution/blob/master/proposals/0258-property-wrappers.md)
 - [Generic Math(s)](https://github.com/apple/swift-evolution/blob/master/proposals/0246-mathable.md)
 - [AdditiveArithmetic Protocol](https://github.com/apple/swift-evolution/blob/master/proposals/0233-additive-arithmetic-protocol.md)
 - [Library Evolution](https://github.com/apple/swift-evolution/blob/master/proposals/0260-library-evolution.md)
+- [Opaque Result Types](https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md)
+
 
 ## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -309,3 +312,5 @@
 - [CryptoKit](https://developer.apple.com/documentation/cryptokit)
 - [VisionKit](https://developer.apple.com/documentation/visionkit)
 - [Binary Dependency Pitch](https://forums.swift.org/t/pitch-support-for-binary-dependencies/27620)
+- [SF Symbols](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/)
+- [Function Builders](https://forums.swift.org/t/function-builders/25167)
