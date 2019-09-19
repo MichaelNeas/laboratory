@@ -51,3 +51,9 @@ Bundle - how apple presents code and other resources on your drive
 - `.replace` for background image is faster because it ignores transparency.
 - Restitution controls a sprite's bounciness.
 - The collision bitmask determines bounces; the contact test bitmask determines which bounces we get told about.
+
+## Instruments
+- Profile your application
+- Open an instrument for what you want to look into with your app including: Core Animation, memory leaks, core data, threading, activity monitor, system usage and much more
+- See how your app is performing and if any of the phone is being over worked causing issues
+- Flags with cmd + down
