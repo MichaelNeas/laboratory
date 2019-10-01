@@ -12,21 +12,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var messageBox: UITextView!
     
-    var webSocketTask: WebSocket?
+    var starSock: NativeWebSocket?
     var wsurlString = "ws://localhost:3000/socket.io/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        webSocketTask = WebSocket(url: URL(string: wsurlString)!)
-        webSocketTask?.connect()
+        //webSocketTask = WebSocket(url: URL(string: wsurlString)!)
+        starSock = NativeWebSocket(url: URL(string: wsurlString)!)
     }
     
     @IBAction func sendButton(_ sender: Any) {
-        webSocketTask?.send(text: textField.text!)
+        starSock?.send(text: textField.text!)
     }
     
     @IBAction func disconnect(_ sender: Any) {
-        webSocketTask?.disconnect()
+        starSock?.disconnect()
     }
     
 }

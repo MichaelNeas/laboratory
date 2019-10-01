@@ -1,5 +1,5 @@
 //
-//  WebSocket.swift
+//  NativeWebSocket.swift
 //  AllTheNetworks
 //
 //  Created by Michael Neas on 9/30/19.
@@ -29,28 +29,30 @@ protocol WebSocketConnectionDelegate {
     func onMessage(connection: WebSocketConnection, data: Data)
 }
 
-class WebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
+class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
     var delegate: WebSocketConnectionDelegate?
     var webSocketTask: URLSessionWebSocketTask!
     var urlSession: URLSession!
     let delegateQueue = OperationQueue()
     var sid = ""
-    var components: URLComponents!
+    //var components: URLComponents!
     
     init(url: URL) {
         super.init()
-        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-        components!.queryItems = [
-            URLQueryItem(name: "EIO", value: "3"),
-            URLQueryItem(name: "transport", value: "websocket"),
-            URLQueryItem(name: "sid", value: sid)
-        ]
+//        components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+//        components!.queryItems = [
+//            URLQueryItem(name: "EIO", value: "3"),
+//            URLQueryItem(name: "transport", value: "websocket"),
+//        ]
         urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: delegateQueue)
-        webSocketTask = urlSession.webSocketTask(with: components!.url!)
+        webSocketTask = urlSession.webSocketTask(with: url)
+        connect()
+        
     }
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
         self.delegate?.onConnected(connection: self)
+        //sendPing()
     }
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
@@ -75,9 +77,9 @@ class WebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
             case .success(let message):
                 switch message {
                 case .string(let text):
-                    if text.first == "0" {
-                        self.handleHandShake(response: text)
-                    }
+//                    if text.first == "0" {
+//                        self.handleHandShake(response: text)
+//                    }
                     self.delegate?.onMessage(connection: self, text: text)
                 case .data(let data):
                     self.delegate?.onMessage(connection: self, data: data)
@@ -96,8 +98,12 @@ class WebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
         let websocketHandShake = try? JSONDecoder().decode(WebsocketHandShake.self, from: response.data(using: .utf8)!)
         sid = String(websocketHandShake!.sid)
         print("Received string: \(sid)")
-        connect()
-        sendPing()
+        //components.queryItems?.append(URLQueryItem(name: "sid", value: sid))
+        //webSocketTask = urlSession.webSocketTask(with: components!.url!)
+        //webSocketTask.currentRequest?.url?.appendPathComponent("&sid=\(sid)")
+        //webSocketTask.currentRequest?.httpBody?.append("&sid=\(sid)".data(using: .utf8))
+        //connect()
+        //sendPing()
     }
     
     func sendPing() {
@@ -117,6 +123,7 @@ class WebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
             if let error = error {
                 self.delegate?.onError(connection: self, error: error)
             }
+            print("sent: \(text)")
         }
     }
     
