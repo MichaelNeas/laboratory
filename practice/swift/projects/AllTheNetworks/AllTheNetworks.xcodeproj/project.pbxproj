@@ -13,6 +13,7 @@
 		689B15592342DBA800A979AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689B15572342DBA800A979AC /* Main.storyboard */; };
 		689B155B2342DBA900A979AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689B155A2342DBA900A979AC /* Assets.xcassets */; };
 		689B155E2342DBA900A979AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689B155C2342DBA900A979AC /* LaunchScreen.storyboard */; };
+		689B15662343039200A979AC /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B15652343039200A979AC /* WebSocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		689B155A2342DBA900A979AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		689B155D2342DBA900A979AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		689B155F2342DBA900A979AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689B15652343039200A979AC /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				689B155A2342DBA900A979AC /* Assets.xcassets */,
 				689B155C2342DBA900A979AC /* LaunchScreen.storyboard */,
 				689B155F2342DBA900A979AC /* Info.plist */,
+				689B15652343039200A979AC /* WebSocket.swift */,
 			);
 			path = AllTheNetworks;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				689B15562342DBA800A979AC /* ViewController.swift in Sources */,
+				689B15662343039200A979AC /* WebSocket.swift in Sources */,
 				689B15522342DBA800A979AC /* AppDelegate.swift in Sources */,
 				689B15542342DBA800A979AC /* SceneDelegate.swift in Sources */,
 			);
