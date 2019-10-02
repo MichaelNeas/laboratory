@@ -22,7 +22,12 @@ const wss = new WebSocket.Server({ port: 3000 });
 wss.on('connection', ws => {
   ws.on('message', message => {
     console.log(`Received message => ${message}`)
-    //ws.emit('message', message);
+    wss.clients.forEach(client => {
+      console.log(client.readyState)
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(message);
+      }
+    });
   });
   ws.on('close', () => {
     console.log('disconnected');
@@ -31,5 +36,5 @@ wss.on('connection', ws => {
 });
 
 http.listen(3001, function(){
-  console.log('listening on *:3000');
+  console.log('listening on *:3001');
 });

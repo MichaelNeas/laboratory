@@ -70,12 +70,12 @@
 				689B15512342DBA800A979AC /* AppDelegate.swift */,
 				689B15532342DBA800A979AC /* SceneDelegate.swift */,
 				689B15552342DBA800A979AC /* ViewController.swift */,
+				689B15652343039200A979AC /* NativeWebSocket.swift */,
+				681F7A142343E6B200EEADA0 /* StarscreamSocket.swift */,
 				689B15572342DBA800A979AC /* Main.storyboard */,
 				689B155A2342DBA900A979AC /* Assets.xcassets */,
 				689B155C2342DBA900A979AC /* LaunchScreen.storyboard */,
 				689B155F2342DBA900A979AC /* Info.plist */,
-				689B15652343039200A979AC /* NativeWebSocket.swift */,
-				681F7A142343E6B200EEADA0 /* StarscreamSocket.swift */,
 			);
 			path = AllTheNetworks;
 			sourceTree = "<group>";

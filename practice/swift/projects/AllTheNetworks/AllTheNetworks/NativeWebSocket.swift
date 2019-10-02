@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import Combine
 import Network
 
+// define what WebSocketConnections can do
 protocol WebSocketConnection {
     func send(text: String)
     func send(data: Data)
@@ -29,25 +29,22 @@ protocol WebSocketConnectionDelegate {
     func onMessage(connection: WebSocketConnection, data: Data)
 }
 
+extension WebSocketConnectionDelegate {
+    func onMessage(connection: WebSocketConnection, data: Data) {}
+}
+
 class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
     var delegate: WebSocketConnectionDelegate?
     var webSocketTask: URLSessionWebSocketTask!
     var urlSession: URLSession!
     let delegateQueue = OperationQueue()
-    var sid = ""
-    //var components: URLComponents!
+    private var pingTimer: Timer?
     
     init(url: URL) {
         super.init()
-//        components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-//        components!.queryItems = [
-//            URLQueryItem(name: "EIO", value: "3"),
-//            URLQueryItem(name: "transport", value: "websocket"),
-//        ]
         urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: delegateQueue)
         webSocketTask = urlSession.webSocketTask(with: url)
         connect()
-        
     }
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
@@ -67,6 +64,7 @@ class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegat
     
     func disconnect() {
         webSocketTask.cancel(with: .goingAway, reason: nil)
+        pingTimer?.invalidate()
     }
     
     func listen()  {
@@ -77,44 +75,25 @@ class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegat
             case .success(let message):
                 switch message {
                 case .string(let text):
-//                    if text.first == "0" {
-//                        self.handleHandShake(response: text)
-//                    }
                     self.delegate?.onMessage(connection: self, text: text)
                 case .data(let data):
                     self.delegate?.onMessage(connection: self, data: data)
                 @unknown default:
                     fatalError()
                 }
-                
-                self.listen()
             }
+            self.listen()
         }
-    }
-    
-    func handleHandShake(response: String) {
-        var response = response
-        response.removeFirst()
-        let websocketHandShake = try? JSONDecoder().decode(WebsocketHandShake.self, from: response.data(using: .utf8)!)
-        sid = String(websocketHandShake!.sid)
-        print("Received string: \(sid)")
-        //components.queryItems?.append(URLQueryItem(name: "sid", value: sid))
-        //webSocketTask = urlSession.webSocketTask(with: components!.url!)
-        //webSocketTask.currentRequest?.url?.appendPathComponent("&sid=\(sid)")
-        //webSocketTask.currentRequest?.httpBody?.append("&sid=\(sid)".data(using: .utf8))
-        //connect()
-        //sendPing()
     }
     
     func sendPing() {
         webSocketTask.sendPing { (error) in
-          if let error = error {
-            print("Sending PING failed: \(error)")
-          }
-
-          DispatchQueue.main.asyncAfter(deadline: .now() + 1.0 ) {
-            self.sendPing()
-          }
+            if let error = error {
+                print("Sending PING failed: \(error)")
+            }
+            self.pingTimer = Timer.scheduledTimer(withTimeInterval: 25.0, repeats: true) { time in
+                self.sendPing()
+            }
         }
     }
     
@@ -134,11 +113,4 @@ class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegat
             }
         }
     }
-}
-
-// MARK: - WebsocketHandShake
-struct WebsocketHandShake: Codable {
-    let sid: String
-    let pingInterval: Int
-    let pingTimeout: Int
 }

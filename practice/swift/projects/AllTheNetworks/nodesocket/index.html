@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <title>Socket Chat</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
@@ -19,20 +19,20 @@
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
   </body>
-  <script src="/socket.io/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
   <script>
       $(function () {
-        var socket = io();
+        //change accordingly to local ip
+        var socket = new WebSocket("ws://localhost:3000")
         $('form').submit(function(){
-          socket.emit('message', $('#m').val());
+          socket.send($('#m').val());
           $('#m').val('');
           return false;
         });
-        socket.on('message', function(msg){
-          $('#messages').append($('<li>').text(msg));
+        socket.onmessage = event => {
+          $('#messages').append($('<li>').text(event.data));
           window.scrollTo(0, document.body.scrollHeight);
-        });
+        }
       });
   </script>
 </html>

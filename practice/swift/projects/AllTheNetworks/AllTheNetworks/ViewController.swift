@@ -8,25 +8,43 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WebSocketConnectionDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var messageBox: UITextView!
     
-    var starSock: NativeWebSocket?
-    var wsurlString = "ws://localhost:3000/socket.io/"
+    var socket: NativeWebSocket?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //webSocketTask = WebSocket(url: URL(string: wsurlString)!)
-        starSock = NativeWebSocket(url: URL(string: wsurlString)!)
+        messageBox.text.removeAll()
+        socket = NativeWebSocket(url: URL(string: "ws://localhost:3000")!)
+        socket?.delegate = self
     }
     
     @IBAction func sendButton(_ sender: Any) {
-        starSock?.send(text: textField.text!)
+        socket?.send(text: textField.text!)
     }
     
     @IBAction func disconnect(_ sender: Any) {
-        starSock?.disconnect()
+        socket?.disconnect()
+    }
+    
+    func onConnected(connection: WebSocketConnection) {
+        print("Connected!")
+    }
+    
+    func onDisconnected(connection: WebSocketConnection, error: Error?) {
+        print("Disconnected!")
+    }
+    
+    func onError(connection: WebSocketConnection, error: Error) {
+        print("Error \(error)")
+    }
+    
+    func onMessage(connection: WebSocketConnection, text: String) {
+        DispatchQueue.main.async {
+            self.messageBox.text.append("\(text)\n")
+        }
     }
     
 }
