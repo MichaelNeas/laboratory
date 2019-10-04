@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Network
 
 // define what WebSocketConnections can do
 protocol WebSocketConnection {

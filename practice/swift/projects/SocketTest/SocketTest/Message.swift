@@ -6,7 +6,6 @@
 //  Copyright © 2019 Neas Lease. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
 struct Message: Identifiable {

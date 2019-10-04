@@ -13,11 +13,7 @@ struct ContentView: View {
     @ObservedObject private var model = Model()
     @ObservedObject private var keyboard = KeyboardResponder()
     
-    var socket: NativeWebSocket?
-    
     init() {
-        socket = NativeWebSocket(url: URL(string: "ws://localhost:3000")!, autoConnect: true)
-        socket?.delegate = model
         UITableView.appearance().separatorColor = .clear
     }
     
@@ -34,8 +30,7 @@ struct ContentView: View {
     }
     
     func send() {
-        model.messages.append(Message(message: message, me: true))
-        socket?.send(text: message)
+        model.send(message)
         message = ""
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
     }
