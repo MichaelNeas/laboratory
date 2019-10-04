@@ -43,6 +43,9 @@ class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegat
     init(url: URL, autoConnect: Bool = false) {
         super.init()
         urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: delegateQueue)
+//        func webSocketTask(with: URL) -> URLSessionWebSocketTask
+//        func webSocketTask(with: URLRequest) -> URLSessionWebSocketTask
+//        func webSocketTask(with: URL, protocols: [String]) -> URLSessionWebSocketTask
         webSocketTask = urlSession.webSocketTask(with: url)
         if autoConnect {
             connect()
@@ -84,6 +87,7 @@ class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegat
                     fatalError()
                 }
             }
+            // Be aware that if you want to receive messages continuously you need to call this again after you’ve finished receiving a message. One way is to wrap this in a function and call the same function recursively.
             self.listen()
         }
     }

@@ -16,10 +16,6 @@ class StarscreamSocket: WebSocketDelegate {
     
     init(url: URL) {
         components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-        components!.queryItems = [
-            URLQueryItem(name: "EIO", value: "3"),
-            URLQueryItem(name: "transport", value: "websocket"),
-        ]
         socket = WebSocket(url: components!.url!)
         socket.delegate = self
         socket.connect()
