@@ -40,11 +40,13 @@ class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegat
     let delegateQueue = OperationQueue()
     private var pingTimer: Timer?
     
-    init(url: URL) {
+    init(url: URL, autoConnect: Bool = false) {
         super.init()
         urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: delegateQueue)
         webSocketTask = urlSession.webSocketTask(with: url)
-        connect()
+        if autoConnect {
+            connect()
+        }
     }
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
@@ -63,7 +65,7 @@ class NativeWebSocket: NSObject, WebSocketConnection, URLSessionWebSocketDelegat
     }
     
     func disconnect() {
-        webSocketTask.cancel(with: .goingAway, reason: nil)
+        webSocketTask.cancel(with: .normalClosure, reason: nil)
         pingTimer?.invalidate()
     }
     

@@ -17,8 +17,12 @@ class ViewController: UIViewController, WebSocketConnectionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageBox.text.removeAll()
-        socket = NativeWebSocket(url: URL(string: "ws://localhost:3000")!)
+        socket = NativeWebSocket(url: URL(string: "ws://localhost:3000")!, autoConnect: true)
         socket?.delegate = self
+    }
+    
+    @IBAction func connect(_ sender: Any) {
+        socket?.connect()
     }
     
     @IBAction func sendButton(_ sender: Any) {
