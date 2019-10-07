@@ -194,6 +194,7 @@
 - [AdditiveArithmetic Protocol](https://github.com/apple/swift-evolution/blob/master/proposals/0233-additive-arithmetic-protocol.md)
 - [Library Evolution](https://github.com/apple/swift-evolution/blob/master/proposals/0260-library-evolution.md)
 - [Opaque Result Types](https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md)
+- [SwiftPreview](https://github.com/apple/swift-evolution/blob/master/proposals/0264-stdlib-preview-package.md)
 
 
 ## Blogs/Forums/Docs/Tools
@@ -314,3 +315,12 @@
 - [Binary Dependency Pitch](https://forums.swift.org/t/pitch-support-for-binary-dependencies/27620)
 - [SF Symbols](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/)
 - [Function Builders](https://forums.swift.org/t/function-builders/25167)
+- [PencilKit](https://developer.apple.com/documentation/pencilkit)
+- [Core Audio](https://developer.apple.com/library/archive/documentation/MusicAudio/Conceptual/CoreAudioOverview/Introduction/Introduction.html)
+- [Audio Kit](https://audiokit.io/)
+- [Hopper](https://www.hopperapp.com/)
+- [AVAudioPlayer](https://developer.apple.com/documentation/avfoundation/avaudioplayer)
+- [AVAudioEngine](https://developer.apple.com/documentation/avfoundation/avaudioengine)
+- [AVAudioSession](https://developer.apple.com/documentation/avfoundation/avaudiosession)
+- [AudioToolbox](https://developer.apple.com/documentation/audiotoolbox)
+- [Paths vs Shapes](https://www.objc.io/blog/2019/08/20/paths-vs-shapes/)
