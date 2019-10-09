@@ -324,3 +324,4 @@
 - [AVAudioSession](https://developer.apple.com/documentation/avfoundation/avaudiosession)
 - [AudioToolbox](https://developer.apple.com/documentation/audiotoolbox)
 - [Paths vs Shapes](https://www.objc.io/blog/2019/08/20/paths-vs-shapes/)
+- [How to Read the Swift Standard Lib Source](https://oleb.net/blog/2016/10/swift-stdlib-source/)
