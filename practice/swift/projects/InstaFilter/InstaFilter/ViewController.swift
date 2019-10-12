@@ -15,7 +15,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var intensitySlider: UISlider!
     @IBOutlet weak var imageView: UIImageView!
-    var currentImage: UIImage!
+    var currentImage: UIImage! {
+        didSet {
+            imageView.alpha = 0
+            UIView.animate(withDuration: 1.0) {
+                self.imageView.alpha = 1.0
+            }
+        }
+    }
     // An evaluation context for rendering image processing results and performing image analysis.
     // creating a context is computationally expensive
     var context: CIContext!

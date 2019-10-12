@@ -79,6 +79,10 @@ class ViewController: UIViewController {
     // IBAction - storyboard actions trigger code
     @IBAction func flagButtonAction(_ sender: UIButton) {
         var title: String
+        
+        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: [], animations: {
+            sender.imageView?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        })
     
         if sender.tag == correctAnswer {
             score += 1
