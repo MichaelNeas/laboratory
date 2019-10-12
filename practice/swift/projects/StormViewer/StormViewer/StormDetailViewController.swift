@@ -24,6 +24,7 @@ class StormDetailViewController: UIViewController {
         // UIBarButtonItem uses ObjC so we need to mark @objc
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         
+        assert(selectedImage != nil, "No selected image")
         if let imageToLoad = selectedImage {
             stormImage.image = UIImage(named: imageToLoad)
         }
