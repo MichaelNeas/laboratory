@@ -9,6 +9,7 @@
 - ios10+ removes non-retina devices so you only need to include 2x,3x
 - ActivityViewControllers are an easy way to enable sharing to social media or interacting with iphone sharing services
 - Because @IBAction means you're connecting storyboards (Objective-C code) to Swift code, it always implies @objc as well.
+- Option click to give zoom in/out on map views
 
 ## Terminologies
 xib - XML Interface Builder
@@ -45,6 +46,13 @@ Bundle - how apple presents code and other resources on your drive
 - option + drag on files will make a copy
 - cmd + . will stop the project
 - cmd + r will run the project
+
+## Animations
+- A scale transform of X:0.5 Y:0.5 makes a view 50% of its default size.
+- Translation transform with negative Y value moves it up the screen
+- Clear color => alpha 0
+- The identity transform resets views to their default size, position, and rotation.
+- Spring animations cause their values to overshoot and bounce. 
 
 ## SpriteKit
 - A sprite is any one visible image in our game
