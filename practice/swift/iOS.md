@@ -51,6 +51,10 @@ Bundle - how apple presents code and other resources on your drive
 - `.replace` for background image is faster because it ignores transparency.
 - Restitution controls a sprite's bounciness.
 - The collision bitmask determines bounces; the contact test bitmask determines which bounces we get told about.
+- SpriteKit action sequences are made from arrays and are executed in order
+- blend mode ignores transparency
+- any part of an SKCropNode mask will not have it's color cropped
+- Y:0 is the bottom of the screen in spritekit
 
 ## Instruments
 - Profile your application
