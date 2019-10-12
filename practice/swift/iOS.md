@@ -63,6 +63,9 @@ Bundle - how apple presents code and other resources on your drive
 - blend mode ignores transparency
 - any part of an SKCropNode mask will not have it's color cropped
 - Y:0 is the bottom of the screen in spritekit
+- angular damping controls how fast an object's rotation slows down
+- Pixel-perfect collision detection is the slowest of all options.
+- update() method is called once every frame
 
 ## Instruments
 - Profile your application
