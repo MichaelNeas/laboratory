@@ -11,6 +11,9 @@
 - Because @IBAction means you're connecting storyboards (Objective-C code) to Swift code, it always implies @objc as well.
 - Option click to give zoom in/out on map views
 - can move green breakpoint line up or down!
+- Swift extensions communicates with iOS, which communicates with Safari.
+- Extensions are shipped inside the parent app.
+- The contentInset property of a UITextView determines how text is placed inside the view. 
 
 ## Terminologies
 xib - XML Interface Builder

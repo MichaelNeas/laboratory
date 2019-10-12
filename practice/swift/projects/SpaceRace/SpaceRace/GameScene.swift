@@ -73,7 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let touch = touches.first else { return }
         var location = touch.location(in: self)
         let tappedNodes = nodes(at: location)
-        for node in tappedNodes {
+        for case let node as SKSpriteNode in tappedNodes {
             guard player == node else { continue }
             if location.y < 100 {
                 location.y = 100
