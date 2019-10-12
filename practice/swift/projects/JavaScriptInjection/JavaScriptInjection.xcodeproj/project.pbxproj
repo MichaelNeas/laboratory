@@ -18,6 +18,7 @@
 		6862067E23522767008DDD19 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6862067C23522767008DDD19 /* MainInterface.storyboard */; };
 		6862068223522767008DDD19 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6862067623522767008DDD19 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		68620688235229C6008DDD19 /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = 68620687235229C6008DDD19 /* Action.js */; };
+		6862068A23525234008DDD19 /* SavedScriptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862068923525234008DDD19 /* SavedScriptsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		6862067D23522767008DDD19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6862067F23522767008DDD19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68620687235229C6008DDD19 /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
+		6862068923525234008DDD19 /* SavedScriptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScriptsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				6862067C23522767008DDD19 /* MainInterface.storyboard */,
 				6862067F23522767008DDD19 /* Info.plist */,
 				68620687235229C6008DDD19 /* Action.js */,
+				6862068923525234008DDD19 /* SavedScriptsTableViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6862068A23525234008DDD19 /* SavedScriptsTableViewController.swift in Sources */,
 				6862067B23522767008DDD19 /* ActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

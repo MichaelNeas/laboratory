@@ -7,6 +7,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Saved Scripts Table View Controller-->
+        <scene sceneID="B8b-Pd-C7g">
+            <objects>
+                <tableViewController id="GeG-z4-KeN" customClass="SavedScriptsTableViewController" customModule="Extension" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mlh-Ko-Cvn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scriptCell" id="MAu-VI-iwu">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MAu-VI-iwu" id="kaf-h6-t6g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GeG-z4-KeN" id="OnT-0u-NYm"/>
+                            <outlet property="delegate" destination="GeG-z4-KeN" id="hs3-We-i3o"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xXl-N9-hbc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHS-d8-TFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648" y="139"/>
+        </scene>
         <!--Image-->
         <scene sceneID="7MM-of-jgj">
             <objects>
@@ -38,11 +67,12 @@
                     <connections>
                         <outlet property="script" destination="Ui1-Yw-ONE" id="GzS-Yk-90D"/>
                         <outlet property="view" destination="zMn-AG-sqS" id="Qma-de-2ek"/>
+                        <segue destination="GeG-z4-KeN" kind="show" identifier="toSavedScripts" id="rv0-R2-shB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
+            <point key="canvasLocation" x="868" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w8N-Qd-EbQ">
