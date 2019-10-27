@@ -15,6 +15,7 @@
 - Extensions are shipped inside the parent app.
 - The contentInset property of a UITextView determines how text is placed inside the view. 
 - The .replace blend more ignores transparency, which makes it faster to draw.
+- iBeacon detection is powered by the Core Location framework. 
 
 ## Terminologies
 xib - XML Interface Builder
