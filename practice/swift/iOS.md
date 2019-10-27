@@ -15,7 +15,7 @@
 - Extensions are shipped inside the parent app.
 - The contentInset property of a UITextView determines how text is placed inside the view. 
 - The .replace blend more ignores transparency, which makes it faster to draw.
-- iBeacon detection is powered by the Core Location framework. 
+- iBeacon detection is powered by the Core Location framework.
 
 ## Terminologies
 xib - XML Interface Builder
@@ -72,6 +72,9 @@ Bundle - how apple presents code and other resources on your drive
 - angular damping controls how fast an object's rotation slows down
 - Pixel-perfect collision detection is the slowest of all options.
 - update() method is called once every frame
+- SKTexture lets us change the image of an SKSpriteNode without having to delete and recreate it. 
+- A physics body with isDynamic set to false will no longer be affected by gravity. 
+- removeAllActions() removes the actions immediately rather than waiting for them to complete.
 
 ## Instruments
 - Profile your application
