@@ -36,6 +36,40 @@ class ViewController: UIViewController {
         askQuestion()
         let defaults = UserDefaults.standard
         highScore = defaults.integer(forKey: "highScore")
+        registerLocalNotifications()
+    }
+    
+    func registerLocalNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                self.scheduleLocal()
+                print("Aye")
+            } else {
+                print("Awe")
+            }
+        }
+    }
+    
+    // add a notification every day
+    func scheduleLocal() {
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        
+        // what should be shown inside the alert
+        let content = UNMutableNotificationContent()
+        content.title = "Let's get to memorizing"
+        content.body = "With repetition comes memorization, lets hit this every day"
+        //type of alert
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = .default
+        
+        for i in 1..<8 {
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(86400 * i), repeats: false)
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            center.add(request)
+        }
     }
     
     func askQuestion(action: UIAlertAction? = nil) {

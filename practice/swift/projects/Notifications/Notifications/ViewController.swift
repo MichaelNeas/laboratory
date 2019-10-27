@@ -70,6 +70,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     // can escape the current method and be used later on
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // https://developer.apple.com/documentation/usernotifications/handling_notifications_and_notification-related_actions
         let userInfo = response.notification.request.content.userInfo
         if let customData = userInfo["customData"] as? String {
             print("Custom data received \(customData)")
@@ -87,6 +88,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
                 ac.addAction(UIAlertAction(title: "Dismiss", style: .destructive))
                 present(ac, animated: true)
             case "remind":
+                //86400
                 scheduleLocal()
             default:
                 break
