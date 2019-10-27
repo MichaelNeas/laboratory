@@ -16,6 +16,7 @@
 - The contentInset property of a UITextView determines how text is placed inside the view. 
 - The .replace blend more ignores transparency, which makes it faster to draw.
 - iBeacon detection is powered by the Core Location framework.
+- Unreliable networking is usually better for live streaming, where getting the latest data there quickly is more important than ensuring old data arrives.
 
 ## Terminologies
 xib - XML Interface Builder
