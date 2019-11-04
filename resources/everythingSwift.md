@@ -82,6 +82,7 @@
 - [XCodeGen](https://github.com/yonaskolb/XcodeGen)
 - [RxCombine](https://github.com/freak4pc/RxCombine)
 - [CombineDataSources](https://github.com/combineopensource/CombineDataSources)
+- [Swift Driver](https://github.com/apple/swift-driver)
 
 
 ## Videos
@@ -325,3 +326,7 @@
 - [AudioToolbox](https://developer.apple.com/documentation/audiotoolbox)
 - [Paths vs Shapes](https://www.objc.io/blog/2019/08/20/paths-vs-shapes/)
 - [How to Read the Swift Standard Lib Source](https://oleb.net/blog/2016/10/swift-stdlib-source/)
+- [Swift Driver Forum](https://forums.swift.org/t/new-project-announcement-swift-compiler-driver-reimplementation-in-swift/29696)
+- [State and Data Flow](https://developer.apple.com/documentation/swiftui/state_and_data_flow)
+- [Swift Powers SwiftUI](https://www.swiftbysundell.com/articles/the-swift-51-features-that-power-swiftuis-api/)
+- [Diagnostic Arch Overview](https://swift.org/blog/new-diagnostic-arch-overview/)
