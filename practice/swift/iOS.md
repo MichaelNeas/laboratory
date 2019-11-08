@@ -18,6 +18,8 @@
 - iBeacon detection is powered by the Core Location framework.
 - Unreliable networking is usually better for live streaming, where getting the latest data there quickly is more important than ensuring old data arrives.
 - Core Graphics can render to PDFs or to screens. 
+- NSValue was needed because Objective-C was not able to store CGRect and other structs in arrays and dictionaries.
+- When biometric authentication succeeds or fails we might be notified on the main thread, or we might be notified on a background thread.
 
 ## Terminologies
 xib - XML Interface Builder
