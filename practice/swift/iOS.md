@@ -17,6 +17,7 @@
 - The .replace blend more ignores transparency, which makes it faster to draw.
 - iBeacon detection is powered by the Core Location framework.
 - Unreliable networking is usually better for live streaming, where getting the latest data there quickly is more important than ensuring old data arrives.
+- Core Graphics can render to PDFs or to screens. 
 
 ## Terminologies
 xib - XML Interface Builder
