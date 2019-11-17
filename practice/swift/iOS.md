@@ -20,6 +20,13 @@
 - Core Graphics can render to PDFs or to screens. 
 - NSValue was needed because Objective-C was not able to store CGRect and other structs in arrays and dictionaries.
 - When biometric authentication succeeds or fails we might be notified on the main thread, or we might be notified on a background thread.
+- add a simple shadow to a UIView by using the shadow properties of its layer.
+- `invalidate()` on a timer stops it from working, and frees up any references it was holding. 
+- Clipping paths allow us to restrict where drawing takes place in a Core Graphics context.
+- dequeueReusableCell(withIdentifier:) returns an optional, whereas dequeueReusableCell(withIdentifier:for:) always returns a table view cell.
+- UIImage(named:) keeps images it loads in a special cache which is managed by UIKit and will be cleared automatically.
+- if a struct has a private member we can't get a default initializer
+- cannot call mutating function on constant struct instance
 
 ## Terminologies
 xib - XML Interface Builder
@@ -42,6 +49,7 @@ Bundle - how apple presents code and other resources on your drive
 - Outlet collections can store multiple ui elements to an array
 - It's important to think about abstract classes paired with generics
 - document outline shows storyboard contents
+- A transient allocation is one that was created and subsequently destroyed. 
 
 ## IB HotKeys 
 - cmd + 0, opt + cmd + 0 to bring in/out side views
