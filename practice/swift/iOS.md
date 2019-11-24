@@ -117,6 +117,9 @@ Bundle - how apple presents code and other resources on your drive
 - environment modifier is like css, where modifiers cascade to children.  On the other hand regular modifiers are added and do not do replacement
 - The wheel picker style is available only on iOS. 
 - Placing two views in a List row will create an implicit HStack
+- `blur()` modifier applies a Gaussian blur to a view
+- `onChanged()` and `onEnded()` modifiers are on DragGesture
+- `Asymmetric transitions` let us specify one transition for insertion and another for removal.
 
 ## CoreML
 - linear regression: draw one straight line through the data points, where average between line and points are as minimal as possible
