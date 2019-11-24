@@ -64,6 +64,7 @@ Bundle - how apple presents code and other resources on your drive
 - option + drag on files will make a copy
 - cmd + . will stop the project
 - cmd + r will run the project
+- option + cmd + p - resume preview
 
 ## Animations
 - A scale transform of X:0.5 Y:0.5 makes a view 50% of its default size.
@@ -93,3 +94,15 @@ Bundle - how apple presents code and other resources on your drive
 - Open an instrument for what you want to look into with your app including: Core Animation, memory leaks, core data, threading, activity monitor, system usage and much more
 - See how your app is performing and if any of the phone is being over worked causing issues
 - Flags with cmd + down
+
+## SwiftUI
+- SceneDelegate is used for launching windows in your app, popular for use in iPad where users can have multiple windows of an app open at the same time
+- Preview Assets you'd like to use when designing a user interface
+- View is the basic protocol you have to use to draw anything on the screen, requires `body`
+- some: `some`thing that conforms must be returned
+- `ContentView_Previews` only affects the way preview shows ui
+- `Form` allows a max of 10 fields, then requires `Group` after that, `Section` is another option that provides a visual separation
+- `NavigationView` is like a navigation bar
+- `@State` allows us to get passed the mutability limitations of structs, automatically watches for changes and will update the body
+- `$` allows for read and write of state variables (two way binding)
+- `.pickerStyle(SegmentedPickerStyle())` adds a segmented control to pickers 
