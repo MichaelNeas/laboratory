@@ -26,7 +26,7 @@
 - dequeueReusableCell(withIdentifier:) returns an optional, whereas dequeueReusableCell(withIdentifier:for:) always returns a table view cell.
 - UIImage(named:) keeps images it loads in a special cache which is managed by UIKit and will be cleared automatically.
 - if a struct has a private member we can't get a default initializer
-- cannot call mutating function on constant struct instance
+- Apple's symbols icon collection is called SF Symbols.
 
 ## Terminologies
 xib - XML Interface Builder
@@ -106,3 +106,9 @@ Bundle - how apple presents code and other resources on your drive
 - `@State` allows us to get passed the mutability limitations of structs, automatically watches for changes and will update the body
 - `$` allows for read and write of state variables (two way binding)
 - `.pickerStyle(SegmentedPickerStyle())` adds a segmented control to pickers 
+- `Spacer()` fills the rest of the space of the device
+- `.edgesIgnoringSafeArea(.all)` goes outside safe area
+- `LinearGradient` is a neat type of view that gives us gradients
+- modifiers are the primary driver behind changing up views
+- cannot call mutating function on constant struct instance
+- draw borders with a custom shape by using the overlay() modifier.
