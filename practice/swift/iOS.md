@@ -112,3 +112,6 @@ Bundle - how apple presents code and other resources on your drive
 - modifiers are the primary driver behind changing up views
 - cannot call mutating function on constant struct instance
 - draw borders with a custom shape by using the overlay() modifier.
+- Structs are used for swiftUI for performance and isolation of state
+- opaque return type: one specific type that conforms to the return protocol
+- environment modifier is like css, where modifiers cascade to children.  On the other hand regular modifiers are added and do not do replacement
