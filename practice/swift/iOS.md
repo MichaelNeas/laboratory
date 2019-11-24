@@ -115,3 +115,12 @@ Bundle - how apple presents code and other resources on your drive
 - Structs are used for swiftUI for performance and isolation of state
 - opaque return type: one specific type that conforms to the return protocol
 - environment modifier is like css, where modifiers cascade to children.  On the other hand regular modifiers are added and do not do replacement
+- The wheel picker style is available only on iOS. 
+
+## CoreML
+- linear regression: draw one straight line through the data points, where average between line and points are as minimal as possible
+- decision tree: natural tree structure based on a series of choices
+- boosted tree: series of decision trees, each tree corrects errors in previous tree, access to all available data
+- random forest: similar to boosted trees, each tree has access to only a subset of data that's different from other trees
+- Root Mean Square Error: on average there is only an error of a given amount of seconds
+- output is the best algorithm to use
