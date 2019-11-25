@@ -27,6 +27,7 @@
 - UIImage(named:) keeps images it loads in a special cache which is managed by UIKit and will be cleared automatically.
 - if a struct has a private member we can't get a default initializer
 - Apple's symbols icon collection is called SF Symbols.
+- UserDefaults is stringly typed, key names are strings
 
 ## Terminologies
 xib - XML Interface Builder
@@ -109,6 +110,7 @@ Bundle - how apple presents code and other resources on your drive
 - `Spacer()` fills the rest of the space of the device
 - `.edgesIgnoringSafeArea(.all)` goes outside safe area
 - `LinearGradient` is a neat type of view that gives us gradients
+- `onDelete()` modifier exists only on ForEach
 - modifiers are the primary driver behind changing up views
 - cannot call mutating function on constant struct instance
 - draw borders with a custom shape by using the overlay() modifier.
@@ -120,6 +122,12 @@ Bundle - how apple presents code and other resources on your drive
 - `blur()` modifier applies a Gaussian blur to a view
 - `onChanged()` and `onEnded()` modifiers are on DragGesture
 - `Asymmetric transitions` let us specify one transition for insertion and another for removal.
+- every time a struct is modified a new struct is made and the old is tossed, which is how `@State` works, it listens to the reassignment
+- `@ObservedObject` can only be used with classes that conform to `ObservableObject`
+- `@Published` more or less the same as `@State`, for properties in observed objects. It announces changes from a property; `@ObservedObject` watches an observed object for changes.
+- `@Environment` property wrappers let you read what's going on in the current environment
+- `Identifiable` gives a promise that the block has an id property and it is unique
+- `EditButton()` will automatically switch between Edit and Done when tapped. 
 
 ## CoreML
 - linear regression: draw one straight line through the data points, where average between line and points are as minimal as possible
