@@ -28,6 +28,7 @@
 - if a struct has a private member we can't get a default initializer
 - Apple's symbols icon collection is called SF Symbols.
 - UserDefaults is stringly typed, key names are strings
+- `dateFormat` allows us to specify a precise format for our dates, whereas `dateStyle` has a selection of built-in formats that match the user's settings.
 
 ## Terminologies
 xib - XML Interface Builder
@@ -107,7 +108,7 @@ Bundle - how apple presents code and other resources on your drive
 - `@State` allows us to get passed the mutability limitations of structs, automatically watches for changes and will update the body
 - `$` allows for read and write of state variables (two way binding)
 - `.pickerStyle(SegmentedPickerStyle())` adds a segmented control to pickers 
-- `Spacer()` fills the rest of the space of the device
+- `Spacer()` fills the rest of the space of the device, `Spacer(minLength:)` works for both width and height depending on the containing view
 - `.edgesIgnoringSafeArea(.all)` goes outside safe area
 - `LinearGradient` is a neat type of view that gives us gradients
 - `onDelete()` modifier exists only on ForEach
@@ -128,6 +129,13 @@ Bundle - how apple presents code and other resources on your drive
 - `@Environment` property wrappers let you read what's going on in the current environment
 - `Identifiable` gives a promise that the block has an id property and it is unique
 - `EditButton()` will automatically switch between Edit and Done when tapped. 
+- `list` will instantiate new structs that are out of screen bounds lazily, where `ScrollView` loads up all of them
+- `NavigationLink` gives us the ability to navigate to a new view, requires a `NavigationView` to work
+- `GeometryReader` provides dynamic sizes for general content in a view, it lets us read the size of a view's container
+- `layoutPriority` gives views more priority over other views, Higher layout priority values mean views are more likely to be allocated space in their container. 0 default
+- `buttonStyle()` controls the way SwiftUI highlights navigation links
+- `frame(maxWidth: .infinity)` will fill the complete width of available screen
+- Sheets are presented above the current screen
 
 ## CoreML
 - linear regression: draw one straight line through the data points, where average between line and points are as minimal as possible
