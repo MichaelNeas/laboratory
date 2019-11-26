@@ -330,3 +330,6 @@
 - [State and Data Flow](https://developer.apple.com/documentation/swiftui/state_and_data_flow)
 - [Swift Powers SwiftUI](https://www.swiftbysundell.com/articles/the-swift-51-features-that-power-swiftuis-api/)
 - [Diagnostic Arch Overview](https://swift.org/blog/new-diagnostic-arch-overview/)
+- [Futures](https://developer.apple.com/documentation/combine/future)
+- [Nio Docs](https://apple.github.io/swift-nio/docs/current/NIO/index.html)
+- [Swift Server Work Group](https://swift.org/server/)
