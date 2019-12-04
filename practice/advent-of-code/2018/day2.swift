@@ -30,9 +30,11 @@ func compareLetterDiff(between a: String, and b: String) -> Bool{
     return offByOne
 }
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day2.txt"
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2018/data/day2.txt", relativeTo: currentDirectoryURL)
+
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let stringChecksum = fileContent.components(separatedBy: .newlines)
     .compactMap { String($0) }
     .reduce((0,0), { x, y in

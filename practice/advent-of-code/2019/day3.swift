@@ -1,8 +1,5 @@
 import Foundation
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2019/data/day3.txt"
-
-
 struct Coordinate: Hashable, Equatable {
     let x: Int
     let y: Int
@@ -18,8 +15,11 @@ struct Coordinate: Hashable, Equatable {
     }
 }
 
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2019/data/day3.txt", relativeTo: currentDirectoryURL)
+
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let directions = fileContent.components(separatedBy: "\n")
     let firstLine = directions[0].components(separatedBy: ",")
     let secondLine = directions[1].components(separatedBy: ",")

@@ -1,9 +1,10 @@
 import Foundation
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2019/data/day2.txt"
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2019/data/day2.txt", relativeTo: currentDirectoryURL)
 
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let intCodeList = fileContent.components(separatedBy: ",").compactMap { Int($0) }
 
     func findNounVerb(list: [Int]) -> Int {

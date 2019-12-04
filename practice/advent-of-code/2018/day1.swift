@@ -1,8 +1,10 @@
 import Foundation
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day1.txt"
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2018/data/day1.txt", relativeTo: currentDirectoryURL)
+
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let totalFrequency = fileContent.components(separatedBy: .newlines)
     .compactMap { Int($0) }
     .reduce(0, { x, y in

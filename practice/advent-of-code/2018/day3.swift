@@ -1,6 +1,5 @@
 import Foundation
 
-let location = "/Users/michael.neas/workspace/laboratory/practice/advent-of-code/2018/data/day3.txt"
 func checkUntouchedCuts(_ processed: [String:Int], _ all: [[Int]]) -> [Int]{
     for cut in all {
         var intersection = false
@@ -20,8 +19,11 @@ func checkUntouchedCuts(_ processed: [String:Int], _ all: [[Int]]) -> [Int]{
     return [1,2,3,4]
 }
 
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2018/data/day3.txt", relativeTo: currentDirectoryURL)
+
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let separatorSet = CharacterSet(charactersIn: " #@,:x")
     let allCuts = fileContent.components(separatedBy: .newlines)
     .compactMap { String($0).components(separatedBy: separatorSet)

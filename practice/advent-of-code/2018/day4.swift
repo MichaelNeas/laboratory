@@ -1,7 +1,5 @@
 import Foundation
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day4.txt"
-
 struct GuardData { 
     var time: Date
     var scaryGuard: String
@@ -9,6 +7,9 @@ struct GuardData {
 }
 
 var guardDict = [String: [Int:Int]]()
+
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2018/data/day4.txt", relativeTo: currentDirectoryURL)
 
 do {
     var activeGuard = ""
@@ -18,7 +19,7 @@ do {
     let formatter = DateFormatter()
     formatter.timeZone = TimeZone.current
     formatter.dateFormat = "yyyy-MM-dd HH:mm"
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let separatorSet = CharacterSet(charactersIn: " []")
     _ = fileContent.components(separatedBy: .newlines)
     .compactMap { String($0).components(separatedBy: separatorSet) }

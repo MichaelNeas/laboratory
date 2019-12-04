@@ -2,7 +2,8 @@
 
 import Foundation
 
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day6.txt"
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2018/data/day6.txt", relativeTo: currentDirectoryURL)
 
 func solution1 (_ sb: [[Int]], _ hubs: [(Int, Int)]) {
     var sandbox = sb
@@ -46,7 +47,7 @@ func solution1 (_ sb: [[Int]], _ hubs: [(Int, Int)]) {
 }
 
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let separatorSet = CharacterSet(charactersIn: ", ")
     let hubs = fileContent.components(separatedBy: .newlines)
     .compactMap { String($0).components(separatedBy: separatorSet) }

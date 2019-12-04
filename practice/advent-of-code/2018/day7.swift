@@ -1,5 +1,8 @@
 import Foundation
-let location = "/Users/michaelneas/workspace/laboratory/practice/advent-of-code/2018/data/day7.txt"
+
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2018/data/day7.txt", relativeTo: currentDirectoryURL)
+
 struct Node {
     var value: String
 }
@@ -135,7 +138,7 @@ struct Graph {
 }
 
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let ordering = fileContent.components(separatedBy: .newlines)
     .compactMap { String($0).components(separatedBy: " ") }
     .map { (Node(value: $0[7]), Node(value: $0[1])) }

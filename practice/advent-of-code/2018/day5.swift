@@ -1,9 +1,10 @@
 import Foundation
 
-let location = "/Users/michael.neas/workspace/laboratory/practice/advent-of-code/2018/data/day5.txt"
+let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+let dataURL = URL(fileURLWithPath: "2018/data/day5.txt", relativeTo: currentDirectoryURL)
 
 do {
-    let fileContent = try String(contentsOfFile: location, encoding: .utf8)
+    let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let allPolymers = fileContent.components(separatedBy: .newlines)
     .compactMap { String($0) }
 
