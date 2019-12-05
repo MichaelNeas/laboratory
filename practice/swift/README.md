@@ -58,3 +58,22 @@
 - CGFloat is different from both Float and Double – it has the ability to change size depending on what device it's running on.
 - An NSRange stores both a location and a length. 
 - Uppercasing a Character returns a String
+
+## Generics
+
+- Most types have shortcuts for the generics Optional<Int> Int?
+- `var set: Set = [2,3,4]`
+- Inouts don’t directly reference, they make a copy and reassign under the hood
+- Compiler has to be able to infer func generics 
+- Extensions in same file can access fileprivate
+
+
+- @escaping, function will live longer than the function invoked in
+- “Stack” is made once ever where in C++ you can see all the mutations of the generics/templates
+- Closure vs closure expression
+Expression:
+```swift
+{ (parameters) -> return type in
+    statements
+}
+```
