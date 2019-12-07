@@ -26,6 +26,7 @@ do {
     let intCodeList = fileContent.components(separatedBy: ",").compactMap { Int($0) }
 
     typealias InstructionMode = (A: Bool, B: Bool, C: Bool, DE: Int)
+    typealias MachineState = (tape: [Int], output: Int, pointer: Int, finished: Bool)
     
     func mode(value: Int) -> InstructionMode {
         let modeConfig = String(format: "%05d", value)
@@ -40,11 +41,11 @@ do {
         return (A, B, C, DE)
     }
     
-    func execute(tape: [Int], phase: Int, input: Int) -> Int {
+    func execute(tape: [Int], phase: Int, input: Int, pointer: Int) -> MachineState {
         var list = tape
         let store = [phase, input]
         var storeIterator = 0
-        var i = 0
+        var i = pointer
         var currentMode = mode(value: list[i])
         
         while currentMode.DE != 99 {
@@ -68,14 +69,18 @@ do {
             // store
             case 3:
                 //print("stored \(store[storeIterator])")
-                list[list[i+1]] = store[storeIterator]
-                storeIterator += 1
+                if phase == -1 {
+                    list[list[i+1]] = input
+                } else {
+                    list[list[i+1]] = store[storeIterator]
+                    storeIterator += 1
+                }
                 i += 2
             // output
             case 4:
-                print(list[list[i+1]])
-                //i += 2
-                return list[list[i+1]]
+                print("output: \(list[list[i+1]])")
+                i += 2
+                return MachineState(list, list[list[i-1]], i, false)
             // jump if true
             case 5:
                 if (currentMode.C ? list[i+1] : list[list[i+1]]) != 0 {
@@ -111,18 +116,27 @@ do {
             }
             currentMode = mode(value: list[i])
         }
-        return 0
+        return MachineState(list, input, i, true)
     }
+    
     var maxThrust = 0
-    var firstInput = 0
-    let phases = [0,1,2,3,4].permutations
+    let phases = [5,6,7,8,9].permutations
+    var phaseCounter = 0
+    var tapes: [MachineState] = Array(repeating: MachineState([0],0,0,false), count: 5)
     for phase in phases {
-        firstInput = 0
-        for i in 0..<phase.count {
-            firstInput = execute(tape: intCodeList, phase: phase[i], input: firstInput)
-        }
-        if maxThrust < firstInput {
-            maxThrust = firstInput
+        tapes = Array(repeating: MachineState([0],0,0,false), count: 5)
+        phaseCounter = 0
+        repeat {
+            tapes[phaseCounter % phase.count] = execute(
+                            tape: phaseCounter < phase.count ? intCodeList : tapes[phaseCounter % phase.count].tape,
+                            phase: phaseCounter < phase.count ? phase[phaseCounter] : -1,
+                            input: phaseCounter == 0 ? 0 : tapes[(phaseCounter-1) % phase.count].output,
+                            pointer: phaseCounter < phase.count ? 0 : tapes[phaseCounter % phase.count].pointer
+            )
+            phaseCounter += 1
+        } while !tapes[(phaseCounter-1) % phase.count].finished
+        if maxThrust < tapes[(phaseCounter-1) % phase.count].output {
+            maxThrust = tapes[(phaseCounter-1) % phase.count].output
         }
     }
     print("max thrust: \(maxThrust)")
