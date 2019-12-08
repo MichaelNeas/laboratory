@@ -45,6 +45,29 @@ do {
         oneTwoCount[code, default: 0] += 1 
     }
     print(oneTwoCount[1]! * oneTwoCount[2]!)
+
+
+    i = 0
+    layerIndex = 0
+    var image = [Int]()
+
+    for j in 0..<layerSize {
+        var layerValue = 2
+        while layerValue > 1 && layerIndex < layers.count {
+            layerValue = layers[layerIndex][j]
+            layerIndex += 1
+        }
+        layerIndex = 0
+        image.append(layerValue)
+    } 
+    
+    let result = image.compactMap{String($0)}.joined(separator: "")
+    for (index, res) in result.enumerated() {
+        print(res == "1" ? "*" : " ", terminator:"")
+        if (index+1) % 25 == 0 {
+            print("")
+        }
+    }
 }
 catch {
     print("Error reading text. \(error)")
