@@ -35,11 +35,19 @@ do {
         }
     }
     
-    func execute(tape: [Int]) {
+        func execute(tape: [Int]) {
         var list = tape
         var i = 0
         var currentMode = mode(value: list[i])
         var relativeBase = 0
+        
+        var cParam: Int {
+            currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]
+        }
+        
+        var bParam: Int {
+            currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase]
+        }
         
         while currentMode.DE != 99 {
             let tempMax = max(i+3, list[i+3], list[i+3] + relativeBase)
@@ -51,34 +59,22 @@ do {
             case 1:
                 switch currentMode.A {
                 case .immediate:
-                    list[i + 3] =
-                    (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) +
-                    (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                    list[i+3] = cParam + bParam
                 case .position:
-                    list[list[i+3]] =
-                    (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) +
-                    (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                    list[list[i+3]] = cParam + bParam
                 case .relative:
-                    list[list[i+3] + relativeBase] =
-                    (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) +
-                    (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                    list[list[i+3] + relativeBase] = cParam + bParam
                 }
                 i += 4
             // multiplication
             case 2:
                 switch currentMode.A {
                 case .immediate:
-                    list[i + 3] =
-                    (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) *
-                    (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                    list[i + 3] = cParam * bParam
                 case .position:
-                    list[list[i+3]] =
-                    (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) *
-                    (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                    list[list[i+3]] = cParam * bParam
                 case .relative:
-                    list[list[i+3] + relativeBase] =
-                    (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) *
-                    (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                    list[list[i+3] + relativeBase] = cParam * bParam
                 }
                 i += 4
             // store
@@ -87,11 +83,11 @@ do {
                 print("storing")
                 switch currentMode.C {
                 case .immediate:
-                    list[i+1] = 2
+                    list[i+1] = 1
                 case .position:
-                    list[list[i+1]] = 2
+                    list[list[i+1]] = 1
                 case .relative:
-                    list[list[i+1] + relativeBase] = 2
+                    list[list[i+1] + relativeBase] = 1
                 }
                 i += 2
             // output
@@ -100,41 +96,43 @@ do {
                 i += 2
             // jump if true
             case 5:
-                if (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) != 0 {
-                    i = (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                if cParam != 0 {
+                    i = bParam
                 } else {
                     i += 3
                 }
             // jump if false
             case 6:
-                if (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) == 0 {
-                    i = (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])
+                if cParam == 0 {
+                    i = bParam
                 } else {
                     i += 3
                 }
             // less than
             case 7:
-                if currentMode.A == .immediate {
-                    list[i + 3] = ((currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) < (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])) ? 1 : 0
-                } else if currentMode.A == .position {
-                    list[list[i+3]] = ((currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) < (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])) ? 1 : 0
-                } else {
-                    list[list[i+3] + relativeBase] = ((currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) < (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])) ? 1 : 0
+                switch currentMode.A {
+                case .immediate:
+                    list[i + 3] = cParam < bParam ? 1 : 0
+                case .position:
+                    list[list[i+3]] = cParam < bParam ? 1 : 0
+                case .relative:
+                    list[list[i+3] + relativeBase] = cParam < bParam ? 1 : 0
                 }
                 i += 4
             // equals
             case 8:
-                if currentMode.A == .immediate {
-                    list[i + 3] = ((currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) == (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])) ? 1 : 0
-                } else if currentMode.A == .position {
-                    list[list[i+3]] = ((currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) == (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])) ? 1 : 0
-                } else {
-                    list[list[i+3] + relativeBase] = ((currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase]) == (currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase])) ? 1 : 0
+                switch currentMode.A {
+                case .immediate:
+                    list[i + 3] = cParam == bParam ? 1 : 0
+                case .position:
+                    list[list[i+3]] = cParam == bParam ? 1 : 0
+                case .relative:
+                    list[list[i+3] + relativeBase] = cParam == bParam ? 1 : 0
                 }
                 i += 4
             // adjust relative base
             case 9:
-                relativeBase += (currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase])
+                relativeBase += cParam
                 i += 2
             default:
                 print("Woops")
