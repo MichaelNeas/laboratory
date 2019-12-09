@@ -87,11 +87,11 @@ do {
                 print("storing")
                 switch currentMode.C {
                 case .immediate:
-                    list[i+1] = 1
+                    list[i+1] = 2
                 case .position:
-                    list[list[i+1]] = 1
+                    list[list[i+1]] = 2
                 case .relative:
-                    list[list[i+1] + relativeBase] = 1
+                    list[list[i+1] + relativeBase] = 2
                 }
                 i += 2
             // output
