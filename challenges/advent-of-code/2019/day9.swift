@@ -35,7 +35,7 @@ do {
         }
     }
     
-        func execute(tape: [Int]) {
+    func execute(tape: [Int]) {
         var list = tape
         var i = 0
         var currentMode = mode(value: list[i])
@@ -49,50 +49,34 @@ do {
             currentMode.B == .immediate ? list[i+2] : currentMode.B == .position ? list[list[i+2]] : list[list[i+2] + relativeBase]
         }
         
+        var aParam: Int {
+            currentMode.A == .immediate ? i+3 : currentMode.A == .position ? list[i+3] : list[i+3] + relativeBase
+        }
+        
         while currentMode.DE != 99 {
             let tempMax = max(i+3, list[i+3], list[i+3] + relativeBase)
             if tempMax > list.count {
                 list += Array(repeating: 0, count: tempMax - list.count)
             }
+            
             switch currentMode.DE {
             // addition
             case 1:
-                switch currentMode.A {
-                case .immediate:
-                    list[i+3] = cParam + bParam
-                case .position:
-                    list[list[i+3]] = cParam + bParam
-                case .relative:
-                    list[list[i+3] + relativeBase] = cParam + bParam
-                }
+                list[aParam] = cParam + bParam
                 i += 4
             // multiplication
             case 2:
-                switch currentMode.A {
-                case .immediate:
-                    list[i + 3] = cParam * bParam
-                case .position:
-                    list[list[i+3]] = cParam * bParam
-                case .relative:
-                    list[list[i+3] + relativeBase] = cParam * bParam
-                }
+                list[aParam] = cParam * bParam
                 i += 4
             // store
             case 3:
                 print(currentMode)
                 print("storing")
-                switch currentMode.C {
-                case .immediate:
-                    list[i+1] = 1
-                case .position:
-                    list[list[i+1]] = 1
-                case .relative:
-                    list[list[i+1] + relativeBase] = 1
-                }
+                list[aParam] = 2
                 i += 2
             // output
             case 4:
-                print("output: \(currentMode.C == .immediate ? list[i+1] : currentMode.C == .position ? list[list[i+1]] : list[list[i+1] + relativeBase])")
+                print("output: \(cParam)")
                 i += 2
             // jump if true
             case 5:
@@ -110,25 +94,11 @@ do {
                 }
             // less than
             case 7:
-                switch currentMode.A {
-                case .immediate:
-                    list[i + 3] = cParam < bParam ? 1 : 0
-                case .position:
-                    list[list[i+3]] = cParam < bParam ? 1 : 0
-                case .relative:
-                    list[list[i+3] + relativeBase] = cParam < bParam ? 1 : 0
-                }
+                list[aParam] = cParam < bParam ? 1 : 0
                 i += 4
             // equals
             case 8:
-                switch currentMode.A {
-                case .immediate:
-                    list[i + 3] = cParam == bParam ? 1 : 0
-                case .position:
-                    list[list[i+3]] = cParam == bParam ? 1 : 0
-                case .relative:
-                    list[list[i+3] + relativeBase] = cParam == bParam ? 1 : 0
-                }
+                list[aParam] = cParam == bParam ? 1 : 0
                 i += 4
             // adjust relative base
             case 9:
