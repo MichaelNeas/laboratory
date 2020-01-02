@@ -48,3 +48,7 @@ struct Stack<T> {
         return whereAllTheCheeseGoes.popLast()
     }
 }
+
+func compose<T, U, W> (inner: @escaping (T)-> U, outer: @escaping (U) -> W) -> ((T) -> W) {
+    { t in outer(inner(t))}
+}
