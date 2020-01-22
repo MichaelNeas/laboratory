@@ -12,6 +12,15 @@ class PerformanceTests: XCTestCase {
         }
     }
 
+	func testReduceFacted() {
+		func factorial(_ number: Int) -> Int {
+			(2...number).reduce(1) { $0 * $1 }
+		}
+		measure {
+        	_ = factorial(20)
+        }
+	}
+
 	func testMemoized() {
 		var memo: [UInt64: UInt64] = [UInt64: UInt64]()
 		func mFactorial(_ n: UInt64) -> UInt64 {
@@ -33,8 +42,8 @@ class PerformanceTests: XCTestCase {
     func testIterative() {
 		func factorialIterative(_ n: UInt64) -> UInt64 {
 			var sol: UInt64 = 1
-			for i in 1..<n {
-				sol = sol * i
+			for i in 2...n {
+				sol *= i
 			}
 			return sol
 		}
