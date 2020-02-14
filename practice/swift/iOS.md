@@ -136,6 +136,13 @@ Bundle - how apple presents code and other resources on your drive
 - `buttonStyle()` controls the way SwiftUI highlights navigation links
 - `frame(maxWidth: .infinity)` will fill the complete width of available screen
 - Sheets are presented above the current screen
+- `Shape` uses paths to draw, `InsettableShape` builds on top to allow us the ability to inset shapes with respect to their bounds
+- `ImagePaint` can be used for shape backgrounds, strokes and borders
+- `drawingGroup` enables metal rendering, for when performance in CoreAnimation is being choked up
+- `animatableData` for shapes allows swiftui to interpolate changes smoothly in animations
+- `saturation` & `blur` adjust the color saturation & blur of any view in real-time
+- `CGAffineTransform` can be used to store rotation and translation data and store shearing and scaling.
+- `AnimatablePair` can only animate values that are animatable, which excludes integers.
 
 ## CoreML
 - linear regression: draw one straight line through the data points, where average between line and points are as minimal as possible
