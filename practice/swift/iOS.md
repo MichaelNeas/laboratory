@@ -143,6 +143,7 @@ Bundle - how apple presents code and other resources on your drive
 - `saturation` & `blur` adjust the color saturation & blur of any view in real-time
 - `CGAffineTransform` can be used to store rotation and translation data and store shearing and scaling.
 - `AnimatablePair` can only animate values that are animatable, which excludes integers.
+- The `@Published` property wrapper places our properties inside a `Published` struct. 
 
 ## CoreML
 - linear regression: draw one straight line through the data points, where average between line and points are as minimal as possible
