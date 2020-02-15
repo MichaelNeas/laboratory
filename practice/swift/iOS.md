@@ -144,6 +144,27 @@ Bundle - how apple presents code and other resources on your drive
 - `CGAffineTransform` can be used to store rotation and translation data and store shearing and scaling.
 - `AnimatablePair` can only animate values that are animatable, which excludes integers.
 - The `@Published` property wrapper places our properties inside a `Published` struct. 
+- `@Binding` lets us share one value in 2 places
+- SwiftUI gives us `AnyView` as a Type erasure to let us hide the underlying type of an object, which conforms to `View`
+- Views presented as sheets have their own environment, so if you want to share values you need to pass them in.
+- Constant bindings cannot have their value changed by the user
+
+## Core Data
+- We can create a testing managed object context for the purpose of SwiftUI previews, they just require a concurrency type
+- Managed objects must be created inside a managed object context.
+- Core Data is available on all of Apple's platforms.
+- We need to call `save()` on managed object context.
+- `[C]` makes an NSPredicate case-insensitive.
+- If you want more complex predicates you can combine multiple instances of `NSPredicate` using `NSCompoundPredicate`.
+- We need to convert the `NSSet` to something more useful before we can use it with SwiftUI.
+- We can dynamically replace an `NSPredicate` string with an attribute name using `%K`
+- Fetch requests work on single entities.
+- `NSManagedObject` subclasses automatically conform to the `Hashable` protocol
+- All managed objects have a unique object ID
+- `hasChanges` property to check whether a managed object context has changes before we try to save it
+- Fetch requests take an array of sort descriptors, and they are applied in order.
+- We can add as many constraints as we want by separating them using commas
+- `BEGINSWITH` and `CONTAINS` predicate is case-sensitive.
 
 ## CoreML
 - linear regression: draw one straight line through the data points, where average between line and points are as minimal as possible
