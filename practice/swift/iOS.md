@@ -9,6 +9,7 @@
 - ios10+ removes non-retina devices so you only need to include 2x,3x
 - ActivityViewControllers are an easy way to enable sharing to social media or interacting with iphone sharing services
 - Because @IBAction means you're connecting storyboards (Objective-C code) to Swift code, it always implies @objc as well.
+- `@objc` tells Swift to create a method that can be read by Objective-C.
 - Option click to give zoom in/out on map views
 - can move green breakpoint line up or down!
 - Swift extensions communicates with iOS, which communicates with Safari.
@@ -29,6 +30,7 @@
 - Apple's symbols icon collection is called SF Symbols.
 - UserDefaults is stringly typed, key names are strings
 - `dateFormat` allows us to specify a precise format for our dates, whereas `dateStyle` has a selection of built-in formats that match the user's settings.
+- `Core Image` performs the transformation in the GPU, Reusing `CIContext` is important for performance.
 
 ## Terminologies
 xib - XML Interface Builder
@@ -144,10 +146,13 @@ Bundle - how apple presents code and other resources on your drive
 - `CGAffineTransform` can be used to store rotation and translation data and store shearing and scaling.
 - `AnimatablePair` can only animate values that are animatable, which excludes integers.
 - The `@Published` property wrapper places our properties inside a `Published` struct. 
-- `@Binding` lets us share one value in 2 places
+- `@Binding` lets us share one value in 2 places, it creates a Binding struct
 - SwiftUI gives us `AnyView` as a Type erasure to let us hide the underlying type of an object, which conforms to `View`
 - Views presented as sheets have their own environment, so if you want to share values you need to pass them in.
 - Constant bindings cannot have their value changed by the user
+- Action sheets can have a title and/or message
+- To make a SwiftUI view wrap a UIKit view, we must make it conform to `UIViewControllerRepresentable` which already conforms to `View`
+- `Coordinators` act as bridges between SwiftUI's views and UIKit's view controllers
 
 ## Core Data
 - We can create a testing managed object context for the purpose of SwiftUI previews, they just require a concurrency type
