@@ -153,6 +153,7 @@ Bundle - how apple presents code and other resources on your drive
 - Action sheets can have a title and/or message
 - To make a SwiftUI view wrap a UIKit view, we must make it conform to `UIViewControllerRepresentable` which already conforms to `View`
 - `Coordinators` act as bridges between SwiftUI's views and UIKit's view controllers
+- `completeFileProtection` stops anyone from reading a file unless the device has been unlocked.
 
 ## Core Data
 - We can create a testing managed object context for the purpose of SwiftUI previews, they just require a concurrency type
