@@ -31,6 +31,9 @@
 - UserDefaults is stringly typed, key names are strings
 - `dateFormat` allows us to specify a precise format for our dates, whereas `dateStyle` has a selection of built-in formats that match the user's settings.
 - `Core Image` performs the transformation in the GPU, Reusing `CIContext` is important for performance.
+- Writing data atomically means that iOS writes to a temporary file then performs a rename, stoping another piece of code from reading the file part-way through a write
+- Every iOS app has a documents directory where we can store our files, this directory is automatically stored in iCloud backups.
+- Touch ID and Face ID are both provided by the LocalAuthentication framework
 
 ## Terminologies
 xib - XML Interface Builder
@@ -154,6 +157,9 @@ Bundle - how apple presents code and other resources on your drive
 - To make a SwiftUI view wrap a UIKit view, we must make it conform to `UIViewControllerRepresentable` which already conforms to `View`
 - `Coordinators` act as bridges between SwiftUI's views and UIKit's view controllers
 - `completeFileProtection` stops anyone from reading a file unless the device has been unlocked.
+- `UIViewRepresentable` handles UIView and `UIViewControllerRepresentable` handles UIViewController
+- `onDismiss` detects when a sheet is closed
+- SwiftUI does not let us bind a text field directly to an optional string property
 
 ## Core Data
 - We can create a testing managed object context for the purpose of SwiftUI previews, they just require a concurrency type
