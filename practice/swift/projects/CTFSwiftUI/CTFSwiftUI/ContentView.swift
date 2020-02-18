@@ -73,6 +73,10 @@ struct ContentView: View {
     @State private var scoreTitle = ""
     @State private var score = 0
     
+    let labels = [
+        "Estonia": "Flag with 3 horizontal stripes of equal size. Top blue, middle black, bottom white",
+        "France": "Flag with 3 vertical strips of equal size, left blue, middle whie, right red"]
+    
     var body: some View {
         ZStack {
             //Color.blue.edgesIgnoringSafeArea(.all)
@@ -90,10 +94,12 @@ struct ContentView: View {
                     Button(action: {
                         self.flagTapped(row)
                     }) {
-                        Image(self.countries[row]).renderingMode(.original)
+                        Image(self.countries[row])
+                            .renderingMode(.original)
                             .clipShape(Capsule())
                             .overlay(Capsule().stroke(Color.black, lineWidth: 1))
                             .shadow(color: .black, radius: 2)
+                            .accessibility(label: Text(self.labels[self.countries[row], default: "Unknown"]))
                     }.padding()
                 }
                 Spacer()

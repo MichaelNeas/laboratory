@@ -34,8 +34,13 @@
 - Writing data atomically means that iOS writes to a temporary file then performs a rename, stoping another piece of code from reading the file part-way through a write
 - Every iOS app has a documents directory where we can store our files, this directory is automatically stored in iCloud backups.
 - Touch ID and Face ID are both provided by the LocalAuthentication framework
+- Timer tolerance allows iOS to delay a timer for better energy efficiency
+- All iPhones have a compact width size class in portrait
+- User interface idiom tells us whether the device is a tablet, phone, or TV.
+- `static let` properties are always created lazily
 
 ## Terminologies
+
 xib - XML Interface Builder
 nib - NeXT Interface Builder
 CA - Core Animation
@@ -160,6 +165,31 @@ Bundle - how apple presents code and other resources on your drive
 - `UIViewRepresentable` handles UIView and `UIViewControllerRepresentable` handles UIViewController
 - `onDismiss` detects when a sheet is closed
 - SwiftUI does not let us bind a text field directly to an optional string property
+- Accessibility labels are read first, followed the accessibility hint
+- Image views automatically have the `isImage` accessibility trait, smart to remove if using image as button, `isButton` needs to be added by hand
+- `accessibility(value:)` modifier can control how swiftUI reads out the value of UI controls like steppers and sliders
+-  `@EnvironmentObject` only works with classes, properties must conform to `ObservableObject`, and must have a value before the view is shown
+- Context menus are triggered when users long press on a view
+- We can add one image and one text view to each tab bar item 
+- programmatically setting the active tab for a `TabView`, requires setting a tag on the views inside it
+- `objectWillChange.send()` notifies SwiftUI that an observable object is about to change
+- on reduce motion disable animations that use motion, but fades are still fine
+- `sequenced(before:)` modifier lets us create chains of gestures
+- `.accessibilityDifferentiateWithoutColor` add extra accessibility support for color blind users
+- `contentShape()` allows control of the tap area for a view
+- Three step layout process: the parent proposes a size, the child chooses its own size, and the parent positions it
+- Two built-in coordinate spaces: global and local
+- `Text("Hello, World!").background(Color.red)`, the text view is a child of the background.
+- `Color` view is layout neutral, it asks its child how much space to use, or occupies whatever size the parent suggested
+- `offset()` modifier changes where a view is rendered without actually changing its original dimensions
+- When applying size rules to a view, we apply those rules to whatever is in its body
+- `GeometryReader` tells us the size that was proposed by our parent and is given one value inside its layout closure, which is a `GeometryProxy` containing layout information. 
+- `position()` allows absolute positioning of views
+- `layoutPriority()` controls how much space a view is allocated
+- `ListFormatter` converts a string array to a string.
+
+## Combine
+- We can receive values from a publisher using `onReceive()`
 
 ## Core Data
 - We can create a testing managed object context for the purpose of SwiftUI previews, they just require a concurrency type
