@@ -15,4 +15,24 @@ class Solution {
         
         return sol
     }
+
+    func linearCountNegatives(_ grid: [[Int]]) -> Int {
+        var sol = 0
+        
+        var row = 0
+        var col = grid[0].count - 1
+        
+        let maxHeight = grid.count
+        
+        while col >= 0 && row < maxHeight {
+            if grid[row][col] < 0 {
+                sol += maxHeight - row
+                col -= 1
+            } else {
+                row += 1
+            }
+        }
+        
+        return sol
+    }
 }
