@@ -83,6 +83,7 @@
 - [RxCombine](https://github.com/freak4pc/RxCombine)
 - [CombineDataSources](https://github.com/combineopensource/CombineDataSources)
 - [Swift Driver](https://github.com/apple/swift-driver)
+- [Swift LLBuild](https://github.com/apple/swift-llbuild)
 
 
 ## Videos
@@ -101,6 +102,7 @@
 - [Numeric Tyles and Protocols](https://speakerdeck.com/jessesquires/exploring-swifts-numeric-types-and-protocols)
 - [wwdc swiftui accessibility](https://developer.apple.com/videos/play/wwdc2019/238/)
 - [Essential Video Sessions from 2019 wwdc](https://wwdcbysundell.com/2019/essential-session-videos/)
+- [Binary Frameworks in Swift](https://developer.apple.com/videos/play/wwdc2019/416/)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -196,7 +198,8 @@
 - [Library Evolution](https://github.com/apple/swift-evolution/blob/master/proposals/0260-library-evolution.md)
 - [Opaque Result Types](https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md)
 - [SwiftPreview](https://github.com/apple/swift-evolution/blob/master/proposals/0264-stdlib-preview-package.md)
-
+- [Magic File Names](https://github.com/apple/swift-evolution/blob/master/proposals/0274-magic-file.md)
+- [Multi-pattern catch clauses](https://github.com/apple/swift-evolution/blob/master/proposals/0276-multi-pattern-catch-clauses.md)
 
 ## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -333,3 +336,6 @@
 - [Futures](https://developer.apple.com/documentation/combine/future)
 - [Nio Docs](https://apple.github.io/swift-nio/docs/current/NIO/index.html)
 - [Swift Server Work Group](https://swift.org/server/)
+- [UITableViewDiffableDataSource](https://developer.apple.com/documentation/uikit/uitableviewdiffabledatasource)
+- [UICollectionViewDiffableDataSource](https://developer.apple.com/documentation/uikit/uicollectionviewdiffabledatasource)
+- [Road to swift 6](https://forums.swift.org/t/on-the-road-to-swift-6/32862)
