@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to my laboratory <img width="100" height="100" src="assets/dexter.png"></h1>
+<h1 align="center">Welcome to my laboratory <img width="42" height="42" src="assets/dexter.png"></h1>
 
 ## Active Directories
 
