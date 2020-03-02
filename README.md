@@ -1,9 +1,9 @@
 <h1 align="center">Welcome to my laboratory</h1>
-<p style="float: right;">
+<p align="right">
   <img width="150" height="150" src="assets/dexter.png">
 </p>
 
-### Directory Structure
+## Active Directories
 
 - [Variations of interview questions](./interviews)
 - [LeetCode Solutions](./challenges/1337)
@@ -23,6 +23,7 @@
 - [Project Euler](https://projecteuler.net/)
 
 ### Security Related Challenges
+
 - [OverTheWire](http://overthewire.org/wargames/)
 - [NetGarage](https://io.netgarage.org/)
 - [SmashTheStack](http://smashthestack.org/)
