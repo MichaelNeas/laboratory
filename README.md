@@ -1,18 +1,18 @@
 <h1 align="center">Welcome to my laboratory</h1>
-<p align="center">
-  <img width="200" height="200" src="assets/dexter.png">
+<p style="float: right;">
+  <img width="150" height="150" src="assets/dexter.png">
 </p>
 
 ### Directory Structure
 
-- [./interviews](Variations of interview questions)
-- [./challenges/1337](LeetCode Solutions)
-- [./challenges/advent-of-code](Advent Solutions)
-- [./practice/interview-practice](Interview practice problems and solutions)
-- [./practice](Various programming languages and projects)
-- [./practice/swift](Swift Practice and Projects)
-- [./practice/js](Really neat js concepts and practice)
-- [./resources](Resources and notes)
+- [Variations of interview questions](./interviews)
+- [LeetCode Solutions](./challenges/1337)
+- [Advent Solutions](./challenges/advent-of-code)
+- [Swift Practice and Projects](./practice/swift)
+- [Interview practice problems and solutions](./practice/interview-practice)
+- [Various programming languages and experiments](./practice)
+- [Really neat js concepts and practice](./practice/js)
+- [Resources and notes](./resources)
 
 ### Challenge Sources
 
