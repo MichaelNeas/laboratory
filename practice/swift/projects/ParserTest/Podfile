@@ -1,0 +1,4 @@
+target 'ParserTest' do
+  use_frameworks!
+  pod 'Down'
+end
