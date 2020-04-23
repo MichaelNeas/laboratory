@@ -53,9 +53,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         motion.showsDeviceMovementDisplay = true
         motion.startDeviceMotionUpdates(using: .xArbitraryZVertical, to: .main) { [weak self] (motion, _) in
             guard let self = self, let data = motion else { return }
-            print("roll: \(data.attitude.roll), pitch: \(cos(data.attitude.pitch))")
+            let quat = data.attitude.quaternion
             
-            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.contentOffset.x - CGFloat(data.attitude.roll), y: self.scrollView.contentOffset.y + CGFloat(cos(data.attitude.pitch) * 16)), animated: true)
+            let qPitch = CGFloat((atan2(2 * (quat.x * quat.w + quat.y * quat.z), 1 - 2 * quat.x * quat.x - 2 * quat.z * quat.z)))
+            let qRoll = CGFloat(atan2(2*(quat.y*quat.w - quat.x*quat.z), 1 - 2*quat.y*quat.y - 2*quat.z*quat.z))
+            
+            //print("roll: \(qRoll), pitch: \(cos(qPitch - CGFloat.pi/4))")
+            
+            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.contentOffset.x - CGFloat(qRoll * 64), y: self.scrollView.contentOffset.y + CGFloat(cos(qPitch + CGFloat.pi/4) * 64
+                )), animated: true)
         }
     }
 }
