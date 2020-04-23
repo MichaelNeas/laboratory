@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MotionPanning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtY-Ry-cog">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tires" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-vs-6sb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3Tb-vs-6sb" secondAttribute="bottom" id="2ea-pv-OLi"/>
+                                    <constraint firstItem="3Tb-vs-6sb" firstAttribute="width" secondItem="rtY-Ry-cog" secondAttribute="width" id="2v3-SU-qji"/>
+                                    <constraint firstItem="3Tb-vs-6sb" firstAttribute="height" secondItem="rtY-Ry-cog" secondAttribute="height" id="E7o-EP-2C7"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Tb-vs-6sb" secondAttribute="trailing" id="kZF-mH-I4A"/>
+                                    <constraint firstItem="3Tb-vs-6sb" firstAttribute="top" secondItem="rtY-Ry-cog" secondAttribute="top" id="ltT-MM-BSZ"/>
+                                    <constraint firstItem="3Tb-vs-6sb" firstAttribute="leading" secondItem="rtY-Ry-cog" secondAttribute="leading" id="vwg-en-VtT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rtY-Ry-cog" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="04j-oo-87J"/>
+                            <constraint firstAttribute="trailing" secondItem="rtY-Ry-cog" secondAttribute="trailing" id="0fR-P0-r6F"/>
+                            <constraint firstItem="rtY-Ry-cog" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ISi-zh-088"/>
+                            <constraint firstAttribute="bottom" secondItem="rtY-Ry-cog" secondAttribute="bottom" id="cDo-63-RWw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="3Tb-vs-6sb" id="yHd-am-36Q"/>
+                        <outlet property="scrollView" destination="rtY-Ry-cog" id="MQA-SO-CXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tires" width="500" height="750"/>
+    </resources>
+</document>
