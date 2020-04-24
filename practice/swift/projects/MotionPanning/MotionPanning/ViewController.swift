@@ -43,7 +43,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let minScale = min(widthScale, heightScale)
         scrollView.minimumZoomScale = minScale
         scrollView.maximumZoomScale = 3.0
-        //scrollView.contentInsetAdjustmentBehavior = .
     }
     
     private func startDeviceMotion() {
