@@ -103,6 +103,7 @@
 - [wwdc swiftui accessibility](https://developer.apple.com/videos/play/wwdc2019/238/)
 - [Essential Video Sessions from 2019 wwdc](https://wwdcbysundell.com/2019/essential-session-videos/)
 - [Binary Frameworks in Swift](https://developer.apple.com/videos/play/wwdc2019/416/)
+- [Embracing Algorithms](https://developer.apple.com/videos/play/wwdc2018/223)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -339,3 +340,12 @@
 - [UITableViewDiffableDataSource](https://developer.apple.com/documentation/uikit/uitableviewdiffabledatasource)
 - [UICollectionViewDiffableDataSource](https://developer.apple.com/documentation/uikit/uicollectionviewdiffabledatasource)
 - [Road to swift 6](https://forums.swift.org/t/on-the-road-to-swift-6/32862)
+- [Playground Key Value Store](https://developer.apple.com/documentation/playgroundsupport/playgroundkeyvaluestore)
+- [Opaque Return Types](https://www.swiftbysundell.com/articles/the-swift-51-features-that-power-swiftuis-api/#opaque-return-types)
+- [@autoclosure](https://www.swiftbysundell.com/articles/using-autoclosure-when-designing-swift-apis/)
+- [LPLinkMetadata](https://developer.apple.com/documentation/linkpresentation/lplinkmetadata)
+- [Type erasure with closures](https://www.swiftbysundell.com/articles/type-erasure-using-closures-in-swift/)
+- [Swift C++ interop](https://forums.swift.org/t/manifesto-interoperability-between-swift-and-c/33874)
+- [Foundation on Windows](https://forums.swift.org/t/swift-soars-ever-higher/34036)
+- [Crypto](https://swift.org/blog/crypto/)
+- [Swift Preview](https://swift.org/blog/preview-package/)
