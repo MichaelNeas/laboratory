@@ -30,6 +30,7 @@ struct ContentView: View {
     }
 }
 
+// https://medium.com/@edwurtle/blur-effect-inside-swiftui-a2e12e61e750
 struct Blur: UIViewRepresentable {
     var style: UIBlurEffect.Style = .systemMaterial
 
