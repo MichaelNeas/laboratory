@@ -57,6 +57,7 @@
 - [UI-Router](ui-router.github.io)
 - [DeepMind](https://deepmind.com/)
 - [DeeplearningJS](https://deeplearnjs.org/)
+- [Cloudflare Workers](https://workers.cloudflare.com/)
 
 
 ## Blogs/ Research Papers

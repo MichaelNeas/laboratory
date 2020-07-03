@@ -51,6 +51,7 @@
 - [RxSwift](https://github.com/ReactiveX/RxSwift)
 - [SnapKit](https://github.com/SnapKit/SnapKit)
 - [Vapor](https://github.com/vapor/vapor)
+- [Vapor Site](https://vapor.codes/)
 - [Kitura](https://github.com/IBM-Swift/Kitura)
 - [Stencil](https://github.com/stencilproject/Stencil)
 - [Marathon](https://github.com/johnsundell/marathon)
@@ -84,6 +85,7 @@
 - [CombineDataSources](https://github.com/combineopensource/CombineDataSources)
 - [Swift Driver](https://github.com/apple/swift-driver)
 - [Swift LLBuild](https://github.com/apple/swift-llbuild)
+- [Arena](https://github.com/finestructure/Arena)
 
 
 ## Videos
@@ -201,6 +203,7 @@
 - [SwiftPreview](https://github.com/apple/swift-evolution/blob/master/proposals/0264-stdlib-preview-package.md)
 - [Magic File Names](https://github.com/apple/swift-evolution/blob/master/proposals/0274-magic-file.md)
 - [Multi-pattern catch clauses](https://github.com/apple/swift-evolution/blob/master/proposals/0276-multi-pattern-catch-clauses.md)
+- [Package Registry Service](https://forums.swift.org/t/swift-package-registry-service/37219)
 
 ## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -349,3 +352,14 @@
 - [Foundation on Windows](https://forums.swift.org/t/swift-soars-ever-higher/34036)
 - [Crypto](https://swift.org/blog/crypto/)
 - [Swift Preview](https://swift.org/blog/preview-package/)
+- [AnyCollection](https://developer.apple.com/documentation/swift/anycollection)
+- [Specializing Protocols](https://www.swiftbysundell.com/articles/specializing-protocols-in-swift/)
+- [SwiftUI Layout System](https://www.swiftbysundell.com/articles/swiftui-layout-system-guide-part-1/)
+- [Optional SwiftUI Views](https://www.swiftbysundell.com/tips/optional-swiftui-views/)
+- [View Modifiers](https://developer.apple.com/documentation/swiftui/navigationview-view-modifiers)
+- [Metal Performance Shaders](https://developer.apple.com/documentation/metalperformanceshaders)
+- [Vision](https://developer.apple.com/documentation/vision)
+- [CoreML](https://developer.apple.com/documentation/coreml)
+- [Swift Package Index](https://swiftpackageindex.com/)
+- [Revisor](https://finestructure.co/revisor)
+- [Orka](https://www.macstadium.com/orka)

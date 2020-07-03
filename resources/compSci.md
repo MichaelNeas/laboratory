@@ -61,6 +61,7 @@
 - [Translation for Devs](https://localise.biz/)
 - [Bazel Build](https://bazel.build/)
 - [HyperCard](https://en.wikipedia.org/wiki/HyperCard)
+- [Genuine Sieve of Eratosethenes](https://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf)
 
 
 ## Compilers
