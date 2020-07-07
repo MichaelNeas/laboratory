@@ -203,7 +203,7 @@
 - [SwiftPreview](https://github.com/apple/swift-evolution/blob/master/proposals/0264-stdlib-preview-package.md)
 - [Magic File Names](https://github.com/apple/swift-evolution/blob/master/proposals/0274-magic-file.md)
 - [Multi-pattern catch clauses](https://github.com/apple/swift-evolution/blob/master/proposals/0276-multi-pattern-catch-clauses.md)
-- [Package Registry Service](https://forums.swift.org/t/swift-package-registry-service/37219)
+- [Tuples Equatable Comparable Hashable](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)
 
 ## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
@@ -363,3 +363,13 @@
 - [Swift Package Index](https://swiftpackageindex.com/)
 - [Revisor](https://finestructure.co/revisor)
 - [Orka](https://www.macstadium.com/orka)
+- [Package Registry Service](https://forums.swift.org/t/swift-package-registry-service/37219)
+- [App](https://developer.apple.com/documentation/swiftui/app)
+- [Scene](https://developer.apple.com/documentation/swiftui/scene)
+- [Color Picker](https://developer.apple.com/documentation/swiftui/colorpicker)
+- [State Object](https://developer.apple.com/documentation/swiftui/stateobject)
+- [Document Group](https://developer.apple.com/documentation/swiftui/documentgroup)
+- [commands](https://developer.apple.com/documentation/swiftui/scene/commands(content:))
+- [Widget](https://developer.apple.com/documentation/widgetkit/creating-a-widget-extension)
+- [Watch Complication](https://developer.apple.com/documentation/clockkit/creating_complications_for_your_watchos_app)
+- [Drawing Group](https://developer.apple.com/documentation/swiftui/scrollview/drawinggroup(opaque:colormode:))
