@@ -31,11 +31,11 @@ struct ContentView: View {
                 TextField("Email", text: $email)
                 TextField("Password", text: $password)
                 Button(action: {
-                    let credential = EmailAuthProvider.credential(withEmail: self.email, password: self.password)
                     Auth.auth().fetchSignInMethods(forEmail: self.email, completion: { query, error in
                         if error != nil {
                             print("We got a big problem")
                         } else if query != nil || self.createNewAccount == true {
+                            let credential = EmailAuthProvider.credential(withEmail: self.email, password: self.password)
                             Auth.auth().currentUser?.link(with: credential, completion: { (authResult, error) in
                                 if let error = error {
                                     let authError = error as NSError
@@ -44,7 +44,6 @@ struct ContentView: View {
                                         print("previous user: \(prevUser?.uid)")
                                         // try to sign in with credentials
                                         Auth.auth().signIn(with: credential, completion: { (authResult, error) in
-                                            print("error signing in with creds: \(error)")
                                             if error == nil {
                                                 print("replace all data from \(prevUser?.uid) with \(Auth.auth().currentUser?.uid)")
                                                 prevUser?.delete(completion: { err in
@@ -56,6 +55,8 @@ struct ContentView: View {
                                                 if authError.code == AuthErrorCode.wrongPassword.rawValue {
                                                     print("Wrong password")
                                                 }
+                                            } else {
+                                                print("error signing in with creds: \(error)")
                                             }
                                         })
                                     } else if authError.code == AuthErrorCode.weakPassword.rawValue {
@@ -69,7 +70,7 @@ struct ContentView: View {
                             })
                         } else {
                             // at this point a user needs to be directed to create an account
-                            print("Create an account")
+                            print("Email doesn't exist in system, create an account")
                         }
                     })
                 }) {
