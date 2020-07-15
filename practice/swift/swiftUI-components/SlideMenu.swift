@@ -102,7 +102,7 @@ struct BottomSheetView: View {
                     self.isOpen = value.translation.height < 0
                 }
             )
-        }.background(Color.black)
+        }.background(Color.black.opacity(1.0 - Double(self.offset + self.translation)/Double(self.maxHeight)))
     }
 }
 
