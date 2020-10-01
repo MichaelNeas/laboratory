@@ -106,6 +106,7 @@
 - [Essential Video Sessions from 2019 wwdc](https://wwdcbysundell.com/2019/essential-session-videos/)
 - [Binary Frameworks in Swift](https://developer.apple.com/videos/play/wwdc2019/416/)
 - [Embracing Algorithms](https://developer.apple.com/videos/play/wwdc2018/223)
+- [Swift Packages](https://developer.apple.com/videos/play/wwdc2020/10169/)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -204,6 +205,13 @@
 - [Magic File Names](https://github.com/apple/swift-evolution/blob/master/proposals/0274-magic-file.md)
 - [Multi-pattern catch clauses](https://github.com/apple/swift-evolution/blob/master/proposals/0276-multi-pattern-catch-clauses.md)
 - [Tuples Equatable Comparable Hashable](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)
+- [Implicit Self Explicit Capture](https://github.com/apple/swift-evolution/blob/master/proposals/0269-implicit-self-explicit-capture.md)
+- [Multiple Trailing Closures](https://github.com/apple/swift-evolution/blob/master/proposals/0279-multiple-trailing-closures.md)
+- [Swift Package Manager Resources](https://github.com/apple/swift-evolution/blob/master/proposals/0271-package-manager-resources.md)
+- [SPM Conditional Target Dependencies](https://github.com/apple/swift-evolution/blob/master/proposals/0273-swiftpm-conditional-target-dependencies.md)
+- [Enum Case As Protocol Witnesses](https://github.com/apple/swift-evolution/blob/master/proposals/0280-enum-cases-as-protocol-witnesses.md)
+- [Synthesized Comparable for Enums](https://github.com/apple/swift-evolution/blob/master/proposals/0266-synthesized-comparable-for-enumerations.md)
+- [Main Attribute](https://github.com/apple/swift-evolution/blob/master/proposals/0281-main-attribute.md)
 
 ## Blogs/Forums/Docs/Tools
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
