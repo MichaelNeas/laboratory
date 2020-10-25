@@ -106,6 +106,18 @@
 - 3 arrays, all n items long, each ith element of each array corresponds to 1 product, how many duplicate products are there?
 - Find the retain cycle, weak refs with force unwraps
 
+08/28/20
+
+- You have an array of sorted arrays, write and algie to find the existence of an Int within the matrix
+
+09/02/20
+
+- Async NodeJS requests, map, reduce, filter to get an expected output
+
+10/15/20
+
+- Color points on a map in JS
+
 ### Lee's Algie Questions
 
 -  Consider a 5x5 chess board where each side has a king and a queen available. Your task is to determine, given input positions only, can white mate within three moves.
