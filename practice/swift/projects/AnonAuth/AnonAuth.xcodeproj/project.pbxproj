@@ -3,22 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682FC1032558C16400A78BCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 682FC1022558C16400A78BCE /* GoogleService-Info.plist */; };
 		685CD64824B53B1000229253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CD64724B53B1000229253 /* AppDelegate.swift */; };
 		685CD64A24B53B1000229253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CD64924B53B1000229253 /* SceneDelegate.swift */; };
 		685CD64C24B53B1000229253 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CD64B24B53B1000229253 /* ContentView.swift */; };
 		685CD64E24B53B1900229253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685CD64D24B53B1900229253 /* Assets.xcassets */; };
 		685CD65124B53B1900229253 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685CD65024B53B1900229253 /* Preview Assets.xcassets */; };
 		685CD65424B53B1900229253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685CD65224B53B1900229253 /* LaunchScreen.storyboard */; };
-		685CD65C24B53C8000229253 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 685CD65B24B53C8000229253 /* GoogleService-Info.plist */; };
 		73F8C9CB0321CAD3D817C1BA /* Pods_AnonAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7E88E9E9221441A19B5A37 /* Pods_AnonAuth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		165F5C1F89C715CF543898EF /* Pods-AnonAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonAuth.release.xcconfig"; path = "Target Support Files/Pods-AnonAuth/Pods-AnonAuth.release.xcconfig"; sourceTree = "<group>"; };
+		682FC1022558C16400A78BCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		685CD64424B53B1000229253 /* AnonAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnonAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		685CD64724B53B1000229253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685CD64924B53B1000229253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		685CD65024B53B1900229253 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		685CD65324B53B1900229253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		685CD65524B53B1900229253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		685CD65B24B53C8000229253 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB7E88E9E9221441A19B5A37 /* Pods_AnonAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnonAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F767B5390AD109E974008F63 /* Pods-AnonAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnonAuth.debug.xcconfig"; path = "Target Support Files/Pods-AnonAuth/Pods-AnonAuth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +50,6 @@
 				F767B5390AD109E974008F63 /* Pods-AnonAuth.debug.xcconfig */,
 				165F5C1F89C715CF543898EF /* Pods-AnonAuth.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,7 +82,7 @@
 		685CD64624B53B1000229253 /* AnonAuth */ = {
 			isa = PBXGroup;
 			children = (
-				685CD65B24B53C8000229253 /* GoogleService-Info.plist */,
+				682FC1022558C16400A78BCE /* GoogleService-Info.plist */,
 				685CD64724B53B1000229253 /* AppDelegate.swift */,
 				685CD64924B53B1000229253 /* SceneDelegate.swift */,
 				685CD64B24B53B1000229253 /* ContentView.swift */,
@@ -164,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				685CD65424B53B1900229253 /* LaunchScreen.storyboard in Resources */,
-				685CD65C24B53C8000229253 /* GoogleService-Info.plist in Resources */,
+				682FC1032558C16400A78BCE /* GoogleService-Info.plist in Resources */,
 				685CD65124B53B1900229253 /* Preview Assets.xcassets in Resources */,
 				685CD64E24B53B1900229253 /* Assets.xcassets in Resources */,
 			);
