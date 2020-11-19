@@ -118,6 +118,31 @@
 
 - Color points on a map in JS
 
+10/22/20
+
+- Conways game of life
+- Architectures
+
+10/30/20
+
+- listview detail view
+- nxn solve tic-tac-toe
+
+11/9/20
+
+- Max stack
+
+11/14/20
+
+- Remove peaks
+- Lexicographical merge strings
+- array mutation based on rules
+- tiny pairs
+- implement a hashmap
+- some math calculation problem (brute force takes too long)
+- another 2 leetcode mediums
+
+
 ### Lee's Algie Questions
 
 -  Consider a 5x5 chess board where each side has a king and a queen available. Your task is to determine, given input positions only, can white mate within three moves.
