@@ -142,6 +142,13 @@
 - some math calculation problem (brute force takes too long)
 - another 2 leetcode mediums
 
+11/20/20
+
+- sliding window problem
+- make tableview from objc api, describe architecture
+- architecture of CL
+- architecture of my own app
+
 
 ### Lee's Algie Questions
 
