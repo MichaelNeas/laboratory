@@ -2,16 +2,13 @@
 
 ## Active Directories
 
+[![Swift](./assets/swift.png "Swift")](./practice/swift)
+[![JavaScript](./assets/javascript.png "JavaScript")](./practice/js)
 [![Interviews](./assets/interviews.png "Interviews")](./interviews)
-
-- [Variations of interview questions](./interviews)
-- [LeetCode Solutions](./challenges/1337)
-- [Advent Solutions](./challenges/advent-of-code)
-- [Swift Practice and Projects](./practice/swift)
-- [Interview practice problems and solutions](./practice/interview-practice)
-- [Various programming languages and experiments](./practice)
-- [Really neat js concepts and practice](./practice/js)
-- [Resources and notes](./resources)
+[![Experiments](./assets/experiments.png "Experiments")](./practice)
+[![1337C0D3](./assets/leet.png "LeetCode")](./challenges/1337)
+[![Advent](./assets/advent.png "Advent")](./challenges/advent-of-code)
+[![Resources](./assets/resources.png "Resources")](./resources)
 
 ### Challenge Sources
 
