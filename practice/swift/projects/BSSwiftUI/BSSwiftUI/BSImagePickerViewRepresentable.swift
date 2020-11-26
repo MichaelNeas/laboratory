@@ -67,7 +67,6 @@ extension BSImagePickerViewRepresentable {
             options.resizeMode = .exact
             assets.forEach { asset in
                 PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: 1000, height: 1000), contentMode: .aspectFit, options: options) { (image, info) in
-                    
                     guard let image = image, let degraded = info?["PHImageResultIsDegradedKey"] as? Int, degraded == 0 else { return }
                     DispatchQueue.main.async {
                         self.parent.images.append(Image(uiImage: image))
