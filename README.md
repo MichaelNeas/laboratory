@@ -2,6 +2,8 @@
 
 ## Active Directories
 
+[![Interviews](./assets/interviews.png)][./interviews]
+
 - [Variations of interview questions](./interviews)
 - [LeetCode Solutions](./challenges/1337)
 - [Advent Solutions](./challenges/advent-of-code)
