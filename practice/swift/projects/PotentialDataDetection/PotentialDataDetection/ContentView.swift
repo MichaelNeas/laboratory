@@ -22,7 +22,9 @@ struct ContentView: View {
 //                }
 //            })
             GeometryReader { proxy in
-                MyTextView(width: proxy.size.width, text: detectLink(input: text))
+                MyTextView(width: proxy.size.width, text: detectLink(input: text)) { tapped in
+                    print(tapped)
+                }
             }
             
             Text("hi dofnoi nfoi  ndf lifj lkdj flkjdlskjlkjlkj lfdksjllksjdflksjdlkfjsdlkjfsldkj l n lkdnflkn ") + Text("by ldn kn lknl knkl nlknklnl nlk jldkjfe")
@@ -49,28 +51,39 @@ struct ContentView: View {
 struct MyTextView: UIViewRepresentable {
     var width: CGFloat
     var text: NSAttributedString
-
+    var tapped: (Bool)->()
+    
     func makeUIView(context: Context) -> UILabel {
+        let coordinator = PsuedoCoordinator(self)
         let label = UILabel()
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.preferredMaxLayoutWidth = width
+        //label.text = "Here's a lot of text for you to display. It won't fit on the screen."
         label.attributedText = text
         label.isUserInteractionEnabled = true
-        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapLabel(tap:))))
-        //label.text = "Here's a lot of text for you to display. It won't fit on the screen."
+        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(coordinator.tapLabel(tap:))))
         return label
     }
 
     func updateUIView(_ view: UILabel, context: Context) {
     }
     
-    @objc func tapLabel(tap: UITapGestureRecognizer) {
-        guard let range = self.yourLabel.text?.range(of: "Substring to detect")?.nsRange else {
-            return
+    class PsuedoCoordinator: NSObject {
+        var parent: MyTextView
+
+        init(_ parent: MyTextView) {
+            self.parent = parent
         }
-        if tap.didTapAttributedTextInLabel(label: self.yourLabel, inRange: range) {
-            // Substring tapped
+        
+        @objc func tapLabel(tap: UITapGestureRecognizer) {
+            guard let range = self.parent.text.range(of: "Substring to detect") else {
+                return
+            }
+            if tap.didTapAttributedTextInLabel(label: self.yourLabel, inRange: range) {
+                // Substring tapped
+                parent.tapped(true)
+            }
         }
     }
 }
