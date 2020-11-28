@@ -190,6 +190,10 @@
 - [Orka](https://www.macstadium.com/orka)
 - [Whats new in swift 5.3](https://www.hackingwithswift.com/articles/218/whats-new-in-swift-5-3)
 - [History of Weak refs](https://mikeash.com/pyblog/friday-qa-2017-09-22-swift-4-weak-references.html)
+- [Catalyst](https://tla.systems/blog/2019/10/08/catalytic-converter/)
+- [Catalyst User interface idiom](https://developer.apple.com/documentation/uikit/mac_catalyst/choosing_a_user_interface_idiom_for_your_mac_app)
+- [Metal](https://developer.apple.com/metal/)
+- [Core Graphics](https://developer.apple.com/documentation/coregraphics)
 
 ### Swift Runtime Project
 - [Swift Runtime: Heap Objects](https://belkadan.com/blog/2020/08/Swift-Runtime-Heap-Objects/)
