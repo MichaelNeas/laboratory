@@ -41,6 +41,7 @@ do {
 			} 
 			switch reqKey {
 				case .byr:
+					// four digits; at least 1920 and at most 2002.
 					if passport[reqKey.rawValue]!.count != 4 {
 						continue data
 					}
@@ -50,6 +51,7 @@ do {
 						}
 					}
 				case .iyr:
+				 	// four digits; at least 2010 and at most 2020.
 					if passport[reqKey.rawValue]!.count != 4 {
 						continue data
 					}
@@ -59,6 +61,7 @@ do {
 						}
 					}
 				case .eyr:
+					// four digits; at least 2020 and at most 2030.
 					if passport[reqKey.rawValue]!.count != 4 {
 						continue data
 					}
@@ -68,35 +71,63 @@ do {
 						}
 					}
 				case .hgt:
-					if let val = Int(passport[reqKey.rawValue]!) {
-						if (val < 150 || val > 195) || (val < 59 || val > 76) {
+					let range = NSRange(location: 0, length: passport[reqKey.rawValue]!.utf16.count)
+					let regex = try! NSRegularExpression(pattern: "[0-9]{3}cm")
+					let regexIn = try! NSRegularExpression(pattern: "[0-9]{2}in")
+					if let cmMatch = regex.firstMatch(in: passport[reqKey.rawValue]!, options: [], range: range)?.range {
+						if cmMatch.upperBound == range.upperBound && cmMatch.lowerBound == range.lowerBound {
+							// the number must be at least 150 and at most 193.
+							if let val = Int(passport[reqKey.rawValue]!.prefix(3)) {
+								if (val < 150 || val > 193)  {
+									continue data
+								}
+							} else {
+								continue data
+							}
+						} else {
 							continue data
 						}
-					}
-					let range = NSRange(location: 0, length: passport[reqKey.rawValue]!.utf16.count)
-					let regex = try! NSRegularExpression(pattern: "[0-9]*cm")
-					if regex.firstMatch(in: passport[reqKey.rawValue]!, options: [], range: range) == nil {
-						let regexIn = try! NSRegularExpression(pattern: "[0-9]*in")
-						if regexIn.firstMatch(in: passport[reqKey.rawValue]!, options: [], range: range) == nil {
+					} else if let inMatch = regexIn.firstMatch(in: passport[reqKey.rawValue]!, options: [], range: range)?.range {
+						if inMatch.upperBound == range.upperBound && inMatch.lowerBound == range.lowerBound {
+							// the number must be at least 59 and at most 76.
+							if let val = Int(passport[reqKey.rawValue]!.prefix(2) ) {
+								if (val < 59 || val > 76)  {
+									continue data
+								}
+							} else {
+								continue data
+							}
+						} else {
 							continue data
-						} 
+						}
+					} else {
+						continue data
 					}
 				case .hcl:
+					// a # followed by exactly six characters 0-9 or a-f.
 					let range = NSRange(location: 0, length: passport[reqKey.rawValue]!.utf16.count)
 					let regex = try! NSRegularExpression(pattern: "#([0-9]|[a-f]){6}")
-					if regex.firstMatch(in: passport[reqKey.rawValue]!, options: [], range: range) != nil {
-						if passport[reqKey.rawValue]!.count != 7 {
+					if let match = regex.firstMatch(in: passport[reqKey.rawValue]!, options: [], range: range)?.range {
+						if range.upperBound != 7 || match.upperBound != range.upperBound || match.lowerBound != range.lowerBound {
 							continue data
 						}
 					} else {
 						continue data
 					}
 				case .ecl:
+					// exactly one of: amb blu brn gry grn hzl oth.
 					if !eyeColors.contains(passport[reqKey.rawValue]!) {
 						continue data
 					}
 				case .pid:
-					if passport[reqKey.rawValue]!.count != 9 {
+					//  a nine-digit number, including leading zeroes.
+					let range = NSRange(location: 0, length: passport[reqKey.rawValue]!.utf16.count)
+					let regex = try! NSRegularExpression(pattern: "[0-9]{9}")
+					if let match = regex.firstMatch(in: passport[reqKey.rawValue]!, options: [], range: range)?.range {
+						if range.upperBound != 9 || match.upperBound != range.upperBound || match.lowerBound != range.lowerBound {
+							continue data
+						}
+					} else {
 						continue data
 					}
 			}
