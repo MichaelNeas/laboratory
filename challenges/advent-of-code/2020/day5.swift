@@ -7,7 +7,7 @@ do {
     let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let locations = fileContent.components(separatedBy: .newlines)
         .compactMap { String($0) }
-	var max = 0
+	var idList = [Int]()
 	for location in locations {
 		var rowA = 0
 		var rowB = 127
@@ -29,11 +29,22 @@ do {
 			}
 		}
 		let num = (rowA * 8) + colA
-		if max < num {
-			max = num
+		// if max < num {
+		// 	max = num
+		// }
+		idList.append(num)
+	}
+	var prev = -1
+	let sortedIDs = idList.sorted()
+	for idIndex in 0..<sortedIDs.count - 1 {
+		if sortedIDs[idIndex] == prev + 1 && sortedIDs[idIndex] == sortedIDs[idIndex + 1] - 1 {
+			//print("SEAT found \(sortedIDs[idIndex])")
+			prev = sortedIDs[idIndex]
+		} else {
+			print("Outcasts \(sortedIDs[idIndex])")
+			prev = sortedIDs[idIndex]
 		}
 	}
-	print(max)
 } catch {
 	print("Error")
 }
