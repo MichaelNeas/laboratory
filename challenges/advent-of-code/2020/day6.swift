@@ -9,12 +9,21 @@ do {
         .compactMap { String($0) }
 	var count = 0
 	var activeSet = Set<Character>()
+	var first = true
+
 	for answer in answers {
 		if answer == "" {
+			print(activeSet)
 			count += activeSet.count
 			activeSet.removeAll()
+			first = true
 		} else {
-			activeSet.formUnion(Array(answer))
+			if first {
+				activeSet.formUnion(Array(answer))
+				first = false
+			} else {
+				activeSet.formIntersection(Array(answer))
+			}
 		}
 	}
 	print(count)
