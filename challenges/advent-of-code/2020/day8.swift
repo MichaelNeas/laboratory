@@ -12,25 +12,51 @@ do {
 	var visitedSet = Set<Int>()
 	var curr = 0
 	var acc = 0
+	var change = 0
 
-	while !visitedSet.contains(curr) {
-		visitedSet.insert(curr)
-		switch codes[curr].0 {
-			case "nop":
-				curr += 1
-			case "acc":
-				acc += codes[curr].1
-				curr += 1
-			case "jmp":
-				curr += codes[curr].1
-			default: 
-				print("Not accounted for")
+	out: while curr < codes.count {
+		while !visitedSet.contains(curr) && curr < codes.count {
+			visitedSet.insert(curr)
+			switch codes[curr].0 {
+				case "nop":
+					if curr == change {
+						curr += codes[curr].1
+					} else {
+						curr += 1
+					}
+				case "acc":
+					acc += codes[curr].1
+					curr += 1
+				case "jmp":
+					if curr == change {
+						curr += 1	
+					} else {
+						curr += codes[curr].1
+					}
+				default: 
+					print("Not accounted for")
+			}
+			
+			if curr >= codes.count {
+				print(acc)
+				break out
+			}
+		}
+		curr = 0
+		acc = 0
+		visitedSet.removeAll()
+		change += 1
+		var nextChange = true
+		while nextChange {
+			
+			if codes[change].0 == "acc" {
+				change += 1
+			} else {
+				nextChange = false
+			}
 		}
 	}
-	print(acc)
 	
 } catch {
 	print("ERROR")
 }
-
-5
