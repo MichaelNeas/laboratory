@@ -27,7 +27,33 @@ do {
 		}	
 	}
 
-	print(nums[curr])
+	let target = nums[curr]
+	print(target)
+
+	done: for i in 0..<curr {
+		for j in i+1..<curr {
+			var sum = nums[j]
+			for iterator in i..<j {
+				sum += nums[iterator]
+			}
+			if sum == target {
+				print("FOUND")
+				var max = 0
+				var min = Int.max
+				for range in i...j {
+					if nums[range] > max {
+						max = nums[range]
+					}
+					if nums[range] < min {
+						min = nums[range]
+					}
+				}
+				print(max+min)
+				break done
+			}
+		}
+	}
+	
 } catch {
 	print("ERROR")
 }
