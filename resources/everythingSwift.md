@@ -239,6 +239,12 @@
 - [Swift.org 1st blog post 2015](https://swift.org/blog/welcome/)
 - [Binary Dependency Pitch](https://forums.swift.org/t/pitch-support-for-binary-dependencies/27620)
 - [String Essentials](https://forums.swift.org/t/string-essentials/21909)
+- [Concurrency Roadmap](https://forums.swift.org/t/swift-concurrency-roadmap/41611)
+- [Actors & Actor Isolation](https://forums.swift.org/t/concurrency-actors-actor-isolation/41613)
+- [Concurrency Objc Interop](https://forums.swift.org/t/concurrency-interoperability-with-objective-c/41616)
+- [Structured Concurrency](https://forums.swift.org/t/concurrency-structured-concurrency/41622)
+- [Asynchronous Functions](https://forums.swift.org/t/concurrency-asynchronous-functions/41619)
+- [AsyncSequence](https://forums.swift.org/t/concurrency-asyncsequence/42417)
 
 ### Swift By Sundell
 - [Function Builders](https://www.swiftbysundell.com/articles/deep-dive-into-swift-function-builders/)
@@ -273,6 +279,7 @@
 - [iOS Accessibility](https://developer.apple.com/accessibility/)
 - [Apple Logging](https://developer.apple.com/documentation/os/logging)
 - [Core Animation](https://developer.apple.com/documentation/quartzcore)
+- [OG docs on Core Animation](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004514-CH1-SW1)
 - [Watch Connectivity](https://developer.apple.com/documentation/watchconnectivity)
 - [Watch Interface Object](https://developer.apple.com/documentation/watchkit/wkinterfaceobject)
 - [Original MVC Doc](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)
@@ -324,6 +331,7 @@
 - [UICollectionViewCompositionalLayout](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayout)
 - [WidgetCenter](https://developer.apple.com/documentation/widgetkit/widgetcenter)
 - [Handle Intent](https://developer.apple.com/documentation/sirikit/resolving_and_handling_intents/handling_an_intent)
+- [SwiftUI Lab](https://swiftui-lab.com/)
 
 ## Proposals
 - [Swift Proposals](https://apple.github.io/swift-evolution/)
@@ -430,3 +438,4 @@
 - [Enum Case As Protocol Witnesses](https://github.com/apple/swift-evolution/blob/master/proposals/0280-enum-cases-as-protocol-witnesses.md)
 - [Synthesized Comparable for Enums](https://github.com/apple/swift-evolution/blob/master/proposals/0266-synthesized-comparable-for-enumerations.md)
 - [Main Attribute](https://github.com/apple/swift-evolution/blob/master/proposals/0281-main-attribute.md)
+- [Concurrency Dependencies](https://gist.githubusercontent.com/DougGregor/444575ac67cbd25bfc4b1d4fd241ae93/raw/e5b027d7d673910e440caa681837276c03954354/SwiftConcurrencyDependencies.svg)
