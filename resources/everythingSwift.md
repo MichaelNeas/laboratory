@@ -107,6 +107,7 @@
 - [Swift Packages](https://developer.apple.com/videos/play/wwdc2020/10169/)
 
 ## Blogs/Forums/Docs/Tools
+- [Cocoa With Love](https://cocoawithlove.com/)
 - [Protocols have semantics](https://oleb.net/blog/2016/12/protocols-have-semantics/)
 - [Swift Weekly goes live 2015](https://swiftweekly.github.io/issue-0/)
 - [objC <-> swift interop](https://academy.realm.io/posts/altconf-nikita-lutsenko-objc-swift-interoperability/)
@@ -439,3 +440,4 @@
 - [Synthesized Comparable for Enums](https://github.com/apple/swift-evolution/blob/master/proposals/0266-synthesized-comparable-for-enumerations.md)
 - [Main Attribute](https://github.com/apple/swift-evolution/blob/master/proposals/0281-main-attribute.md)
 - [Concurrency Dependencies](https://gist.githubusercontent.com/DougGregor/444575ac67cbd25bfc4b1d4fd241ae93/raw/e5b027d7d673910e440caa681837276c03954354/SwiftConcurrencyDependencies.svg)
+- [Async/Await](https://github.com/apple/swift-evolution/blob/main/proposals/0298-asyncsequence.md)
