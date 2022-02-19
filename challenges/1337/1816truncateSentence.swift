@@ -3,6 +3,7 @@
 // You are given a sentence s​​​​​​ and an integer k​​​​​​. You want to truncate s​​​​​​ such that it contains only the first k​​​​​​ words. Return s​​​​​​ after truncating it.
 class Solution {
     func truncateSentence(_ s: String, _ k: Int) -> String {
-        s.components(separatedBy: " ")[0..<k].joined(separator: " ")
+        s.split(separator: " ")[0..<k].joined(separator: " ")
+        // s.components(separatedBy: " ")[0..<k].joined(separator: " ")
     }
 }
