@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6821C369288A5549002A34AD /* definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = definitions.h; sourceTree = "<group>"; };
 		683D5B8A28864FA900BA607D /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		683D5B8B28864FA900BA607D /* GameEngineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngineApp.swift; sourceTree = "<group>"; };
 		683D5B8E28864FAA00BA607D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 				683D5B8B28864FA900BA607D /* GameEngineApp.swift */,
 				683D5BCC288650DA00BA607D /* GameView.swift */,
 				683D5BCF2886514D00BA607D /* MetalView.swift */,
+				6821C369288A5549002A34AD /* definitions.h */,
 				683D5BD22886563A00BA607D /* Shaderz.metal */,
 				683D5B8E28864FAA00BA607D /* Assets.xcassets */,
 				683D5B8928864FA900BA607D /* GameEngine.xcdatamodeld */,
@@ -555,6 +557,7 @@
 				PRODUCT_NAME = GameEngine;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/definitions.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -581,6 +584,7 @@
 				PRODUCT_NAME = GameEngine;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/definitions.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
