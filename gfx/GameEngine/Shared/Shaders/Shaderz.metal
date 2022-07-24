@@ -1,7 +1,10 @@
 #include <metal_stdlib>
 using namespace metal;
 
-#include "definitions.h"
+struct VertexIn {
+    float3 position [[ attribute(0) ]];
+    float4 color [[ attribute(1) ]];
+};
 
 struct RasterizerData {
     float4 position [[position]];
@@ -11,12 +14,11 @@ struct RasterizerData {
 // vertex shader main task is to process incoming vertex data and map to screen space
 // vertex shader passes all the data into the rasterizer
 // position should come out the way it went in, color will get interpolated
-vertex RasterizerData vertexShader(const device Vertex *vertexArray [[buffer(0)]], unsigned int vid [[vertex_id]]) {
-    Vertex input = vertexArray[vid];
+vertex RasterizerData vertexShader(const VertexIn vIn [[stage_in]]) {
     
     RasterizerData output;
-    output.position = float4(input.position, 1);
-    output.color = input.color;
+    output.position = float4(vIn.position, 1);
+    output.color = vIn.color;
     
     return output;
 }
