@@ -4,19 +4,7 @@ class GameView: MTKView {
     var metalCommandQueue: MTLCommandQueue!
     var renderPipelineState: MTLRenderPipelineState!
     
-    // Not sure how to color these?
-//    let vertices: [SIMD3<Float>] = [
-//        [0, 1, 0], // top middle
-//        [-1, -1, 0], // bottom left
-//        [1, -1, 0] // bottom right
-//    ]
-    
-    let vertices = [
-        Vertex(position: [0, 1, 0], color: [1, 0, 0, 1]),
-        Vertex(position: [-1, -1, 0], color: [0, 1, 0, 1]),
-        Vertex(position: [1, -1, 0], color: [0, 0, 1, 1])
-    ]
-    
+    var vertices: [Vertex]!
     var vertexBuffer: MTLBuffer!
     
     override init(frame frameRect: CGRect, device: MTLDevice?) {
@@ -37,6 +25,7 @@ class GameView: MTKView {
         self.metalCommandQueue = device?.makeCommandQueue()
         
         createRenderPipelineState()
+        createVertices()
         createBuffers()
     }
     
@@ -56,6 +45,14 @@ class GameView: MTKView {
         renderPipelineDescriptor.vertexFunction = vertexFunction
         renderPipelineDescriptor.fragmentFunction = fragmentFunction
         self.renderPipelineState = try! device?.makeRenderPipelineState(descriptor: renderPipelineDescriptor)
+    }
+    
+    private func createVertices() {
+        vertices = [
+            Vertex(position: [0, 1, 0], color: [1, 0, 0, 1]),
+            Vertex(position: [-1, -1, 0], color: [0, 1, 0, 1]),
+            Vertex(position: [1, -1, 0], color: [0, 0, 1, 1])
+        ]
     }
     
     private func createBuffers() {
