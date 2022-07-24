@@ -1,18 +1,16 @@
 import MetalKit
 
 class Renderer: NSObject {
-    let gameObject: GameObject
+    let player: GameObject
     
-    init(gameObject: GameObject) {
-        self.gameObject = gameObject
+    init(player: GameObject) {
+        self.player = player
     }
 }
 
 extension Renderer: MTKViewDelegate {
     // when window is resized
-    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        
-    }
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
     
     func draw(in view: MTKView) {
         guard let drawable = view.currentDrawable,
@@ -20,7 +18,7 @@ extension Renderer: MTKViewDelegate {
         
         let commandBuffer = Engine.CommandQueue.makeCommandBuffer()!
         let renderCommandEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor)!
-        gameObject.render(renderCommandEncoder: renderCommandEncoder)
+        player.render(renderCommandEncoder: renderCommandEncoder)
         
         renderCommandEncoder.endEncoding()
         commandBuffer.present(drawable)

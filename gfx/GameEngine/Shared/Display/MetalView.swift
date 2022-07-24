@@ -26,7 +26,7 @@ struct MetalView: NSViewRepresentable {
 
         init(_ parent: MetalView) {
             self.parent = parent
-            super.init(gameObject: GameObject())
+            super.init(player: Player())
         }
     }
 }

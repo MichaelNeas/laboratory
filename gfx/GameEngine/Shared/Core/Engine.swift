@@ -12,5 +12,6 @@ class Engine {
         VertexDescriptorLibrary.create()
         RenderPipelineDescriptorLibrary.create()
         RenderPipelineStateLibrary.create()
+        MeshLibrary.create()
     }
 }
