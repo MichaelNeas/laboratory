@@ -30,7 +30,7 @@ class GameObject: Node {
 extension GameObject: Renderable {
     func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder) {
         // use bytes when <4k data
-        renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 1)
+        renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         // lines allows you to see the outlines vs filled up
 //        renderCommandEncoder.setTriangleFillMode(.lines)
         // each game object will have it's own render pipeline state
