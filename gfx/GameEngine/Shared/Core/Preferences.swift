@@ -7,4 +7,5 @@ enum ClearColors {
 class Preferences {
     public static var ClearColor: MTLClearColor = ClearColors.default
     public static var PixelFormat: MTLPixelFormat = .bgra8Unorm
+    public static var DepthPixelFormat: MTLPixelFormat = .depth32Float
 }

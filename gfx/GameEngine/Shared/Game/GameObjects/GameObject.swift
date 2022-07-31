@@ -29,14 +29,16 @@ class GameObject: Node {
 
 extension GameObject: Renderable {
     func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder) {
-        // use bytes when <4k data
-        renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         // lines allows you to see the outlines vs filled up
 //        renderCommandEncoder.setTriangleFillMode(.lines)
         // each game object will have it's own render pipeline state
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
+        // every time we render check the depth
+        renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
         // set buffer in device space
         renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
+        // use bytes when <4k data
+        renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         // start with the top vertice and move counter clockwise
         renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexCount)
     }

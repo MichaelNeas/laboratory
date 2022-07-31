@@ -10,6 +10,7 @@ class Engine {
         self.CommandQueue = device.makeCommandQueue()
         ShaderLibrary.create()
         VertexDescriptorLibrary.create()
+        DepthStencilStateLibrary.create()
         RenderPipelineDescriptorLibrary.create()
         RenderPipelineStateLibrary.create()
         MeshLibrary.create()

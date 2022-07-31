@@ -18,6 +18,7 @@ struct ModelConstants {
 
 struct SceneConstants {
     float4x4 viewMatrix;
+    float4x4 projectionMatrix;
 };
 
 // vertex shader main task is to process incoming vertex data and map to screen space
@@ -29,7 +30,7 @@ vertex RasterizerData vertexShader(const VertexIn vIn [[stage_in]],
     
     RasterizerData output;
     // model space, model coordinates, mvp
-    output.position = sceneConstants.viewMatrix * modelConstants.modelMatrix * float4(vIn.position, 1);
+    output.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * modelConstants.modelMatrix * float4(vIn.position, 1);
     output.color = vIn.color;
     
     return output;

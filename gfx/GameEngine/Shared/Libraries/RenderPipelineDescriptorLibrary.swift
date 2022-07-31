@@ -34,7 +34,7 @@ struct BasicRenderPipelineDescriptor: RenderPipelineDescriptor {
         renderPipelineDescriptor = MTLRenderPipelineDescriptor()
         renderPipelineDescriptor.label = name
         renderPipelineDescriptor.colorAttachments[0].pixelFormat = Preferences.PixelFormat
-
+        renderPipelineDescriptor.depthAttachmentPixelFormat = Preferences.DepthPixelFormat
         renderPipelineDescriptor.vertexFunction = ShaderLibrary.Vertex(.Basic)
         renderPipelineDescriptor.fragmentFunction = ShaderLibrary.Fragment(.Basic)
         renderPipelineDescriptor.vertexDescriptor = VertexDescriptorLibrary.descriptor(.Basic)

@@ -32,6 +32,7 @@ struct ModelConstants: Sizable {
 
 struct SceneConstants: Sizable {
     var viewMatrix = matrix_identity_float4x4
+    var projectionMatrix = matrix_identity_float4x4
 }
 
 extension SIMD3: Sizable {}

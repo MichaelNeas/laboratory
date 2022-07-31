@@ -21,6 +21,7 @@ class GameScene: Node {
  
     func updateSceneConstants() {
         sceneConstants.viewMatrix = cameraManager.currentCamera.viewMatrix
+        sceneConstants.projectionMatrix = cameraManager.currentCamera.projectionMatrix
     }
     
     func updateCameras(deltaTime: Float) {

@@ -16,6 +16,7 @@ struct MetalView: NSViewRepresentable {
         gameView.delegate = context.coordinator
         gameView.clearColor = Preferences.ClearColor
         gameView.colorPixelFormat = Preferences.PixelFormat
+        gameView.depthStencilPixelFormat = Preferences.DepthPixelFormat
         context.coordinator.updateScreenSize(view: gameView)
         return gameView
     }

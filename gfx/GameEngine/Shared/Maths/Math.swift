@@ -12,6 +12,16 @@ public var Z_AXIS: SIMD3<Float>{
     return SIMD3<Float>(0,0,1)
 }
 
+extension Float {
+    var toRadians: Float {
+        (self / 180.0) * Float.pi
+    }
+    
+    var toDegrees: Float {
+        self * (180.0 / Float.pi)
+    }
+}
+
 extension simd_float4x4 {
     // translation matrix
     // 1 0 0 0
@@ -98,4 +108,26 @@ extension simd_float4x4 {
         
         self = matrix_multiply(self, result)
     }
+    
+    //https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl
+    static func perspective(degreesFov: Float, aspectRatio: Float, near: Float, far: Float)->matrix_float4x4{
+        let fov = degreesFov.toRadians
+        
+        let t: Float = tan(fov / 2)
+        
+        let x: Float = 1 / (aspectRatio * t)
+        let y: Float = 1 / t
+        let z: Float = -((far + near) / (far - near))
+        let w: Float = -((2 * far * near) / (far - near))
+        
+        var result = matrix_identity_float4x4
+        result.columns = (
+            SIMD4<Float>(x,  0,  0,   0),
+            SIMD4<Float>(0,  y,  0,   0),
+            SIMD4<Float>(0,  0,  z,  -1),
+            SIMD4<Float>(0,  0,  w,   0)
+        )
+        return result
+    }
 }
+
