@@ -26,5 +26,10 @@ struct Vertex: Sizable {
     var color: SIMD4<Float>
 }
 
+struct ModelConstants: Sizable {
+    var modelMatrix = matrix_identity_float4x4
+}
+
 extension SIMD3: Sizable {}
 extension SIMD4: Sizable {}
+extension Float: Sizable {}
