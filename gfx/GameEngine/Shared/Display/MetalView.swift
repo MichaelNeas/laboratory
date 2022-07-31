@@ -21,12 +21,12 @@ struct MetalView: NSViewRepresentable {
     
     func updateNSView(_ nsView: MTKView, context: NSViewRepresentableContext<MetalView>) {}
     
-    class Coordinator : Renderer {
+    class Coordinator: Renderer {
         var parent: MetalView
 
         init(_ parent: MetalView) {
             self.parent = parent
-            super.init(player: Player())
+            super.init()
         }
     }
 }

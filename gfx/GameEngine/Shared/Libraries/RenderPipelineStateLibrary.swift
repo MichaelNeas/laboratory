@@ -22,13 +22,15 @@ class RenderPipelineStateLibrary {
 
 protocol RenderPipelineState {
     var name: String { get }
-    var renderPipelineState: MTLRenderPipelineState { get }
+    var renderPipelineState: MTLRenderPipelineState! { get }
 }
 
 struct BasicRenderPipelineState: RenderPipelineState {
     var name: String = "Basic Render Pipeline State"
     
-    var renderPipelineState: MTLRenderPipelineState {
-        try! Engine.Device.makeRenderPipelineState(descriptor: RenderPipelineDescriptorLibrary.descriptor(.Basic))
+    var renderPipelineState: MTLRenderPipelineState!
+    
+    init() {
+        renderPipelineState = try! Engine.Device.makeRenderPipelineState(descriptor: RenderPipelineDescriptorLibrary.descriptor(.Basic))
     }
 }

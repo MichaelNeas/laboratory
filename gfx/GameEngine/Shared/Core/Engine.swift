@@ -13,5 +13,7 @@ class Engine {
         RenderPipelineDescriptorLibrary.create()
         RenderPipelineStateLibrary.create()
         MeshLibrary.create()
+        
+        SceneManager.create(.Sandbox)
     }
 }

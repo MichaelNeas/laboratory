@@ -11,12 +11,12 @@ class GameObject: Node {
     }
     
     var time: Float = 0
-    func update(deltaTime: Float) {
+    override func update(deltaTime: Float) {
         time += deltaTime
         // delta position goes up and down
 //        self.position.x = sin(time)
 //        self.position.y = sin(time)
-        self.scale = SIMD3<Float>(repeating: cos(time))
+//        self.scale = SIMD3<Float>(repeating: cos(time))
 //        self.rotation.z = cos(time)
         
         updateModelConstants()

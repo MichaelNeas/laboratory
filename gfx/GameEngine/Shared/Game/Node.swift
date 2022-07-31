@@ -19,7 +19,19 @@ class Node {
         return modelMatrix
     }
     
+    var children = [Node]()
+    
+    func addChild(_ child: Node) {
+        children.append(child)
+    }
+    
+    func update(deltaTime: Float) {
+        children.forEach { $0.update(deltaTime: deltaTime) }
+    }
+    
     func render(renderCommandEncoder: MTLRenderCommandEncoder) {
+        children.forEach { $0.render(renderCommandEncoder: renderCommandEncoder) }
+        
         if let renderable = self as? Renderable {
             renderable.doRender(renderCommandEncoder)
         }
