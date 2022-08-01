@@ -3,6 +3,7 @@ import MetalKit
 
 class GameObject: Node {
     var modelConstants = ModelConstants()
+    private var material = Material()
     
     var mesh: Mesh
     
@@ -35,13 +36,27 @@ extension GameObject: Renderable {
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
         // every time we render check the depth
         renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
+        
+        // Vertex Shader
         // set buffer in device space
         renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
         // use bytes when <4k data
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
+        
+        // Fragment Shader
+        renderCommandEncoder.setFragmentBytes(&material, length: Material.stride, index: 1)
+        
         // start with the top vertice and move counter clockwise
         renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexCount)
     }
 }
 
 // model constants are a way of transfering movement information on our object to GPU
+
+// MARK: Material
+extension GameObject {
+    func setColor(_ color: SIMD4<Float>) {
+        self.material.color = color
+        self.material.useMaterialColor = true
+    }
+}

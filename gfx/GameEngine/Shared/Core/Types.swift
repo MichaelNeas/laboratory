@@ -35,6 +35,11 @@ struct SceneConstants: Sizable {
     var projectionMatrix = matrix_identity_float4x4
 }
 
+struct Material: Sizable {
+    var color = SIMD4<Float>(0.7, 0.7, 0.7, 1.0)
+    var useMaterialColor: Bool = false
+}
+
 extension SIMD3: Sizable {}
 extension SIMD4: Sizable {}
 extension Float: Sizable {}

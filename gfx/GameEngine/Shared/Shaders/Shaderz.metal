@@ -21,6 +21,11 @@ struct SceneConstants {
     float4x4 projectionMatrix;
 };
 
+struct Material {
+    float4 color;
+    bool useMaterialColor;
+};
+
 // vertex shader main task is to process incoming vertex data and map to screen space
 // vertex shader passes all the data into the rasterizer
 // position should come out the way it went in, color will get interpolated
@@ -39,8 +44,9 @@ vertex RasterizerData vertexShader(const VertexIn vIn [[stage_in]],
 // gets used after the rasterizer
 // each fragment will get the interpolated color and spits out a pixel
 // [[stage_in]] is an attribute qualifier, marking per fragment
-fragment float4 fragmentShader(RasterizerData input [[stage_in]]) {
-    return input.color;
+fragment float4 fragmentShader(RasterizerData input [[stage_in]],
+                               constant Material &material [[ buffer(1) ]]) {
+    return material.useMaterialColor ? material.color : input.color;
 }
 
 //// [[ Attribute tags ]]

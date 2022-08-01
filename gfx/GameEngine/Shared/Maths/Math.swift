@@ -20,6 +20,10 @@ extension Float {
     var toDegrees: Float {
         self * (180.0 / Float.pi)
     }
+    
+    static var randomZeroToOne: Float {
+        Float(arc4random()) / Float(UINT32_MAX)
+    }
 }
 
 extension simd_float4x4 {
