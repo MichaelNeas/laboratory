@@ -36,3 +36,6 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+## Zig
+zig-cache
