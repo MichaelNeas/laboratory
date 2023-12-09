@@ -21,25 +21,23 @@ let searchSet = Array(qualifiers.keys) + Array(qualifiers.values)
 func process(value: String) -> String {
     var found = [Int: String]()
     for qualifier in searchSet {
-        if let range = value.range(of: qualifier) {
+        var searchStartIndex = value.startIndex
+        while let range = value.range(of: qualifier, range: searchStartIndex ..< value.endIndex) {
             let startIndex = value.distance(from: value.startIndex, to: range.lowerBound)
             found[startIndex] = String(value[range])
+            searchStartIndex = range.upperBound
         }
     }
     let sortedKeys = found.keys.sorted()
     let firstValidValue = qualifiers[found[sortedKeys.first!]!] ?? found[sortedKeys.first!]!
-    let secondValidValue = qualifiers[found[sortedKeys.last!]!] ?? found[sortedKeys.last!]!
-    print(sortedKeys)
-    print(value)
-    print(firstValidValue+secondValidValue)
+    let secondValidValue = qualifiers[found[sortedKeys.last!]!] ?? found[sortedKeys.last!]! 
     return firstValidValue + secondValidValue
 }
 
 do {
     let fileContent = try String(contentsOf: dataURL, encoding: .utf8)
     let calibrationTotal = fileContent.components(separatedBy: .newlines)
-        .compactMap { String($0) }
-        .compactMap(process)
+        .map(process)
         .reduce(into: 0, { acc, curr in
             acc += Int("\(curr.first!)\(curr.last!)")!
         })
