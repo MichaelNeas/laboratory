@@ -103,22 +103,59 @@ func bfs(grid: inout [[String.Element]], start: Position) -> Int? {
     return nil
 }
 
-func floodFill(_ grid: inout [[String.Element]], from startPoint: Position, with color: String.Element) {
+
+func isValidPosition(_ position: Position, inGrid grid: [[String.Element]]) -> Bool {
+    return position.x >= 0 && position.x < grid[0].count &&
+           position.y >= 0 && position.y < grid.count
+}
+
+
+func floodFill(_ grid: inout [[String.Element]], from startPoint: Position) {
     let directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
     var stack = [startPoint]
-
-    while let currentPoint = stack.popLast() {
-        grid[currentPoint.x][currentPoint.y] = color
+    if ["M","S","V"].contains(grid[startPoint.y][startPoint.x]) {
+        return
+    }
+    while let currentPosition = stack.popLast() {
+        grid[currentPosition.y][currentPosition.x] = "M"
 
         for direction in directions {
-            let nextPoint = Position(x: currentPoint.x + direction.0, y: currentPoint.y + direction.1)
-
-            if isValidPosition(nextPoint, grid: grid) &&
-               grid[nextPoint.y][nextPoint.x] != "M" {
+            let nextPoint = Position(x: currentPosition.x + direction.0, y: currentPosition.y + direction.1)
+            if isValidPosition(nextPoint, inGrid: grid) && !["M","S","V"].contains(grid[nextPoint.y][nextPoint.x]) {
                 stack.append(nextPoint)
             }
         }
+    }
+}
+
+struct Polygon {
+    var vertices: [Position]
+
+    func contains(point: Point) -> Bool {
+        var windingNumber = 0
+
+        for i in 0..<vertices.count {
+            let currentVertex = vertices[i]
+            let nextVertex = vertices[(i + 1) % vertices.count]
+
+            if currentVertex.y <= point.y {
+                if nextVertex.y > point.y && isLeftOfEdge(point, currentVertex, nextVertex) {
+                    windingNumber += 1
+                }
+            } else {
+                if nextVertex.y <= point.y && isLeftOfEdge(point, nextVertex, currentVertex) {
+                    windingNumber -= 1
+                }
+            }
+        }
+
+        return windingNumber != 0
+    }
+
+    // Helper function to check if a point is left of an edge
+    private func isLeftOfEdge(_ point: Position, _ start: Position, _ end: Point) -> Bool {
+        return (end.x - start.x) * (point.y - start.y) > (end.y - start.y) * (point.x - start.x)
     }
 }
 
@@ -142,9 +179,28 @@ do {
     let visitedCount = bfs(grid: &pipeGrid, start: startPosition)
     
     // print(visitedCount)
+    // flood fill from outside doesn't get the inner bits that aren't in the system
+    // for i in 0..<pipeGrid[0].count {
+    //     floodFill(&pipeGrid, from: Position(x: i, y: 0))
+    //     floodFill(&pipeGrid, from: Position(x: i, y: pipeGrid.count - 1))
+    // }
 
-    floodFill(&pipeGrid, from: Position(x: 0, y: 0), with: "M")
+    // for i in 0..<pipeGrid.count {
+    //     floodFill(&pipeGrid, from: Position(x: 0, y: i))
+    //     floodFill(&pipeGrid, from: Position(x: pipeGrid[0].count - 1, y: i))
+    // }
+    // print("Final")
     pipeGrid.forEach { print(String($0))  }
+
+    var verticies: [Position]
+    for i in 0..<pipeGrid.count {
+        for j in 0..<pipeGrid[i].count {
+            if !["M","S","V"].contains(pipeGrid[i][j]) {
+                burrows += 1
+            }
+        }
+    }
+    print(burrows)
 }
 catch {
     print("Error reading text. \(error)")
