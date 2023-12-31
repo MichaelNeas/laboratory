@@ -41,6 +41,23 @@ vertex RasterizerData vertexShader(const VertexIn vIn [[stage_in]],
     return output;
 }
 
+vertex RasterizerData instancedVertexShader(const VertexIn vIn [[stage_in]],
+                                   constant SceneConstants &sceneConstants [[ buffer(1) ]],
+                                   constant ModelConstants *modelConstants [[ buffer(2) ]],
+                                    uint instanceId [[ instance_id ]]) {
+    
+    RasterizerData output;
+    
+    ModelConstants modelConstant = modelConstants[instanceId];
+    
+    // model space, model coordinates, mvp
+    output.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * modelConstant.modelMatrix * float4(vIn.position, 1);
+    output.color = vIn.color;
+    
+    return output;
+}
+
+
 // gets used after the rasterizer
 // each fragment will get the interpolated color and spits out a pixel
 // [[stage_in]] is an attribute qualifier, marking per fragment

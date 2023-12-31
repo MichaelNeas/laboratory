@@ -73,6 +73,10 @@
 		6866852228974AE7007678C5 /* DepthStencilStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6866852028974AE7007678C5 /* DepthStencilStateLibrary.swift */; };
 		68668525289750B0007678C5 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68668524289750B0007678C5 /* ColorUtil.swift */; };
 		68668526289750B0007678C5 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68668524289750B0007678C5 /* ColorUtil.swift */; };
+		68A107322B40F82E00E0DE76 /* InstancedGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A107312B40F82E00E0DE76 /* InstancedGameObject.swift */; };
+		68A107332B40F82E00E0DE76 /* InstancedGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A107312B40F82E00E0DE76 /* InstancedGameObject.swift */; };
+		68A107352B41CA7A00E0DE76 /* CubeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A107342B41CA7A00E0DE76 /* CubeCollection.swift */; };
+		68A107362B41CA7A00E0DE76 /* CubeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A107342B41CA7A00E0DE76 /* CubeCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +137,8 @@
 		6866851D2897491E007678C5 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		6866852028974AE7007678C5 /* DepthStencilStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthStencilStateLibrary.swift; sourceTree = "<group>"; };
 		68668524289750B0007678C5 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
+		68A107312B40F82E00E0DE76 /* InstancedGameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancedGameObject.swift; sourceTree = "<group>"; };
+		68A107342B41CA7A00E0DE76 /* CubeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,8 @@
 				6833EF9A288DF8EF006B21DA /* Pointer.swift */,
 				6833EF91288DEF5C006B21DA /* GameObject.swift */,
 				6866851D2897491E007678C5 /* Cube.swift */,
+				68A107312B40F82E00E0DE76 /* InstancedGameObject.swift */,
+				68A107342B41CA7A00E0DE76 /* CubeCollection.swift */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -523,6 +531,7 @@
 				6833EF95288DF0DD006B21DA /* Renderer.swift in Sources */,
 				683D5BB428864FAA00BA607D /* GameEngine.xcdatamodeld in Sources */,
 				6833EF98288DF62E006B21DA /* MeshLibrary.swift in Sources */,
+				68A107322B40F82E00E0DE76 /* InstancedGameObject.swift in Sources */,
 				6866851B28973D41007678C5 /* CameraManager.swift in Sources */,
 				68668511289729CB007678C5 /* Mouse.swift in Sources */,
 				6866851828973AB0007678C5 /* DebugCamera.swift in Sources */,
@@ -540,6 +549,7 @@
 				683D5BD32886563A00BA607D /* Shaderz.metal in Sources */,
 				6833EF9E288DF9BC006B21DA /* Node.swift in Sources */,
 				6833EF82288DDE80006B21DA /* Preferences.swift in Sources */,
+				68A107352B41CA7A00E0DE76 /* CubeCollection.swift in Sources */,
 				6833EF8B288DEA9E006B21DA /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				68668515289739E1007678C5 /* Camera.swift in Sources */,
 				6833EF9B288DF8EF006B21DA /* Pointer.swift in Sources */,
@@ -560,6 +570,7 @@
 				6833EF96288DF0DD006B21DA /* Renderer.swift in Sources */,
 				683D5BB528864FAA00BA607D /* GameEngine.xcdatamodeld in Sources */,
 				6833EF99288DF62E006B21DA /* MeshLibrary.swift in Sources */,
+				68A107332B40F82E00E0DE76 /* InstancedGameObject.swift in Sources */,
 				6866851C28973D41007678C5 /* CameraManager.swift in Sources */,
 				68668512289729CB007678C5 /* Mouse.swift in Sources */,
 				6866851928973AB0007678C5 /* DebugCamera.swift in Sources */,
@@ -577,6 +588,7 @@
 				683D5BD42886563A00BA607D /* Shaderz.metal in Sources */,
 				6833EF9F288DF9BC006B21DA /* Node.swift in Sources */,
 				6833EF83288DDE80006B21DA /* Preferences.swift in Sources */,
+				68A107362B41CA7A00E0DE76 /* CubeCollection.swift in Sources */,
 				6833EF8C288DEA9E006B21DA /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				68668516289739E1007678C5 /* Camera.swift in Sources */,
 				6833EF9C288DF8EF006B21DA /* Pointer.swift in Sources */,

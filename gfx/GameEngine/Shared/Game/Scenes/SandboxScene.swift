@@ -3,28 +3,37 @@ class SandboxScene: GameScene {
     let camera = DebugCamera()
     var cube = Cube()
     
+    var cubeCollection: CubeCollection!
+    
     override func build() {
         addCamera(camera)
         
-        camera.position.z = 10
+        camera.position.z = 100
         
         addCubes()
-
     }
     
     func addCubes() {
-        for y in -5..<5{
-            let posY = Float(y) + 0.5
-            for x in -8..<8 {
-                let posX = Float(x) + 0.5
-                let cube = Cube()
-                cube.position.y = posY
-                cube.position.x = posX
-                cube.scale = SIMD3<Float>(repeating: 0.3)
-                cube.setColor(ColorUtil.randomColor)
-                addChild(cube)
-            }
-        }
+        cubeCollection = CubeCollection(cubesWide: 20, cubesHigh: 20, cubesBack: 20)
+        cubeCollection.position.x = -16
+        addChild(cubeCollection)
+
+        // this old way was creating a child every time, but now with instanced game object we only can reuse meshes
+//        for y in -20..<20{
+//            let posY = Float(y) + 0.5
+//            for x in -20..<20 {
+//                let posX = Float(x) + 0.5
+//                for z in -20..<20 {
+//                    let posZ = Float(z) + 0.5
+//                    let cube = Cube()
+//                    cube.position.z = posZ
+//                    cube.position.y = posY
+//                    cube.position.x = posX
+//                    cube.scale = SIMD3<Float>(repeating: 0.3)
+//                    addChild(cube)
+//                }
+//            }
+//        }
     }
     
     override func update(deltaTime: Float) {
@@ -50,6 +59,7 @@ class SandboxScene: GameScene {
 //        children.forEach { child in
 //            child.rotation.z += 0.02
 //        }
+        cubeCollection.rotation.z += deltaTime
         super.update(deltaTime: deltaTime)
     }
     

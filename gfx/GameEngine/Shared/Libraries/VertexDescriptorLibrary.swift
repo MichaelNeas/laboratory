@@ -4,7 +4,7 @@ enum VertexDescriptorTypes {
     case Basic
 }
 
-class VertexDescriptorLibrary {
+enum VertexDescriptorLibrary {
     private static var vertexDescriptors = [VertexDescriptorTypes: VertexDescriptor]()
     
     static func create() {

@@ -47,7 +47,7 @@ extension GameObject: Renderable {
         renderCommandEncoder.setFragmentBytes(&material, length: Material.stride, index: 1)
         
         // start with the top vertice and move counter clockwise
-        renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexCount)
+        mesh.drawPrimitives(renderCommandEncoder)
     }
 }
 
