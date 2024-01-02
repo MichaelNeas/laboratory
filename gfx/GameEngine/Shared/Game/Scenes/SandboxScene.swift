@@ -9,10 +9,6 @@ class SandboxScene: GameScene {
         debugCamera.position.z = 5
         addChild(quad)
     }
-    
-    override func doUpdate() {
-        quad.position.x = cos(GameTime.TotalGameTime)
-    }
 }
 
 // old sandbox

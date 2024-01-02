@@ -40,6 +40,12 @@ struct BasicVertexDescriptor: VertexDescriptor {
         vertexDescriptor.attributes[1].bufferIndex = 0
         vertexDescriptor.attributes[1].offset = SIMD3<Float>.size
         
+        // texture coordinate
+        vertexDescriptor.attributes[2].format = .float2
+        vertexDescriptor.attributes[2].bufferIndex = 0
+        // offset by the above 2 attributes
+        vertexDescriptor.attributes[2].offset = SIMD3<Float>.size + SIMD4<Float>.size
+        
         vertexDescriptor.layouts[0].stride = Vertex.stride
     }
 }

@@ -22,8 +22,11 @@ extension Sizable {
 }
 
 struct Vertex: Sizable {
+    // 0,0 is center using cartesian coords
     var position: SIMD3<Float>
     var color: SIMD4<Float>
+    // texture and UV coordinates are basically the same thing
+    var textureCoordinate: SIMD2<Float>
 }
 
 struct ModelConstants: Sizable {
@@ -31,6 +34,7 @@ struct ModelConstants: Sizable {
 }
 
 struct SceneConstants: Sizable {
+    var totalGameTime: Float = 0
     var viewMatrix = matrix_identity_float4x4
     var projectionMatrix = matrix_identity_float4x4
 }
@@ -40,6 +44,7 @@ struct Material: Sizable {
     var useMaterialColor: Bool = false
 }
 
+extension SIMD2: Sizable {}
 extension SIMD3: Sizable {}
 extension SIMD4: Sizable {}
 extension Float: Sizable {}
