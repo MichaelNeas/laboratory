@@ -1,32 +1,33 @@
 import simd
 
-class DebugCamera: Camera {
-    var cameraType: CameraTypes = .Debug
+final class DebugCamera: Camera {
     
-    var position: SIMD3<Float> = SIMD3<Float>(repeating: 0)
-    
-    var projectionMatrix: matrix_float4x4 {
+    override var projectionMatrix: matrix_float4x4 {
         matrix_float4x4.perspective(degreesFov: 45,
                                     aspectRatio: Renderer.AspectRatio,
                                     near: 0.1,
-                                    far: 1_000)
+                                    far: 1000)
     }
     
-    func update(deltaTime: Float) {
+    init() {
+        super.init(cameraType: .Debug)
+    }
+
+    override func doUpdate() {
         if Keyboard.isKeyPressed(.leftArrow) {
-            self.position.x -= deltaTime
+            moveX(-GameTime.DeltaTime)
         }
         
         if Keyboard.isKeyPressed(.rightArrow) {
-            self.position.x += deltaTime
+            moveX(GameTime.DeltaTime)
         }
         
         if Keyboard.isKeyPressed(.upArrow) {
-            self.position.y += deltaTime
+            moveY(GameTime.DeltaTime)
         }
         
         if Keyboard.isKeyPressed(.downArrow) {
-            self.position.y -= deltaTime
+            moveY(-GameTime.DeltaTime)
         }
     }
 }

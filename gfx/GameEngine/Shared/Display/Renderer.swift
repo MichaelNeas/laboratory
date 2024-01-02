@@ -23,7 +23,10 @@ extension Renderer: MTKViewDelegate {
               let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
         
         let commandBuffer = Engine.CommandQueue.makeCommandBuffer()!
+        commandBuffer.label = "Super command buffer"
+        
         let renderCommandEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor)!
+        renderCommandEncoder.label = "First render command encoder"
         
         SceneManager.tickScene(renderCommandEncoder: renderCommandEncoder, deltaTime: 1 / Float(view.preferredFramesPerSecond))
         

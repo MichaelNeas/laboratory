@@ -8,11 +8,9 @@ class Pointer: GameObject {
         super.init(meshType: .TriangleCustom)
     }
     
-    override func update(deltaTime: Float) {
+    override func doUpdate() {
+        rotation.z = (-atan2f(Mouse.GetMouseViewportPosition().x - position.x + camera.position.x,
+                              Mouse.GetMouseViewportPosition().y - position.y + camera.position.y))
         
-        self.rotation.z = -atan2(
-            Mouse.GetMouseViewportPosition().x - position.x + camera.position.x, 
-            Mouse.GetMouseViewportPosition().y - position.y + camera.position.y)
-        super.update(deltaTime: deltaTime)
     }
 }

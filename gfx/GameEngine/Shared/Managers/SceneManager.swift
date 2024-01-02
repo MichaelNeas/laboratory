@@ -1,4 +1,5 @@
 import Metal
+
 enum SceneTypes {
     case Sandbox
 }
@@ -6,7 +7,7 @@ enum SceneTypes {
 class SceneManager {
     private static var currentScene: GameScene!
     
-    public static func create(_ sceneType: SceneTypes) {
+    public static func Initialize(_ sceneType: SceneTypes) {
         setScene(sceneType)
     }
     
@@ -18,8 +19,9 @@ class SceneManager {
     }
     
     public static func tickScene(renderCommandEncoder: MTLRenderCommandEncoder, deltaTime: Float) {
-        currentScene.updateCameras(deltaTime: deltaTime)
-        currentScene.update(deltaTime: deltaTime)
+        GameTime.UpdateTime(deltaTime)
+        currentScene.updateCameras()
+        currentScene.update()
         currentScene.render(renderCommandEncoder: renderCommandEncoder)
     }
 }

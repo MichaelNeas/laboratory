@@ -10,7 +10,9 @@ class CameraManager {
         currentCamera = cameras[cameraType]
     }
     
-    func update(deltaTime: Float) {
-        cameras.values.forEach { $0.update(deltaTime: deltaTime) }
+    func update() {
+        for camera in cameras.values {
+            camera.update()
+        }
     }
 }

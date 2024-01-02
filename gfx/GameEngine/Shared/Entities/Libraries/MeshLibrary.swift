@@ -6,21 +6,18 @@ enum MeshTypes {
     case CubeCustom
 }
 
-class MeshLibrary {
-    private static var meshes: [MeshTypes: Mesh] = [:]
+class MeshLibrary: Library<MeshTypes,Mesh> {
     
-    static func create() {
-        createDefaultMeshes()
+    private var library: [MeshTypes:Mesh] = [:]
+        
+    override func fillLibrary() {
+        library.updateValue(TriangleCustomMesh(), forKey: .TriangleCustom)
+        library.updateValue(QuadCustomMesh(), forKey: .QuadCustom)
+        library.updateValue(CubeCustomMesh(), forKey: .CubeCustom)
     }
     
-    private static func createDefaultMeshes() {
-        meshes.updateValue(TriangleCustomMesh(), forKey: .TriangleCustom)
-        meshes.updateValue(QuadCustomMesh(), forKey: .QuadCustom)
-        meshes.updateValue(Cube_CustomMesh(), forKey: .CubeCustom)
-    }
-    
-    static func Mesh(_ meshType: MeshTypes) -> Mesh {
-        meshes[meshType]!
+    override subscript(_ type: MeshTypes)->Mesh {
+        library[type]!
     }
 }
 
@@ -95,7 +92,7 @@ class QuadCustomMesh: CustomMesh {
     }
 }
 
-class Cube_CustomMesh: CustomMesh {
+class CubeCustomMesh: CustomMesh {
     override func createVertices() {
         vertices = [
             //Left 2 triangles

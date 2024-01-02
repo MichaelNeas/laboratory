@@ -8,19 +8,12 @@ class GameObject: Node {
     var mesh: Mesh
     
     init(meshType: MeshTypes) {
-        self.mesh = MeshLibrary.Mesh(meshType)
+        mesh = Entities.Meshes[meshType]
     }
     
-    var time: Float = 0
-    override func update(deltaTime: Float) {
-        time += deltaTime
-        // delta position goes up and down
-//        self.position.x = sin(time)
-//        self.position.y = sin(time)
-//        self.scale = SIMD3<Float>(repeating: cos(time))
-//        self.rotation.z = cos(time)
-        
+    override func update() {
         updateModelConstants()
+        super.update()
     }
     
     private func updateModelConstants() {
@@ -33,13 +26,13 @@ extension GameObject: Renderable {
         // lines allows you to see the outlines vs filled up
 //        renderCommandEncoder.setTriangleFillMode(.lines)
         // each game object will have it's own render pipeline state
-        renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
+        renderCommandEncoder.setRenderPipelineState(Graphics.RenderPipelineStates[.Basic])
         // every time we render check the depth
-        renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
+        renderCommandEncoder.setDepthStencilState(Graphics.DepthStencilStates[.Less])
         
         // Vertex Shader
         // set buffer in device space
-        renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
+//        renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
         // use bytes when <4k data
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         
