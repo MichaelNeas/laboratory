@@ -11,7 +11,8 @@ enum ClearColors {
 
 enum Preferences {
     static var ClearColor: MTLClearColor = ClearColors.default
-    static var MainPixelFormat: MTLPixelFormat = .bgra8Unorm
+    // gamma correction with bgra8Unorm
+    static var MainPixelFormat: MTLPixelFormat = .bgra8Unorm_srgb
     static var MainDepthPixelFormat: MTLPixelFormat = MTLPixelFormat.depth32Float
     static var StartingSceneType: SceneTypes = SceneTypes.Sandbox
 }

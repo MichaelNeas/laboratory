@@ -3,6 +3,7 @@
 #include "Shared.metal"
 using namespace metal;
 
+// gpu side
 // vertex shader main task is to process incoming vertex data and map to screen space
 // vertex shader passes all the data into the rasterizer
 // position should come out the way it went in, color will get interpolated
@@ -22,16 +23,20 @@ vertex RasterizerData basicVertexShader(const VertexIn vIn [[ stage_in ]],
 // gets used after the rasterizer
 // each fragment will get the interpolated color and spits out a pixel
 // [[stage_in]] is an attribute qualifier, marking per fragment
+// mtl textures are sent through to the GPU
 fragment half4 basicFragmentShader(RasterizerData rd [[ stage_in ]],
-                                     constant Material &material [[ buffer(1) ]]){
-//    float4 color = material.useMaterialColor ? material.color : rd.color;
+                                   constant Material &material [[ buffer(1) ]],
+                                   sampler sampler2d [[sampler(0)]],
+                                   texture2d<float> texture [[texture(0)]]){
     float2 texCoord = rd.textureCoordinate;
-    float gameTime = rd.totalGameTime;
+    float4 color;
     
-    float x = sin((texCoord.x + gameTime)*20.0);
-    float y = sin((texCoord.y - gameTime)*20.0);
-    float z = tan((texCoord.x + gameTime)*20.0);
-    float4 color = float4(x,y,z,1);
-                                                        
+    if (material.useTexture) {
+        color = texture.sample(sampler2d, texCoord);
+    } else if (material.useMaterialColor) {
+        color = material.color;
+    } else {
+        color = rd.color;
+    }
     return half4(color.r, color.g, color.b, color.a);
 }

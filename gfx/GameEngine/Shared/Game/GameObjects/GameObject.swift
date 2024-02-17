@@ -4,6 +4,7 @@ import MetalKit
 class GameObject: Node {
     var modelConstants = ModelConstants()
     private var material = Material()
+    private var textureType = TextureTypes.none
     
     var mesh: Mesh
     
@@ -37,7 +38,11 @@ extension GameObject: Renderable {
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         
         // Fragment Shader
+        renderCommandEncoder.setFragmentSamplerState(Graphics.SamplerStates[.linear], index: 0)
         renderCommandEncoder.setFragmentBytes(&material, length: Material.stride, index: 1)
+        if material.useTexture {
+            renderCommandEncoder.setFragmentTexture(Entities.Textures[textureType], index: 0)
+        }
         
         // start with the top vertice and move counter clockwise
         mesh.drawPrimitives(renderCommandEncoder)
@@ -49,7 +54,14 @@ extension GameObject: Renderable {
 // MARK: Material
 extension GameObject {
     func setColor(_ color: SIMD4<Float>) {
-        self.material.color = color
-        self.material.useMaterialColor = true
+        material.color = color
+        material.useMaterialColor = true
+        material.useTexture = false
+    }
+    
+    func setTexture(_ textureType: TextureTypes) {
+        self.textureType = textureType
+        material.useTexture = true
+        material.useMaterialColor = false
     }
 }

@@ -1,9 +1,13 @@
 
 enum Entities {
     private static var meshLibrary: MeshLibrary!
-    public static var Meshes: MeshLibrary { meshLibrary }
+    static var Meshes: MeshLibrary { meshLibrary }
     
-    public static func Initialize() {
+    private static var textureLibrary: TextureLibrary!
+    static var Textures: TextureLibrary { textureLibrary }
+    
+    static func Initialize() {
         self.meshLibrary = MeshLibrary()
+        self.textureLibrary = TextureLibrary()
     }
 }

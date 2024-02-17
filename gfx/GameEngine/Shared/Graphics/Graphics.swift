@@ -18,6 +18,9 @@ enum Graphics {
     private static var depthStencilStateLibrary: DepthStencilStateLibrary!
     public static var DepthStencilStates: DepthStencilStateLibrary { depthStencilStateLibrary }
     
+    private static var samplerStateLibrary: SamplerStateLibrary!
+    public static var SamplerStates: SamplerStateLibrary { samplerStateLibrary }
+    
     public static func Initialize() {
         self.vertexShaderLibrary = VertexShaderLibrary()
         self.fragmentShaderLibrary = FragmenthaderLibrary()
@@ -25,6 +28,7 @@ enum Graphics {
         self.renderPipelineDescriptorLibrary = RenderPipelineDescriptorLibrary()
         self.renderPipelineStateLibrary = RenderPipelineStateLibrary()
         self.depthStencilStateLibrary = DepthStencilStateLibrary()
+        self.samplerStateLibrary = SamplerStateLibrary()
     }
     
 }
