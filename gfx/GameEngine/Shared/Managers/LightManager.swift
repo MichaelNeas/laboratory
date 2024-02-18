@@ -1,5 +1,16 @@
 import MetalKit
 
+// Phong = ambient + diffuse + specular (intensities)
+// ambient - the environmental lighting, the general lighting around the scene
+// diffuse - lighting facing the object
+// specular - reflection of light into eyes
+// Maths
+// vectors - direction & magnitude (length)
+// normals - a vector perpendicular to a plane
+// dot product - scalar product
+// vector subtraction - Head - Tail,
+// normalizing - value derived to be in 1 length
+// summations - addition of a sequence of any kind of number (for loop)
 final class LightManager {
     private var lightObjects: [LightObject] = []
     
