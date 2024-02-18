@@ -31,7 +31,7 @@ class Mouse {
     ///Sets the delta distance the mouse had moved
     public static func SetMousePositionChange(overallPosition: SIMD2<Float>, deltaPosition: SIMD2<Float>){
         self.overallMousePosition = overallPosition
-        self.mousePositionDelta += deltaPosition
+        self.mousePositionDelta = deltaPosition
     }
 
     public static func ScrollMouse(deltaY: Float){

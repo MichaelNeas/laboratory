@@ -1,10 +1,12 @@
 import MetalKit
 
 enum MeshTypes {
+    case none
     case TriangleCustom
     case QuadCustom
     case CubeCustom
     case Cruiser
+    case Sphere
 }
 
 class MeshLibrary: Library<MeshTypes,Mesh> {
@@ -12,10 +14,12 @@ class MeshLibrary: Library<MeshTypes,Mesh> {
     private var library: [MeshTypes:Mesh] = [:]
         
     override func fillLibrary() {
+        library.updateValue(NoMesh(), forKey: .none)
         library.updateValue(TriangleCustomMesh(), forKey: .TriangleCustom)
         library.updateValue(QuadCustomMesh(), forKey: .QuadCustom)
         library.updateValue(CubeCustomMesh(), forKey: .CubeCustom)
         library.updateValue(ModelMesh(name: "cruiser"), forKey: .Cruiser)
+        library.updateValue(ModelMesh(name: "sphere"), forKey: .Sphere)
     }
     
     override subscript(_ type: MeshTypes)->Mesh {
@@ -26,6 +30,14 @@ class MeshLibrary: Library<MeshTypes,Mesh> {
 protocol Mesh {
     var instanceCount: Int { get set }
     func drawPrimitives(_ renderCommandEncoder: MTLRenderCommandEncoder)
+}
+
+final class NoMesh: Mesh {
+    var instanceCount: Int = 0
+    
+    func drawPrimitives(_ renderCommandEncoder: MTLRenderCommandEncoder) {
+        
+    }
 }
 
 final class ModelMesh: Mesh {

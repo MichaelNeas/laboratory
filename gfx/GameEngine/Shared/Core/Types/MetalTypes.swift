@@ -45,6 +45,10 @@ struct Material: Sizable {
     var useTexture: Bool = false
 }
 
+struct LightData: Sizable {
+    var position: SIMD3<Float> = SIMD3<Float>(0, 0 ,0)
+}
+
 extension SIMD2: Sizable {}
 extension SIMD3: Sizable {}
 extension SIMD4: Sizable {}

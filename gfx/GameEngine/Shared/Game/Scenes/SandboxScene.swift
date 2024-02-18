@@ -4,9 +4,12 @@ class SandboxScene: GameScene {
     var debugCamera = DebugCamera()
 //    var quad = Quad()
     var cruiser = Cruiser()
+    var sun = Sun()
     
     override func build() {
         addCamera(debugCamera)
+        sun.position = SIMD3<Float>(0,2,2)
+        addLight(sun)
         debugCamera.position.z = 5
         addChild(cruiser)
     }
