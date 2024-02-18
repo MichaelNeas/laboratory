@@ -4,6 +4,7 @@ enum MeshTypes {
     case TriangleCustom
     case QuadCustom
     case CubeCustom
+    case Cruiser
 }
 
 class MeshLibrary: Library<MeshTypes,Mesh> {
@@ -14,6 +15,7 @@ class MeshLibrary: Library<MeshTypes,Mesh> {
         library.updateValue(TriangleCustomMesh(), forKey: .TriangleCustom)
         library.updateValue(QuadCustomMesh(), forKey: .QuadCustom)
         library.updateValue(CubeCustomMesh(), forKey: .CubeCustom)
+        library.updateValue(ModelMesh(name: "cruiser"), forKey: .Cruiser)
     }
     
     override subscript(_ type: MeshTypes)->Mesh {
@@ -22,9 +24,54 @@ class MeshLibrary: Library<MeshTypes,Mesh> {
 }
 
 protocol Mesh {
-    var vertexCount: Int { get }
     var instanceCount: Int { get set }
     func drawPrimitives(_ renderCommandEncoder: MTLRenderCommandEncoder)
+}
+
+final class ModelMesh: Mesh {
+    
+    private var meshes = [MTKMesh]()
+    
+    init(name: String) {
+        loadModel(name: name)
+    }
+    
+    func loadModel(name: String) {
+        let url = Bundle.main.url(forResource: name, withExtension: "obj")
+        
+        let descriptor = MTKModelIOVertexDescriptorFromMetal(Graphics.VertexDescriptors[.Basic])
+        // tell the description what its attributes are, matching MetalTypes
+        (descriptor.attributes[0] as! MDLVertexAttribute).name = MDLVertexAttributePosition
+        (descriptor.attributes[1] as! MDLVertexAttribute).name = MDLVertexAttributeColor
+        (descriptor.attributes[2] as! MDLVertexAttribute).name = MDLVertexAttributeTextureCoordinate
+        
+        let bufferAllocator = MTKMeshBufferAllocator(device: Engine.Device)
+        let asset = MDLAsset(url: url,
+                             vertexDescriptor: descriptor,
+                             bufferAllocator: bufferAllocator)
+        // metalkit meshes has position, model io has animation stuff
+        meshes = try! MTKMesh.newMeshes(asset: asset, device: Engine.Device).metalKitMeshes
+    }
+    
+    // MARK: Mesh
+    var instanceCount: Int = 1
+    
+    func drawPrimitives(_ renderCommandEncoder: MTLRenderCommandEncoder) {
+        for mesh in meshes {
+            for vertexBuffer in mesh.vertexBuffers {
+                renderCommandEncoder.setVertexBuffer(vertexBuffer.buffer, offset: vertexBuffer.offset, index: 0)
+                for submesh in mesh.submeshes {
+                    // instead of loading 2+ vertices in the same position, use an instance
+                    renderCommandEncoder.drawIndexedPrimitives(type: submesh.primitiveType,
+                                                               indexCount: submesh.indexCount,
+                                                               indexType: submesh.indexType,
+                                                               indexBuffer: submesh.indexBuffer.buffer,
+                                                               indexBufferOffset: submesh.indexBuffer.offset,
+                                                               instanceCount: instanceCount)
+                }
+            }
+        }
+    }
 }
 
 class CustomMesh: Mesh {

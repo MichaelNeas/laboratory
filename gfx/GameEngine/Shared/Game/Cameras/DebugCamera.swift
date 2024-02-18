@@ -2,8 +2,10 @@ import simd
 
 final class DebugCamera: Camera {
     
+    private var zoom: Float = 45.0
+    
     override var projectionMatrix: matrix_float4x4 {
-        matrix_float4x4.perspective(degreesFov: 45,
+        matrix_float4x4.perspective(degreesFov: zoom,
                                     aspectRatio: Renderer.AspectRatio,
                                     near: 0.1,
                                     far: 1000)
@@ -29,5 +31,7 @@ final class DebugCamera: Camera {
         if Keyboard.isKeyPressed(.downArrow) {
             moveY(-GameTime.DeltaTime)
         }
+        
+        self.zoom += Mouse.GetDWheel()
     }
 }
