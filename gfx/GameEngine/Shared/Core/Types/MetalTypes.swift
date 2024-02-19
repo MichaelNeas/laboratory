@@ -43,13 +43,20 @@ struct Material: Sizable {
     var color = SIMD4<Float>(0.7, 0.7, 0.7, 1.0)
     var useMaterialColor: Bool = false
     var useTexture: Bool = false
+    var isLit: Bool = true
+    var ambient: SIMD3<Float> = SIMD3<Float>(0.3, 0.3, 0.3)
 }
 
 struct LightData: Sizable {
     var position: SIMD3<Float> = SIMD3<Float>(0, 0 ,0)
+    var color: SIMD3<Float> = SIMD3<Float>(1, 1, 1)
+    var brightness: Float = 1.0
+    
+    var ambientIntensity: Float = 1.0
 }
 
 extension SIMD2: Sizable {}
 extension SIMD3: Sizable {}
 extension SIMD4: Sizable {}
 extension Float: Sizable {}
+extension Int32: Sizable {}

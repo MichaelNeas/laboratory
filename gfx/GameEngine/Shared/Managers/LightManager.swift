@@ -24,9 +24,15 @@ final class LightManager {
     
     func setLightData(_ renderCommandEncoder: MTLRenderCommandEncoder) {
         var lightData = gatherLightData()
-        // send all our light data into the GPU
-        renderCommandEncoder.setFragmentBytes(&lightData,
-                                              length: LightData.size(lightData.count),
+        var lightCount = lightData.count
+        // pass through the count
+        renderCommandEncoder.setFragmentBytes(&lightCount,
+                                              length: Int32.size,
                                               index: 2)
+        // send all our light data into the GPU
+        // stride over the array for array buffer
+        renderCommandEncoder.setFragmentBytes(&lightData,
+                                              length: LightData.stride(lightCount),
+                                              index: 3)
     }
 }

@@ -53,7 +53,7 @@ extension GameObject: Renderable {
 
 // MARK: Material
 extension GameObject {
-    func setColor(_ color: SIMD4<Float>) {
+    func setMaterialColor(_ color: SIMD4<Float>) {
         material.color = color
         material.useMaterialColor = true
         material.useTexture = false
@@ -64,4 +64,28 @@ extension GameObject {
         material.useTexture = true
         material.useMaterialColor = false
     }
+    
+    // Is lit
+    func setMaterialIsLit(_ isLit: Bool) { material.isLit = isLit }
+    var materialIsLit: Bool { material.isLit }
+    
+    // Ambient
+    func setMaterialAmbient(_ ambient: SIMD3<Float>) { material.ambient = ambient }
+    func setMaterialAmbient(_ ambient: Float) { material.ambient = SIMD3<Float>(ambient, ambient, ambient) }
+    func addMaterialAmbient(_ value: Float) { material.ambient += value }
+    var matrialAmbient: SIMD3<Float> { material.ambient }
+}
+
+extension LightObject {
+    // Light Color
+    func setLightColor(_ color: SIMD3<Float>) { lightData.color = color }
+    var lightColor: SIMD3<Float> { lightData.color }
+    
+    // Light Brightness
+    func setLightBrightness(_ brightness: Float) { lightData.brightness = brightness }
+    var lightBrightness: Float { lightData.brightness }
+    
+    // Ambient Intensity
+    func setLightAmbientIntensity(_ intensity: Float) { lightData.ambientIntensity = intensity }
+    var lightIntensity: Float { lightData.ambientIntensity }
 }
