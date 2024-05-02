@@ -4,7 +4,7 @@
   "description": "random node stuff",
   "main": "app.js",
   "dependencies": {
-    "ejs": "^3.1.7",
+    "ejs": "^3.1.10",
     "express": "^4.19.2"
   },
   "devDependencies": {},
