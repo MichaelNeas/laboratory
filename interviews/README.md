@@ -153,6 +153,10 @@
 - architecture of CL
 - architecture of my own app
 
+4/4/25
+- tax brackets
+- SQL db creation
+
 
 ### Lee's Algie Questions
 
